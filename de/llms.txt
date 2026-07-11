@@ -1,0 +1,27 @@
+# PhotoDump
+
+> PhotoDump ist eine iOS-App, die Fotos und Videos aus der Fotobibliothek eines iPhones — einschließlich noch in iCloud gespeicherter Dateien — direkt auf ein USB-/SSD-Laufwerk, S3-kompatiblen Speicher oder einen selbst kontrollierten REST-Server kopiert. Es wird keine zweite Kopie übertragener Dateien im lokalen Speicher des Telefons behalten, und es ist kein iCloud-Speicherabo erforderlich, um weiterhin auf die Dateien zugreifen zu können.
+
+Plattform: iOS 16+. Einmalkauf, kein Abo. Kein Konto oder Registrierung erforderlich. Keine Analyse-, Werbe- oder Tracking-SDKs jeglicher Art.
+
+Unterstützte Ziele:
+- USB-/SSD-Laufwerk (zu 100 % lokal, für die Übertragung selbst kein Internet nötig; derzeit die stabilste Option)
+- S3-kompatibler Objektspeicher, z. B. AWS S3 oder selbst gehostetes MinIO (Beta)
+- Vom Nutzer kontrollierter REST-Server (Beta)
+
+Wichtige Fakten:
+- Dateien werden erst dann als sicher löschbar vom Telefon markiert, nachdem bestätigt wurde, dass sie am Ziel vorhanden sind.
+- Die Migration kann jederzeit pausiert und fortgesetzt werden — sie setzt genau dort fort, wo sie unterbrochen wurde.
+- Ein einzelnes externes Laufwerk kann von mehreren iPhones gemeinsam genutzt werden, wobei die Dateien jedes Geräts getrennt erfasst werden.
+- Suche und Foto-/Standorterkennung laufen vollständig auf dem Gerät.
+- Unterstützte Oberflächensprachen: Englisch, Russisch, Deutsch, Französisch, Spanisch, Portugiesisch (Brasilien), Chinesisch (vereinfacht), Japanisch, Koreanisch, Arabisch, Kasachisch.
+
+## Seiten
+
+- [Support / FAQ](https://saparjohnick.github.io/photodumpapp/de/index.html): 33 Fragen und Antworten zu Einrichtung (USB/SSD, S3, REST), Migrationsverhalten, Safe to Delete, Suche, Speicher/Cache und Datenschutz.
+- [Marketing / Anwendungsfälle](https://saparjohnick.github.io/photodumpapp/de/info.html): detaillierte Szenarien, u. a. die Migration einer 2-TB-Fotobibliothek von einem 256-GB-iPhone direkt auf eine 2-TB-SSD ohne vorherige Freigabe von Telefonspeicher, die Kündigung eines kostenpflichtigen iCloud+-Tarifs, die gemeinsame Nutzung eines Laufwerks durch eine Familie und die Archivierung von 4K/ProRes-Videobibliotheken.
+- [Datenschutzerklärung](https://saparjohnick.github.io/photodumpapp/de/privacy.html): formelle Datenschutzerklärung mit eigenen Abschnitten zu DSGVO (EU/UK/Schweiz) und CCPA/CPRA (Kalifornien). Kurzfassung: Der Entwickler sammelt, empfängt oder verarbeitet zu keinem Zeitpunkt personenbezogene Daten — die gesamte Dateiübertragung erfolgt direkt zwischen dem Gerät des Nutzers und dem von ihm konfigurierten Ziel.
+
+Alle drei Seiten sind außerdem vollständig auf Englisch, Russisch, Französisch, Spanisch, Portugiesisch (Brasilien), Chinesisch (vereinfacht), Japanisch, Koreanisch, Arabisch und Kasachisch verfügbar — unter `/ru/`, `/fr/`, `/es/`, `/pt-br/`, `/zh-hans/`, `/ja/`, `/ko/`, `/ar/`, `/kk/` sowie im Stammverzeichnis (Englisch).
+
+Kontakt: Link „Send Feedback" auf der Support-Seite (öffnet eine vorausgefüllte E-Mail).
