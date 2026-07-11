@@ -3,18 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PhotoDump — iCloud 저장공간 없이 iPhone 사진과 동영상을 USB/SSD 드라이브로 옮기기</title>
-<meta name="description" content="PhotoDump는 iPhone 사진 보관함의 사진과 동영상(iCloud에만 저장된 파일 포함)을 USB/SSD 드라이브, S3 호환 스토리지 또는 직접 운영하는 REST 서버로 직접 마이그레이션합니다 — 휴대폰의 로컬 저장공간을 채우지 않고, iCloud 저장공간 구독도 필요 없습니다.">
-<meta name="keywords" content="iCloud 저장공간 비용 절약, iCloud 저장공간 대안, iPhone 사진 외장 드라이브로 이동, iPhone 사진 SSD로 마이그레이션, 사진 삭제 없이 iPhone 저장공간 확보, iPhone 사진 USB 드라이브로 전송, iCloud 없는 iPhone 사진 백업, iPhone 사진 외장 하드디스크로 옮기기, iCloud 사진 외장 SSD로 이동, iOS 사진 마이그레이션 앱">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>PhotoDump — iCloud 없이 iPhone 사진과 동영상을 휴대폰에서 옮기기</title>
+<meta name="description" content="PhotoDump는 iPhone의 사진과 동영상을 USB/SSD 드라이브, S3 호환 스토리지, 또는 직접 운영하는 REST 서버로 전송합니다. iCloud에만 저장된 파일도 포함됩니다. 이후에는 iCloud 저장공간 구독이 필요 없습니다.">
+<meta name="keywords" content="iOS 사진 마이그레이션 앱, iPhone 사진을 외장 하드디스크로 전송, iCloud 저장공간 대안, iPhone 저장공간 부족, iCloud 없이 iPhone 사진 백업">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/ko/info.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PhotoDump — iCloud 없이 iPhone 사진을 USB/SSD 드라이브로 이동">
-<meta property="og:description" content="256GB iPhone에 있는 2TB 사진 보관함을 휴대폰에서 단 1메가바이트도 비우지 않고, iCloud 저장공간 구독 없이 곧바로 외장 드라이브로 마이그레이션하세요.">
+<meta property="og:title" content="PhotoDump — iCloud 없이 iPhone 사진과 동영상을 휴대폰에서 옮기기">
+<meta property="og:description" content="iCloud에 남아있는 파일을 포함해 사진과 동영상을 사용자가 소유한 드라이브로 전송하세요. iCloud 저장공간 구독 없이도 가능합니다.">
 <meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/ko/info.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PhotoDump — iCloud 없이 iPhone 사진을 USB/SSD 드라이브로 이동">
-<meta name="twitter:description" content="256GB iPhone에 있는 2TB 사진 보관함을 휴대폰에서 단 1메가바이트도 비우지 않고 곧바로 외장 드라이브로 마이그레이션하세요.">
+<meta name="twitter:title" content="PhotoDump — iCloud 없이 iPhone 사진과 동영상을 휴대폰에서 옮기기">
+<meta name="twitter:description" content="iCloud에 남아있는 파일을 포함해 사진과 동영상을 사용자가 소유한 드라이브로 전송하세요. iCloud 저장공간 구독 없이도 가능합니다.">
 <link rel="stylesheet" href="../style.css">
 <link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/info.html">
 <link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/info.html">
@@ -35,7 +37,7 @@
   "name": "PhotoDump",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "iOS 16+",
-  "description": "PhotoDump는 iCloud에만 저장되어 있는 파일을 포함해 iPhone 사진 보관함의 사진과 동영상을 사용자가 관리하는 USB 또는 SSD 드라이브, S3 호환 스토리지, REST 서버로 직접 복사합니다 — 휴대폰의 로컬 저장공간에 사본을 남기지 않으며, iCloud 저장공간 구독도 필요하지 않습니다.",
+  "description": "PhotoDump는 iCloud에만 저장되어 있는 파일을 포함해 iPhone 사진 보관함의 사진과 동영상을 USB 또는 SSD 드라이브, S3 호환 스토리지, 또는 사용자가 관리하는 REST 서버로 전송합니다. 파일은 휴대폰에 사본으로 남지 않으며, 이후 iCloud 저장공간 구독도 필요하지 않습니다.",
   "offers": {
     "@type": "Offer",
     "price": "4.99",
@@ -43,36 +45,12 @@
   }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "256GB iPhone에서 2TB 사진 보관함을 2TB SSD로 마이그레이션할 수 있나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "네. PhotoDump는 사진 보관함의 각 사진과 동영상을(기기에 저장되어 있지 않은 경우 먼저 iCloud에서 다운로드한 뒤) 한 번에 한 파일씩 외장 드라이브로 직접 스트리밍하며, 전송 중에는 휴대폰에 작은 임시 버퍼만 기록하고 드라이브에서 파일이 확인되는 즉시 이를 삭제합니다. 휴대폰의 로컬 저장공간이 전체 보관함을 한꺼번에 담아야 하는 경우는 결코 없으므로, 256GB 기기도 사전에 공간을 확보하지 않고 2TB 보관함을 2TB 드라이브로 마이그레이션할 수 있습니다."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "PhotoDump가 iCloud 저장공간 구독을 대체할 수 있나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "USB/SSD 드라이브 같은 대상으로 이미 마이그레이션된 파일의 경우에는 그렇습니다 — 파일이 드라이브로 복사되고 나면, PhotoDump 자체의 탐색 및 검색 기능으로 계속 접근하기 위해 더 이상 iCloud에 저장되어 있을 필요가 없습니다. 많은 사용자가 자신이 소유한 드라이브로 보관함을 마이그레이션한 후 유료 iCloud+ 저장공간 등급을 다운그레이드하거나 해지합니다."
-      }
-    }
-  ]
-}
-</script>
 </head>
 <body>
 <div class="wrap">
   <img class="icon" src="../icon.png" alt="PhotoDump">
-  <h1>iCloud 저장공간 비용을 그만 지불하세요</h1>
-  <p class="subtitle">PhotoDump는 iPhone의 사진과 동영상을 휴대폰을 채우지 않고 사용자가 소유한 드라이브 — USB/SSD, S3 또는 직접 운영하는 서버 — 로 옮겨줍니다.</p>
+  <h1>사진을 iPhone에서 옮기세요, 빌린 클라우드가 아니라</h1>
+  <p class="subtitle">PhotoDump는 사진과 동영상을 사용자가 소유한 드라이브 — USB/SSD, S3, 또는 직접 운영하는 서버 — 로 복사합니다.</p>
 
   <nav class="pages">
     <a href="info.html" class="active">마이그레이션</a>
@@ -81,58 +59,26 @@
   </nav>
 
   <div class="card">
-    <h2>문제: 사진 보관함이 휴대폰보다 커졌습니다</h2>
-    <p>최신 iPhone은 카메라 해상도, 4K 동영상, ProRes 포맷이 기본 저장공간 용량보다 빠르게 커지고 있습니다. 몇 년 치 사진과 동영상을 보유한 가정이라면 500GB에서 2TB에 달하는 미디어를 쉽게 쌓게 되는 반면, 휴대폰 자체의 물리적 저장공간은 128GB, 256GB, 또는 512GB에 불과할 수 있습니다. Apple이 내놓은 해답은 iCloud+ 구독입니다: 매달, 영원히 요금을 내면서 모든 것을 "이용 가능한" 상태로 유지하지만, 정작 휴대폰에는 그중 일부만 로컬로 캐시됩니다.</p>
-    <p>PhotoDump는 다른 해답을 제시합니다: 파일을 사용자가 물리적으로 소유한 드라이브로 한 번, 일회성 비용만으로 옮기는 것입니다 — 반복되는 요금도, 자신의 추억에 계속 접근하기 위해 구독을 유지해야 하는 부담도 없습니다.</p>
+    <h2>iPhone 저장공간이 가득 찼나요?</h2>
+    <p>사진과 동영상을 삭제하는 대신 휴대폰에서 옮기세요 — 드라이브에서 확인되기 전까지는 아무것도 삭제해도 안전하다고 표시되지 않습니다.</p>
+    <p><a href="iphone-storage-full.html">자세히 보기 →</a></p>
   </div>
 
-  <h2 class="section-title" style="margin-top:0">사용 사례: 2TB 보관함, 256GB 휴대폰, 2TB SSD</h2>
   <div class="card">
-    <h2>정확한 시나리오</h2>
-    <p>실제로 흔한 사례를 살펴보겠습니다: 물리적 저장공간이 256GB인 iPhone에서 "iPhone 저장공간 최적화"를 켠 채로 iCloud 사진을 사용하고 있습니다. 몇 년에 걸쳐 연결된 iCloud 사진 보관함이 2TB까지 늘어났습니다 — 원본 화질 원본은 iCloud에 있고, 휴대폰에는 공간 절약용 미리보기와 최근에 본 파일만 남아 있어 256GB 안에 여유롭게 들어갑니다. 소유자는 2TB 외장 SSD를 구입해 모든 것을 그곳으로 옮기고 싶어 합니다.</p>
-    <p>언뜻 보면 불가능해 보입니다: 256GB짜리 기기가 어떻게 2TB의 데이터를 어딘가로 복사할 수 있을 만큼 "담아둘" 수 있을까요? 그럴 수 없고, 또 그럴 필요도 없습니다.</p>
-    <h2>PhotoDump가 휴대폰을 채우지 않고 이를 수행하는 방법</h2>
-    <p>PhotoDump는 보관함을 한 번에 한 파일씩(또는 설정에서 조정 가능한 소수의 파일을 동시에) 처리합니다. 각 파일에 대해 다음을 수행합니다: (1) 로컬에 아직 캐시되어 있지 않다면 iCloud에서 원본을 요청하고, (2) 전체 보관함이 아니라 해당 파일 하나 크기의 작은 임시 파일로 데이터를 휴대폰에 스트리밍하며, (3) 그 임시 파일을 외장 SSD로 복사하고, (4) 복사가 성공했는지 확인한 다음, (5) 즉시 휴대폰에서 임시 파일을 삭제합니다. 다음 파일도 동일한 과정을 반복합니다.</p>
-    <p>어느 시점을 보더라도 휴대폰에는 처리 중인 소수의 파일만 있을 뿐입니다 — 동시 처리 설정에 따라 보통 총 수십에서 수백 메가바이트 수준이며, 2TB 전체 보관함이 담기는 일은 결코 없습니다. 마이그레이션이 끝날 무렵에는 휴대폰의 로컬 저장공간 사용량이 시작 시점과 사실상 동일해지며, 2TB는 이제 전부 SSD에 있게 됩니다.</p>
-    <h2>수치로 보기</h2>
-    <ul>
-      <li>휴대폰 물리적 저장공간: 256GB</li>
-      <li>사진 보관함 크기(iCloud 기준): 2TB</li>
-      <li>대상 SSD 크기: 2TB</li>
-      <li>마이그레이션 중 최대 추가 사용 휴대폰 저장공간: 동시에 처리 중인 몇 개 파일 크기 정도 — 보통 2TB가 아니라 1GB 미만</li>
-      <li>마이그레이션 완료 후 휴대폰 저장공간 사용량: 마이그레이션 시작 전과 동일</li>
-    </ul>
+    <h2>iCloud+ 요금 내는 것도 지치셨나요?</h2>
+    <p>2TB 요금제는 매달 $9.99이며, 이는 끝없이 계속됩니다. 보관함을 한 번만 사용자가 소유한 드라이브로 옮기면, 이후 다운그레이드하거나 해지할 수 있습니다.</p>
+    <p><a href="no-icloud-subscription.html">자세히 보기 →</a></p>
   </div>
 
-  <h2 class="section-title">사용 사례: 비싼 iCloud+ 요금제 해지하기</h2>
   <div class="card">
-    <h2>비용 계산</h2>
-    <p>Apple의 2TB iCloud+ 요금제는 매달 반복되는 요금입니다. 무기한으로 매달 납부하면 누적 비용은 끝없이 늘어나며, 결제가 한 번이라도 누락되면 그 즉시 자신의 파일에 대한 접근이 중단됩니다. 이에 비해 PhotoDump와 비슷한 용량의 외장 SSD를 함께 한 번만 구매하는 것은 고정된 일회성 비용입니다.</p>
-    <p>PhotoDump로 보관함을 소유한 드라이브로 마이그레이션한 후, 많은 사용자가 iCloud 요금제를 더 작은(또는 무료) 등급으로 다운그레이드합니다. 이제 미디어의 장기 보관처는 iCloud가 아니라 드라이브이기 때문입니다.</p>
+    <h2>보관함이 휴대폰 저장공간보다 큰가요?</h2>
+    <p>256GB iPhone도 2TB 보관함을 2TB SSD로 옮길 수 있습니다 — 한 번에 한 파일씩, 전체를 한꺼번에 담아두는 일 없이요.</p>
+    <p><a href="transfer-photos-to-external-drive.html">자세히 보기 →</a></p>
   </div>
 
-  <h2 class="section-title">사용 사례: 한 대의 드라이브를 공유하는 가족</h2>
   <div class="card">
-    <h2>SSD 하나, 여러 대의 iPhone</h2>
-    <p>하나의 외장 드라이브를 여러 대의 iPhone에서 사용할 수 있습니다. 각 기기는 자신만의 대상 폴더 이름으로 설정되므로, 예를 들어 iPhone 네 대를 사용하는 가정이라면 모든 사람의 보관함을 4TB 또는 8TB SSD 하나에 함께 마이그레이션할 수 있고, 각 기기의 파일은 서로 분리되어 절대 섞이지 않습니다.</p>
-  </div>
-
-  <h2 class="section-title">사용 사례: "저장공간 거의 가득 참"에 멈춘 휴대폰</h2>
-  <div class="card">
-    <h2>일상에서 마주치는 계기</h2>
-    <p>사람들이 PhotoDump 같은 도구를 찾는 가장 흔한 이유는 거창한 아카이빙 프로젝트가 아니라, 시스템 업데이트나 새 앱 설치를 가로막는 "저장공간 거의 가득 참" 알림입니다. 마이그레이션이 전체 보관함이 휴대폰에 먼저 담기기를 요구하지 않고 파일 단위로 스트리밍되기 때문에, PhotoDump는 긴 사전 처리 과정 없이도 몇 분 안에(파일이 마이그레이션되어 삭제해도 안전한 것으로 확인된 후) 실질적이고 의미 있는 저장공간을 확보하기 시작할 수 있습니다.</p>
-  </div>
-
-  <h2 class="section-title">사용 사례: 4K/ProRes 동영상 보관함 아카이빙</h2>
-  <div class="card">
-    <h2>실제로 휴대폰을 채우는 것은 동영상입니다</h2>
-    <p>4K 동영상은 1분만 해도 수백 메가바이트에 달할 수 있으며, 최신 iPhone의 ProRes 동영상은 그보다도 더 큽니다. 보관함을 수십 기가바이트에서 테라바이트 단위로 밀어 올리는 주범은 대개 사진이 아니라 동영상입니다. PhotoDump는 동영상도 사진과 동일한 방식으로 처리합니다 — 파일 단위로 스트리밍, 마이그레이션, 검증을 수행하므로, 그 영상을 한꺼번에 휴대폰에 담을 필요 없이 몇 년 치의 4K/ProRes 영상을 외장 드라이브에 아카이빙하는 일이 현실적으로 가능해집니다.</p>
-  </div>
-
-  <h2 class="section-title">사용 사례: iCloud나 Google 포토 대신 셀프 호스팅</h2>
-  <div class="card">
-    <h2>개인정보와 인프라를 중시하는 사용자를 위해</h2>
-    <p>PhotoDump의 S3 호환 및 REST 서버 대상(현재 베타)을 사용하면 기술에 익숙한 사용자가 상용 클라우드 사진 서비스 대신 자신이 직접 운영하는 인프라 — S3 호환 API를 제공하는 홈 NAS, 셀프 호스팅 오브젝트 스토리지, 또는 개인 서버 — 로 보관함을 마이그레이션할 수 있습니다. 이 전송 과정에는 어떠한 시점에도 PhotoDump 계정이나 서버가 관여하지 않습니다.</p>
+    <h2>클라우드 서비스 대신 나만의 스토리지 운영하기</h2>
+    <p>PhotoDump의 S3 호환 및 REST 서버 지원(베타)은 홈 NAS, 셀프 호스팅 오브젝트 스토리지, 또는 사용자가 관리하는 어떤 서버에서도 작동합니다. PhotoDump 자체는 어떤 파일의 사본도 보관하지 않습니다 — 파일은 휴대폰에서 설정한 대상으로 곧바로 전송됩니다.</p>
   </div>
 
   <div class="footer">
