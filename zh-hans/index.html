@@ -5,8 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="../icon.png">
 <link rel="apple-touch-icon" href="../icon.png">
-<title>PhotoDump Export App — 支持</title>
-<meta name="description" content="PhotoDump Export App —— 关于设置、迁移、USB/SSD、S3、REST 以及隐私的支持与常见问题解答。">
+<title>PhotoDump Export App — 无需 iCloud，将 iPhone 照片和视频移出手机</title>
+<meta name="description" content="PhotoDump Export App 可将照片和视频从 iPhone 传输到 USB/SSD 硬盘、S3 兼容存储或你自己的 REST 服务器，包括仍存储在 iCloud 中的文件。之后无需 iCloud 存储订阅。">
+<meta name="keywords" content="iOS 照片迁移应用, 将 iPhone 照片传输到外部硬盘, iCloud 存储替代方案, iPhone 存储空间已满, 不用 iCloud 备份 iPhone 照片">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/zh-hans/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PhotoDump — 无需 iCloud，将 iPhone 照片和视频移出手机">
+<meta property="og:description" content="将照片和视频传输到你自己拥有的硬盘，包括仍在 iCloud 中的文件，无需 iCloud 存储订阅。">
+<meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/zh-hans/index.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PhotoDump — 无需 iCloud，将 iPhone 照片和视频移出手机">
+<meta name="twitter:description" content="将照片和视频传输到你自己拥有的硬盘，包括仍在 iCloud 中的文件，无需 iCloud 存储订阅。">
 <link rel="stylesheet" href="../style.css">
 <link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/index.html">
 <link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/index.html">
@@ -20,16 +30,31 @@
 <link rel="alternate" hreflang="ar" href="https://saparjohnick.github.io/photodumpapp/ar/index.html">
 <link rel="alternate" hreflang="kk" href="https://saparjohnick.github.io/photodumpapp/kk/index.html">
 <link rel="alternate" hreflang="x-default" href="https://saparjohnick.github.io/photodumpapp/index.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PhotoDump Export App",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "iOS 16+",
+  "description": "PhotoDump 会将照片和视频从 iPhone 的照片图库传输到 USB 或 SSD 硬盘、S3 兼容存储，或用户自己掌控的 REST 服务器，包括仍存储在 iCloud 中的文件。文件不会在手机上保留第二份副本，之后也不需要 iCloud 存储订阅。",
+  "offers": {
+    "@type": "Offer",
+    "price": "4.99",
+    "priceCurrency": "USD"
+  }
+}
+</script>
 </head>
 <body>
 <div class="wrap">
   <img class="icon" src="../icon.png" alt="PhotoDump">
-  <h1>PhotoDump 支持</h1>
-  <p class="subtitle">常见问题解答。没有找到你要找的问题？请给我们发消息。</p>
+  <h1>把照片从 iPhone 移出来，而不是搬进你租来的云端</h1>
+  <p class="subtitle">PhotoDump Export App 会把照片和视频复制到你自己拥有的硬盘——USB/SSD、S3 或你自己的服务器。</p>
 
   <nav class="pages">
-    <a href="info.html">迁移</a>
-    <a href="index.html" class="active">支持</a>
+    <a href="index.html" class="active">迁移</a>
+    <a href="support.html">支持</a>
     <a href="privacy.html">隐私政策</a>
   </nav>
 
@@ -49,177 +74,31 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-<a class="btn" href="mailto:saparjohnick@gmail.com?subject=PhotoDump%20反馈">发送反馈</a>
-
-  <p class="section-title">入门指南</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>PhotoDump 是做什么的？</summary>
-      <div class="faq-body"><p>PhotoDump 会将你的照片和视频（包括实况照片）以原始质量从 iPhone 复制到你自己掌控的目标位置：USB 或 SSD 硬盘、你自己的 S3 兼容存储，或者你自己运行的 REST 服务器。</p></div>
-    </details>
-    <details class="faq">
-      <summary>支持哪些目标位置？</summary>
-      <div class="faq-body"><p>USB/SSD 硬盘、S3 兼容的对象存储（AWS S3、MinIO 及其他兼容服务），以及你自己掌控的 REST 服务器。目前 USB/SSD 是最成熟的选项；S3 和 REST 标注为测试版。</p></div>
-    </details>
-    <details class="faq">
-      <summary>我需要创建账户吗？</summary>
-      <div class="faq-body"><p>不需要。没有注册、登录，也没有任何形式的 PhotoDump 账户。你只需要配置想要使用的目标位置。</p></div>
-    </details>
-    <details class="faq">
-      <summary>有订阅或应用内购买吗？</summary>
-      <div class="faq-body"><p>没有持续订阅。PhotoDump 是一次性购买，购买后即可解锁所有目标位置，包括测试版功能。</p></div>
-    </details>
-    <details class="faq">
-      <summary>需要什么 iOS 版本？</summary>
-      <div class="faq-body"><p>iOS 16 或更高版本。部分功能（例如锁屏上的实时活动）会在设备支持的情况下利用更新的 iOS 版本。</p></div>
-    </details>
-    <details class="faq">
-      <summary>PhotoDump 支持哪些语言？</summary>
-      <div class="faq-body"><p>英语、俄语、德语、法语、西班牙语、葡萄牙语（巴西）、简体中文、日语、韩语、阿拉伯语和哈萨克语。应用会自动跟随设备语言，你也可以在“设置”中手动选择。</p></div>
-    </details>
+<div class="card">
+    <h2>iPhone 存储空间已满？</h2>
+    <p>把照片和视频移出手机，而不是删除它们——只有在硬盘上确认存在后，文件才会被标记为可以安全删除。</p>
+    <p><a href="iphone-storage-full.html">阅读更多 →</a></p>
   </div>
 
-  <p class="section-title">USB 与 SSD</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>如何连接 USB 或 SSD 硬盘？</summary>
-      <div class="faq-body"><p>将硬盘连接到你的 iPhone（可直接连接或通过转接头），打开 PhotoDump，选择“USB 硬盘”作为目标位置。系统提示时授予文件夹访问权限。</p></div>
-    </details>
-    <details class="faq">
-      <summary>USB/SSD 真的是 100% 本地传输、无需联网吗？</summary>
-      <div class="faq-body"><p>是的。文件会直接从你的照片图库流式传输到硬盘，不会上传到任何地方，传输过程本身不需要网络连接（只有在下载仍存储于 iCloud 而非设备本地的原始文件时才需要联网）。</p></div>
-    </details>
-    <details class="faq">
-      <summary>一个硬盘可以给多台 iPhone 使用吗？</summary>
-      <div class="faq-body"><p>可以。在设置时为每台设备指定不同的目标文件夹名称，这样它们的记录会保持独立，不同手机的文件也不会混在一起。</p></div>
-    </details>
-    <details class="faq">
-      <summary>迁移过程中硬盘断开连接会怎样？</summary>
-      <div class="faq-body"><p>迁移会自动暂停。重新连接硬盘后，迁移会从中断的地方精确恢复——不会重复复制，也不会丢失文件。</p></div>
-    </details>
-    <details class="faq">
-      <summary>为什么应用要求输入文件夹名称？</summary>
-      <div class="faq-body"><p>文件夹名称决定了你的文件（以及 PhotoDump 的内部记录数据库）在硬盘上的存储位置。这也是多台设备共用一个硬盘时文件不会混在一起的原因。</p></div>
-    </details>
-    <details class="faq">
-      <summary>PhotoDump 会格式化或清除我的硬盘吗？</summary>
-      <div class="faq-body"><p>不会。PhotoDump 只会写入你选择的目标文件夹，绝不会格式化、清除硬盘上的其他内容，也不会触碰硬盘上的其他数据。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">S3 与 REST（测试版）</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>如何设置 S3 兼容目标位置？</summary>
-      <div class="faq-body"><p>选择“S3 存储”作为目标位置，然后输入存储桶名称、区域、访问密钥和密钥。任何 S3 兼容的服务商都可以使用，不限于 AWS。</p></div>
-    </details>
-    <details class="faq">
-      <summary>只支持 Amazon S3 吗？</summary>
-      <div class="faq-body"><p>不是。任何支持 S3 API 的存储服务都可以使用，包括 MinIO 等自建方案，使用方式相同。</p></div>
-    </details>
-    <details class="faq">
-      <summary>如何设置 REST 服务器目标位置？</summary>
-      <div class="faq-body"><p>选择“REST API”作为目标位置，提供服务器的上传 URL 以及所需的身份验证请求头。具体的请求格式请参阅应用内的设置指南。</p></div>
-    </details>
-    <details class="faq">
-      <summary>为什么 S3 和 REST 标注为测试版？</summary>
-      <div class="faq-body"><p>它们比 USB/SSD 支持推出得更晚，目前仍在针对网络中断、不同服务商的特殊情况等边缘场景进行完善。使用它们是安全的，但目前 USB/SSD 是经过最充分验证的方案。</p></div>
-    </details>
-    <details class="faq">
-      <summary>我的 S3 访问密钥存储安全吗？</summary>
-      <div class="faq-body"><p>安全。凭证存储在设备的钥匙串中，这与 iOS 存储密码所使用的安全存储方式相同，且只会直接发送到你配置的目标位置，不会发送到其他任何地方。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">迁移</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>“可安全删除”是如何判定的？</summary>
-      <div class="faq-body"><p>只有在 PhotoDump 确认文件已存在于目标位置之后，才会将手机上的文件标记为可安全删除。在通过该检查之前，不会建议删除任何内容。</p></div>
-    </details>
-    <details class="faq">
-      <summary>可以暂停并恢复迁移吗？</summary>
-      <div class="faq-body"><p>可以，随时都可以。关闭应用后再回来，迁移会从中断的地方继续，而不会从头开始。</p></div>
-    </details>
-    <details class="faq">
-      <summary>为什么迁移速度很慢，或卡在从 iCloud 下载？</summary>
-      <div class="faq-body"><p>如果照片或视频仍存储在 iCloud 而非设备本地，下载速度取决于 Apple 的 iCloud 服务针对你账户所允许的速度。这一速度由 Apple 控制，而非 PhotoDump。文件下载完成后，就不再依赖 iCloud 了。</p></div>
-    </details>
-    <details class="faq">
-      <summary>迁移过程中手机锁屏会怎样？</summary>
-      <div class="faq-body"><p>迁移界面打开时，PhotoDump 会阻止屏幕自动锁定，因此你可以安全地调暗亮度。如果你手动锁屏，迁移会暂停，解锁后会自动恢复。</p></div>
-    </details>
-    <details class="faq">
-      <summary>迁移可以在后台运行吗？</summary>
-      <div class="faq-body"><p>iOS 对所有应用的后台照片上传都有限制，因此 PhotoDump 在应用保持打开状态时效果最佳。它会使用实时活动在锁屏上显示进度，如果后台运行时间用尽，会提示你重新打开应用。</p></div>
-    </details>
-    <details class="faq">
-      <summary>文件迁移失败会怎样？</summary>
-      <div class="faq-body"><p>PhotoDump 会自动重试失败的文件几次，之后才会将其标记为失败。失败的项目会列在迁移日志中，你可以随时手动重试。</p></div>
-    </details>
-    <details class="faq">
-      <summary>PhotoDump 会自动删除我的照片吗？</summary>
-      <div class="faq-body"><p>不会。PhotoDump 只会将文件标记为可安全删除——它绝不会自行从你的照片图库中删除任何内容。删除操作始终需要你手动执行。</p></div>
-    </details>
-    <details class="faq">
-      <summary>可以选择要迁移哪些相册或照片吗？</summary>
-      <div class="faq-body"><p>可以。你可以迁移整个图库，也可以在迁移设置界面中选择特定的预设和相册。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">浏览与搜索</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>可以像“照片”应用一样浏览我的目标位置吗？</summary>
-      <div class="faq-body"><p>可以。无论文件仍在手机上还是已经迁移到目标位置，相册、全屏查看和搜索的使用方式都是一样的。</p></div>
-    </details>
-    <details class="faq">
-      <summary>搜索是如何工作的？</summary>
-      <div class="faq-body"><p>PhotoDump 会在设备本地为每张照片的内容（人物、地点、物体）以及拍摄地点建立索引，因此你可以按内容或位置搜索，而无需输入精确的文件名或日期。</p></div>
-    </details>
-    <details class="faq">
-      <summary>硬盘未连接时搜索还能用吗？</summary>
-      <div class="faq-body"><p>当源硬盘当前无法访问时，搜索标签会被隐藏，这样你就不会得到指向当前实际无法打开内容的搜索结果。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">存储与缓存</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>PhotoDump 会占用手机上的额外存储空间吗？</summary>
-      <div class="faq-body"><p>不会占用有意义的空间。PhotoDump 不会在手机存储中保留已迁移文件的第二份副本。传输过程中使用的少量临时文件会被自动清理。</p></div>
-    </details>
-    <details class="faq">
-      <summary>“设置”中的“清除缓存”有什么作用？</summary>
-      <div class="faq-body"><p>它会清除缩略图，以及因迁移中断或视频预览而残留的临时文件，立即释放空间，而不必等待自动清理。</p></div>
-    </details>
-    <details class="faq">
-      <summary>USB/SSD 的存储占用方式与 S3/REST 不同吗？</summary>
-      <div class="faq-body"><p>USB/SSD 完全不会把文件复制到手机本地存储——它是直接流式传输到硬盘的。S3/REST 在上传文件时会短暂地在本地保留文件，上传完成后会自动删除。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">隐私</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>PhotoDump 会收集分析或跟踪数据吗？</summary>
-      <div class="faq-body"><p>不会。应用中没有任何分析、崩溃报告或广告 SDK。完整详情请参阅 <a href="privacy.html">隐私政策</a>。</p></div>
-    </details>
-    <details class="faq">
-      <summary>谁能看到我的照片？</summary>
-      <div class="faq-body"><p>只有你自己。文件会直接从你的设备传输到你配置的目标位置。PhotoDump 的开发者永远不会收到你迁移内容的任何副本。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">仍需帮助？</p>
   <div class="card">
-    <h2><span class="dot"></span>联系我们</h2>
-    <p>如果上面没有涵盖你的问题，请给我们发消息，我们会尽快回复。请注明你的应用版本以及使用的目标位置类型（USB/S3/REST）——通过“设置 → 发送反馈”会自动填入这些信息。</p>
-    <a class="btn" href="mailto:saparjohnick@gmail.com?subject=PhotoDump%20反馈">发送反馈</a>
+    <h2>厌倦了为 iCloud+ 付费？</h2>
+    <p>2TB 套餐每月 $9.99，而且永远要付下去。把图库一次性迁移到你自己拥有的硬盘，然后降级或取消订阅。</p>
+    <p><a href="no-icloud-subscription.html">阅读更多 →</a></p>
+  </div>
+
+  <div class="card">
+    <h2>图库比手机存储空间还大？</h2>
+    <p>256GB 的 iPhone 依然可以把 2TB 的图库迁移到 2TB 的 SSD 上——逐个文件传输，从不需要一次性容纳全部内容。</p>
+    <p><a href="transfer-photos-to-external-drive.html">阅读更多 →</a></p>
+  </div>
+
+  <div class="card">
+    <h2>用自己的存储代替云服务商</h2>
+    <p>PhotoDump 对 S3 兼容存储和 REST 服务器的支持（测试版）适用于家用 NAS、自建对象存储，或任何你自己掌控的服务器。PhotoDump 本身不会保留任何文件的副本——文件直接从你的手机传输到你设置的目标位置。</p>
   </div>
 
   <div class="footer">
-    <p>PhotoDump Export App &middot; <a href="privacy.html">隐私政策</a></p>
+    <p>PhotoDump Export App &middot; <a href="support.html">支持</a> &middot; <a href="privacy.html">隐私政策</a></p>
   </div>
 </div>
 
