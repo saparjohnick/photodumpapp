@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transfer Photos from iPhone to External Hard Drive (Even If They're Bigger Than Your Phone) | PhotoDump</title>
+<meta name="description" content="How PhotoDump moves photos and videos from an iPhone's Photos library to a USB/SSD drive, even when the library is larger than the phone's own storage. Includes 4K/ProRes video and files still stored only in iCloud.">
+<meta name="keywords" content="transfer photos from iphone to external hard drive, move icloud photos to external hard drive, icloud photos to external ssd, backup iphone photos to external storage, transfer 4k video from iphone to hard drive">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Transfer Photos from iPhone to External Hard Drive | PhotoDump">
+<meta property="og:description" content="Move a photo library larger than your iPhone's own storage to an external drive, without freeing up space first.">
+<meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Transfer Photos from iPhone to External Hard Drive | PhotoDump">
+<meta name="twitter:description" content="Move a photo library larger than your iPhone's own storage to an external drive, without freeing up space first.">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I transfer a photo library that's bigger than my iPhone's storage to an external drive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. PhotoDump transfers one file at a time — downloading it from iCloud first if it isn't already on the device, writing it briefly to the phone, copying it to the drive, then deleting the temporary copy — so the phone never has to hold the full library at once. A 256GB iPhone can move a 2TB library to a 2TB drive this way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work for 4K and ProRes video, not just photos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, video transfers the same way as photos: one file at a time, verified on the destination before being marked complete. Video is usually what actually fills up a library, since a minute of 4K can run several hundred megabytes and ProRes is larger still."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <img class="icon" src="icon.png" alt="PhotoDump">
+  <h1>Transfer Photos to an External Drive, Even If They Don't Fit on Your Phone</h1>
+  <p class="subtitle">A 256GB iPhone can still move a 2TB library to a 2TB SSD. Here's the actual mechanism.</p>
+
+  <nav class="pages">
+    <a href="info.html">Migrate</a>
+    <a href="index.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+
+  <div class="card">
+    <h2>The case that sounds impossible</h2>
+    <p>An iPhone with 256GB of storage, iCloud Photos set to "Optimize iPhone Storage," and a library that's quietly grown to 2TB in iCloud over the years — the phone only ever kept previews and whatever was recently opened. Buy a 2TB external SSD, and the obvious question is: how does a 256GB device move 2TB of data anywhere? It would need to "hold" all of it first, and it can't.</p>
+  </div>
+
+  <div class="card">
+    <h2>It doesn't hold all of it — it never has to</h2>
+    <p>PhotoDump processes the library one file at a time (or a handful concurrently). Each file gets downloaded from iCloud if needed, written briefly to the phone, copied to the drive, confirmed, and the temporary copy deleted — all before the next file starts. At any given moment the phone is only holding whatever's currently in transit, typically under a gigabyte total. By the time the whole library has moved, the phone's storage is back where it started, and the 2TB lives entirely on the SSD.</p>
+  </div>
+
+  <div class="card">
+    <h2>Video is usually the bigger problem</h2>
+    <p>A minute of 4K video runs several hundred megabytes, and ProRes on newer iPhones is bigger still — video is usually what pushes a library from tens of gigabytes into the terabytes, not photos. It moves through the same one-file-at-a-time process, so archiving years of 4K or ProRes footage doesn't require it to ever fit on the phone.</p>
+  </div>
+
+  <div class="card">
+    <h2>One drive for the whole family</h2>
+    <p>The same drive can hold more than one iPhone's library. Each device gets its own folder, so a household can put everyone's photos on one shared 4TB or 8TB drive without anyone's files getting mixed together.</p>
+  </div>
+
+  <div class="card">
+    <h2>Related</h2>
+    <p><a href="iphone-storage-full.html">If your phone is already full right now</a> · <a href="no-icloud-subscription.html">What this means for your iCloud+ subscription</a></p>
+  </div>
+
+  <div class="footer">
+    <p>PhotoDump &middot; <a href="info.html">Migrate</a> &middot; <a href="index.html">Support</a> &middot; <a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</div>
+</body>
+</html>
