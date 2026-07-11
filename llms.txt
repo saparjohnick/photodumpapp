@@ -18,10 +18,10 @@ Key facts:
 
 ## Pages
 
-- [Support / FAQ](https://saparjohnick.github.io/photodumpapp/index.html): 33 questions and answers covering setup (USB/SSD, S3, REST), migration behavior, Safe to Delete, search, storage/cache, and privacy basics.
-- [Marketing / Use Cases](https://saparjohnick.github.io/photodumpapp/info.html): detailed use-case scenarios, including migrating a 2TB photo library off a 256GB iPhone directly to a 2TB SSD without freeing any phone storage, cancelling a paid iCloud+ plan, sharing one drive across a family's iPhones, and archiving 4K/ProRes video libraries.
+- [Support / FAQ](https://saparjohnick.github.io/photodumpapp/support.html): 33 questions and answers covering setup (USB/SSD, S3, REST), migration behavior, Safe to Delete, search, storage/cache, and privacy basics.
+- [Marketing / Use Cases](https://saparjohnick.github.io/photodumpapp/index.html): detailed use-case scenarios, including migrating a 2TB photo library off a 256GB iPhone directly to a 2TB SSD without freeing any phone storage, cancelling a paid iCloud+ plan, sharing one drive across a family's iPhones, and archiving 4K/ProRes video libraries.
 - [Privacy Policy](https://saparjohnick.github.io/photodumpapp/privacy.html): formal privacy policy, including dedicated GDPR (EU/UK/Switzerland) and CCPA/CPRA (California) sections. Summary: no personal data is collected, transmitted to, or processed by the developer at any point; all photo/video transfer happens directly between the user's device and the destination they configure.
 
-All three pages are also available translated in full at `/ru/`, `/de/`, `/fr/`, `/es/`, `/pt-br/`, `/zh-hans/`, `/ja/`, `/ko/`, `/ar/`, and `/kk/` (e.g. `https://saparjohnick.github.io/photodumpapp/ru/index.html`).
+All three pages are also available translated in full at `/ru/`, `/de/`, `/fr/`, `/es/`, `/pt-br/`, `/zh-hans/`, `/ja/`, `/ko/`, `/ar/`, and `/kk/` (e.g. `https://saparjohnick.github.io/photodumpapp/ru/support.html`).
 
 Contact: use the "Send Feedback" link on the Support page (opens a pre-addressed email).
