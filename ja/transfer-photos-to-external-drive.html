@@ -67,7 +67,23 @@
     <a href="privacy.html">プライバシーポリシー</a>
   </nav>
 
-  <div class="card">
+  
+  <div class="lang-switcher">
+    <select id="langSwitch" aria-label="Language">
+      <option value="">English</option>
+      <option value="ru/">Русский</option>
+      <option value="de/">Deutsch</option>
+      <option value="fr/">Français</option>
+      <option value="es/">Español</option>
+      <option value="pt-br/">Português (Brasil)</option>
+      <option value="zh-hans/">简体中文</option>
+      <option value="ja/">日本語</option>
+      <option value="ko/">한국어</option>
+      <option value="ar/">العربية</option>
+      <option value="kk/">Қазақша</option>
+    </select>
+  </div>
+<div class="card">
     <h2>不可能に思えるケース</h2>
     <p>ストレージ256GBのiPhoneで、「iPhoneのストレージを最適化」を有効にしたiCloud写真を使っていて、ライブラリは何年もかけて静かにiCloud上で2TBまで膨らんでいた — スマートフォンにはプレビューと最近開いたものだけが保存されていました。2TBの外付けSSDを購入すると、当然こんな疑問が浮かびます。256GBのデバイスがどうやって2TBのデータをどこかへ移動できるのか？まずすべてを「保持」する必要があるはずですが、それはできません。</p>
   </div>
@@ -96,5 +112,22 @@
     <p>PhotoDump &middot; <a href="info.html">移行</a> &middot; <a href="index.html">サポート</a> &middot; <a href="privacy.html">プライバシーポリシー</a></p>
   </div>
 </div>
+
+<script>
+(function() {
+  var langs = ["ru","de","fr","es","pt-br","zh-hans","ja","ko","ar","kk"];
+  var parts = location.pathname.split('/').filter(Boolean);
+  var filename = parts[parts.length - 1] || 'index.html';
+  var maybeLang = parts.length >= 2 ? parts[parts.length - 2] : null;
+  var currentPrefix = (maybeLang && langs.indexOf(maybeLang) !== -1) ? maybeLang + '/' : '';
+  var select = document.getElementById('langSwitch');
+  if (select) {
+    select.value = currentPrefix;
+    select.addEventListener('change', function() {
+      location.href = select.value + filename;
+    });
+  }
+})();
+</script>
 </body>
 </html>
