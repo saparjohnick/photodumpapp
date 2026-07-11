@@ -67,7 +67,23 @@
     <a href="privacy.html">Politique de confidentialité</a>
   </nav>
 
-  <div class="card">
+  
+  <div class="lang-switcher">
+    <select id="langSwitch" aria-label="Language">
+      <option value="">English</option>
+      <option value="ru/">Русский</option>
+      <option value="de/">Deutsch</option>
+      <option value="fr/">Français</option>
+      <option value="es/">Español</option>
+      <option value="pt-br/">Português (Brasil)</option>
+      <option value="zh-hans/">简体中文</option>
+      <option value="ja/">日本語</option>
+      <option value="ko/">한국어</option>
+      <option value="ar/">العربية</option>
+      <option value="kk/">Қазақша</option>
+    </select>
+  </div>
+<div class="card">
     <h2>La notification à l'origine de tout ça</h2>
     <p>Presque personne n'ouvre une application de migration de photos parce qu'il prépare un grand projet d'archivage. C'est généralement l'avertissement « Stockage presque plein » qui bloque une mise à jour système, ou une nouvelle application qui refuse de s'installer. Le réflexe est de commencer à supprimer des choses — mais supprimer est irréversible, et trier des milliers de photos pour trouver ce qui peut être retiré sans risque n'est pas réaliste.</p>
   </div>
@@ -91,5 +107,22 @@
     <p>PhotoDump &middot; <a href="info.html">Migrer</a> &middot; <a href="index.html">Assistance</a> &middot; <a href="privacy.html">Politique de confidentialité</a></p>
   </div>
 </div>
+
+<script>
+(function() {
+  var langs = ["ru","de","fr","es","pt-br","zh-hans","ja","ko","ar","kk"];
+  var parts = location.pathname.split('/').filter(Boolean);
+  var filename = parts[parts.length - 1] || 'index.html';
+  var maybeLang = parts.length >= 2 ? parts[parts.length - 2] : null;
+  var currentPrefix = (maybeLang && langs.indexOf(maybeLang) !== -1) ? maybeLang + '/' : '';
+  var select = document.getElementById('langSwitch');
+  if (select) {
+    select.value = currentPrefix;
+    select.addEventListener('change', function() {
+      location.href = select.value + filename;
+    });
+  }
+})();
+</script>
 </body>
 </html>
