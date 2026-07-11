@@ -18,8 +18,8 @@
 
 ## ページ
 
-- [サポート / よくある質問](https://saparjohnick.github.io/photodumpapp/ja/index.html)：設定（USB/SSD、S3、REST）、移行の動作、Safe to Delete、検索、ストレージ/キャッシュ、プライバシーに関する33の質問と回答。
-- [製品紹介 / 活用事例](https://saparjohnick.github.io/photodumpapp/ja/info.html)：256GBのiPhoneから2TBの写真ライブラリを、事前に容量を空けることなく2TBのSSDへ直接移行するケースをはじめ、有料のiCloud+プランの解約、家族で1台のドライブを共有する方法、4K/ProRes動画ライブラリのアーカイブなど、詳細な活用事例。
+- [サポート / よくある質問](https://saparjohnick.github.io/photodumpapp/ja/support.html)：設定（USB/SSD、S3、REST）、移行の動作、Safe to Delete、検索、ストレージ/キャッシュ、プライバシーに関する33の質問と回答。
+- [製品紹介 / 活用事例](https://saparjohnick.github.io/photodumpapp/ja/index.html)：256GBのiPhoneから2TBの写真ライブラリを、事前に容量を空けることなく2TBのSSDへ直接移行するケースをはじめ、有料のiCloud+プランの解約、家族で1台のドライブを共有する方法、4K/ProRes動画ライブラリのアーカイブなど、詳細な活用事例。
 - [プライバシーポリシー](https://saparjohnick.github.io/photodumpapp/ja/privacy.html)：GDPR（EU/英国/スイス）およびCCPA/CPRA（カリフォルニア州）に関する専用セクションを含む正式なプライバシーポリシー。要点：開発者はいかなる時点でも個人データを収集・受信・処理しません。ファイル転送はすべて、ユーザーの端末と設定した転送先の間で直接行われます。
 
 これら3つのページは、英語、ロシア語、ドイツ語、フランス語、スペイン語、ポルトガル語（ブラジル）、簡体字中国語、韓国語、アラビア語、カザフ語でも全文が利用可能です（`/ru/`、`/de/`、`/fr/`、`/es/`、`/pt-br/`、`/zh-hans/`、`/ko/`、`/ar/`、`/kk/` フォルダおよびサイトのルート（英語））。
