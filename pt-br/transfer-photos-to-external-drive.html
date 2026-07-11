@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Transferir fotos do iPhone para um HD externo (mesmo que sejam maiores que o seu telefone) | PhotoDump</title>
+<meta name="description" content="Como o PhotoDump move fotos e vídeos da biblioteca de Fotos de um iPhone para um drive USB/SSD, mesmo quando a biblioteca é maior que o próprio armazenamento do telefone. Inclui vídeo 4K/ProRes e arquivos que ainda estão só no iCloud.">
+<meta name="keywords" content="transferir fotos do iphone para um hd externo, mover fotos do icloud para um hd externo, fotos do icloud para ssd externo, fazer backup das fotos do iphone em armazenamento externo, transferir vídeo 4k do iphone para um hd">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/pt-br/transfer-photos-to-external-drive.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Transferir fotos do iPhone para um HD externo | PhotoDump">
+<meta property="og:description" content="Mova uma biblioteca de fotos maior que o próprio armazenamento do seu iPhone para um drive externo, sem precisar liberar espaço antes.">
+<meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/pt-br/transfer-photos-to-external-drive.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Transferir fotos do iPhone para um HD externo | PhotoDump">
+<meta name="twitter:description" content="Mova uma biblioteca de fotos maior que o próprio armazenamento do seu iPhone para um drive externo, sem precisar liberar espaço antes.">
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="de" href="https://saparjohnick.github.io/photodumpapp/de/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="fr" href="https://saparjohnick.github.io/photodumpapp/fr/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="es" href="https://saparjohnick.github.io/photodumpapp/es/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="pt-BR" href="https://saparjohnick.github.io/photodumpapp/pt-br/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://saparjohnick.github.io/photodumpapp/zh-hans/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ja" href="https://saparjohnick.github.io/photodumpapp/ja/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ko" href="https://saparjohnick.github.io/photodumpapp/ko/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ar" href="https://saparjohnick.github.io/photodumpapp/ar/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="kk" href="https://saparjohnick.github.io/photodumpapp/kk/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="x-default" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Posso transferir uma biblioteca de fotos maior que o armazenamento do meu iPhone para um drive externo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O PhotoDump transfere um arquivo de cada vez — baixando-o primeiro do iCloud se ele ainda não estiver no dispositivo, gravando-o brevemente no telefone, copiando-o para o drive, e depois excluindo a cópia temporária — assim o telefone nunca precisa conter a biblioteca inteira de uma vez. Um iPhone de 256 GB pode mover uma biblioteca de 2 TB para um drive de 2 TB dessa forma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Isso funciona para vídeo 4K e ProRes, não só fotos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, o vídeo é transferido da mesma forma que as fotos: um arquivo de cada vez, verificado no destino antes de ser marcado como concluído. Vídeo costuma ser o que realmente lota uma biblioteca, já que um minuto de 4K pode ter várias centenas de megabytes, e o ProRes é ainda maior."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <img class="icon" src="../icon.png" alt="PhotoDump">
+  <h1>Transfira fotos para um drive externo, mesmo que não caibam no seu telefone</h1>
+  <p class="subtitle">Um iPhone de 256 GB ainda consegue mover uma biblioteca de 2 TB para um SSD de 2 TB. Veja como isso funciona de verdade.</p>
+
+  <nav class="pages">
+    <a href="info.html">Migrar</a>
+    <a href="index.html">Suporte</a>
+    <a href="privacy.html">Política de Privacidade</a>
+  </nav>
+
+  <div class="card">
+    <h2>O caso que parece impossível</h2>
+    <p>Um iPhone com 256 GB de armazenamento, iCloud Fotos configurado com "Otimizar Armazenamento do iPhone", e uma biblioteca que cresceu discretamente para 2 TB no iCloud ao longo dos anos — o telefone sempre manteve apenas prévias e o que foi aberto recentemente. Compre um SSD externo de 2 TB, e a pergunta óbvia é: como um dispositivo de 256 GB move 2 TB de dados para algum lugar? Ele precisaria "conter" tudo primeiro, e não consegue.</p>
+  </div>
+
+  <div class="card">
+    <h2>Ele não contém tudo — nunca precisa</h2>
+    <p>O PhotoDump processa a biblioteca um arquivo de cada vez (ou alguns poucos em paralelo). Cada arquivo é baixado do iCloud se necessário, gravado brevemente no telefone, copiado para o drive, confirmado, e a cópia temporária é excluída — tudo antes de o próximo arquivo começar. A qualquer momento, o telefone contém apenas o que está atualmente em trânsito, tipicamente menos de um gigabyte no total. Quando toda a biblioteca é movida, o armazenamento do telefone volta para onde começou, e os 2 TB ficam inteiramente no SSD.</p>
+  </div>
+
+  <div class="card">
+    <h2>Vídeo costuma ser o problema maior</h2>
+    <p>Um minuto de vídeo 4K tem várias centenas de megabytes, e o ProRes nos iPhones mais recentes é ainda maior — vídeo, e não fotos, costuma ser o que leva uma biblioteca de dezenas de gigabytes para a faixa dos terabytes. Ele passa pelo mesmo processo de um arquivo de cada vez, então arquivar anos de filmagens 4K ou ProRes nunca exige que caibam no telefone.</p>
+  </div>
+
+  <div class="card">
+    <h2>Um drive para a família toda</h2>
+    <p>O mesmo drive pode conter a biblioteca de mais de um iPhone. Cada dispositivo tem sua própria pasta, então uma casa pode colocar as fotos de todos em um único drive compartilhado de 4 TB ou 8 TB sem que os arquivos de ninguém se misturem.</p>
+  </div>
+
+  <div class="card">
+    <h2>Relacionado</h2>
+    <p><a href="iphone-storage-full.html">Se o seu telefone já está cheio agora</a> · <a href="no-icloud-subscription.html">O que isso significa para a sua assinatura do iCloud+</a></p>
+  </div>
+
+  <div class="footer">
+    <p>PhotoDump &middot; <a href="info.html">Migrar</a> &middot; <a href="index.html">Suporte</a> &middot; <a href="privacy.html">Política de Privacidade</a></p>
+  </div>
+</div>
+</body>
+</html>
