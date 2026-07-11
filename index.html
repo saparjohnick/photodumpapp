@@ -5,8 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
-<title>PhotoDump Export App — Support</title>
-<meta name="description" content="PhotoDump Export App — support and answers to common questions about setup, migration, USB/SSD, S3, REST, and privacy.">
+<title>PhotoDump Export App — Move iPhone Photos and Videos Off Your Phone Without iCloud</title>
+<meta name="description" content="PhotoDump Export App transfers photos and videos from an iPhone to a USB/SSD drive, S3-compatible storage, or your own REST server, including files still stored in iCloud. No iCloud storage subscription needed afterward.">
+<meta name="keywords" content="photo migration app ios, transfer photos from iphone to external hard drive, icloud storage alternative, iphone storage full, backup iphone photos without icloud">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PhotoDump — Move iPhone Photos and Videos Off Your Phone Without iCloud">
+<meta property="og:description" content="Transfer photos and videos to a drive you own, including files still in iCloud, without an iCloud storage subscription.">
+<meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/index.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PhotoDump — Move iPhone Photos and Videos Off Your Phone Without iCloud">
+<meta name="twitter:description" content="Transfer photos and videos to a drive you own, including files still in iCloud, without an iCloud storage subscription.">
 <link rel="stylesheet" href="style.css">
 <link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/index.html">
 <link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/index.html">
@@ -20,16 +30,31 @@
 <link rel="alternate" hreflang="ar" href="https://saparjohnick.github.io/photodumpapp/ar/index.html">
 <link rel="alternate" hreflang="kk" href="https://saparjohnick.github.io/photodumpapp/kk/index.html">
 <link rel="alternate" hreflang="x-default" href="https://saparjohnick.github.io/photodumpapp/index.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PhotoDump Export App",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "iOS 16+",
+  "description": "PhotoDump transfers photos and videos from an iPhone's Photos library, including files still stored in iCloud, to a USB or SSD drive, S3-compatible storage, or a REST server the user controls. Files are not kept a second time on the phone, and no iCloud storage subscription is required afterward.",
+  "offers": {
+    "@type": "Offer",
+    "price": "4.99",
+    "priceCurrency": "USD"
+  }
+}
+</script>
 </head>
 <body>
 <div class="wrap">
   <img class="icon" src="icon.png" alt="PhotoDump">
-  <h1>PhotoDump Support</h1>
-  <p class="subtitle">Answers to common questions. Can't find yours? Send us a message.</p>
+  <h1>Move Your Photos Off Your iPhone, Not Onto a Rented Cloud</h1>
+  <p class="subtitle">PhotoDump Export App copies photos and videos to a drive you own — USB/SSD, S3, or your own server.</p>
 
   <nav class="pages">
-    <a href="info.html">Migrate</a>
-    <a href="index.html" class="active">Support</a>
+    <a href="index.html" class="active">Migrate</a>
+    <a href="support.html">Support</a>
     <a href="privacy.html">Privacy Policy</a>
   </nav>
 
@@ -49,177 +74,31 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-<a class="btn" href="mailto:saparjohnick@gmail.com?subject=PhotoDump%20Feedback">Send Feedback</a>
-
-  <p class="section-title">Getting Started</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>What does PhotoDump do?</summary>
-      <div class="faq-body"><p>PhotoDump copies your photos and videos, in full quality including Live Photos, from your iPhone to a destination you control: a USB or SSD drive, your own S3-compatible storage, or a REST server you run.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Which destinations are supported?</summary>
-      <div class="faq-body"><p>USB/SSD drives, S3-compatible object storage (AWS S3, MinIO, and compatible services), and REST servers you control. USB/SSD is the most mature option today; S3 and REST are labeled Beta.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Do I need to create an account?</summary>
-      <div class="faq-body"><p>No. There is no sign-up, login, or PhotoDump account of any kind. You only configure the destination you want to use.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Is there a subscription or in-app purchase?</summary>
-      <div class="faq-body"><p>No recurring subscription. PhotoDump is a single one-time purchase that unlocks all destinations, including the Beta ones.</p></div>
-    </details>
-    <details class="faq">
-      <summary>What iOS version do I need?</summary>
-      <div class="faq-body"><p>iOS 16 or later. Some features, such as Live Activities on the Lock Screen, take advantage of newer iOS versions when available.</p></div>
-    </details>
-    <details class="faq">
-      <summary>What languages does PhotoDump support?</summary>
-      <div class="faq-body"><p>English, Russian, German, French, Spanish, Portuguese (Brazil), Chinese (Simplified), Japanese, Korean, Arabic, and Kazakh. The app follows your device's language automatically, or you can pick one manually in Settings.</p></div>
-    </details>
+<div class="card">
+    <h2>iPhone storage full?</h2>
+    <p>Move photos and videos off the phone instead of deleting them — nothing gets marked safe to delete until it's confirmed on the drive.</p>
+    <p><a href="iphone-storage-full.html">Read more →</a></p>
   </div>
 
-  <p class="section-title">USB &amp; SSD</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>How do I connect a USB or SSD drive?</summary>
-      <div class="faq-body"><p>Connect the drive to your iPhone (directly or via an adapter), open PhotoDump, and choose "USB Drive" as your destination. Grant folder access when prompted.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Is USB/SSD really 100% local, with no internet required?</summary>
-      <div class="faq-body"><p>Yes. Files stream directly from your Photos library to the drive. Nothing is uploaded anywhere, and no internet connection is needed for the transfer itself (only for downloading originals that are still stored in iCloud rather than on your device).</p></div>
-    </details>
-    <details class="faq">
-      <summary>Can I use one drive with more than one iPhone?</summary>
-      <div class="faq-body"><p>Yes. Give each device a different destination folder name during setup so their records stay separate and files from different phones don't get mixed together.</p></div>
-    </details>
-    <details class="faq">
-      <summary>What happens if the drive disconnects mid-migration?</summary>
-      <div class="faq-body"><p>Migration pauses automatically. Reconnect the drive and it resumes exactly where it left off — nothing is re-copied or lost.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Why does the app ask for a folder name?</summary>
-      <div class="faq-body"><p>The folder name determines where on the drive your files (and PhotoDump's internal record database) are stored. This is what keeps multiple devices sharing one drive from mixing their files together.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Does PhotoDump reformat or erase my drive?</summary>
-      <div class="faq-body"><p>No. PhotoDump only writes into the destination folder you choose. It never reformats, erases, or touches anything else on the drive.</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">S3 &amp; REST (Beta)</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>How do I set up an S3-compatible destination?</summary>
-      <div class="faq-body"><p>Choose "S3 Storage" as your destination and enter your bucket name, region, access key, and secret key. Any S3-compatible provider works, not just AWS.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Is Amazon S3 the only supported provider?</summary>
-      <div class="faq-body"><p>No. Any storage service that speaks the S3 API — including self-hosted options like MinIO — works the same way.</p></div>
-    </details>
-    <details class="faq">
-      <summary>How do I set up a REST server destination?</summary>
-      <div class="faq-body"><p>Choose "REST API" as your destination and provide your server's upload URL and any required authentication headers. See the in-app setup guide for the exact request format PhotoDump sends.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Why are S3 and REST marked Beta?</summary>
-      <div class="faq-body"><p>They are newer than USB/SSD support and are still being hardened against edge cases like network interruptions and provider-specific quirks. They are safe to use, but USB/SSD is currently the most battle-tested path.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Is my S3 access key stored securely?</summary>
-      <div class="faq-body"><p>Yes. Credentials are stored in your device's Keychain, the same secure storage iOS uses for passwords, and are never sent anywhere except directly to the destination you configured.</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">Migration</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>How does "Safe to Delete" work?</summary>
-      <div class="faq-body"><p>A file is only marked safe to delete from your phone after PhotoDump confirms it exists on the destination. Nothing is ever suggested for deletion before that check passes.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Can I pause and resume migration?</summary>
-      <div class="faq-body"><p>Yes, at any point. Close the app, come back later, and migration continues exactly where it stopped instead of starting over.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Why is migration slow, or stuck downloading from iCloud?</summary>
-      <div class="faq-body"><p>If a photo or video is still stored in iCloud rather than on your device, downloading it runs at the speed Apple's iCloud service allows for your account. This is controlled by Apple, not by PhotoDump. Once a file is downloaded, it no longer depends on iCloud.</p></div>
-    </details>
-    <details class="faq">
-      <summary>What happens if my phone locks during migration?</summary>
-      <div class="faq-body"><p>PhotoDump keeps the screen from locking on its own while the migration screen is open, so you can dim the brightness safely. If you lock the phone manually, migration pauses and resumes once you unlock it again.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Does migration run in the background?</summary>
-      <div class="faq-body"><p>iOS limits background photo uploads for all apps, so PhotoDump works best with the app open. It uses Live Activities to show progress on your Lock Screen, and will prompt you to reopen the app if background time runs out.</p></div>
-    </details>
-    <details class="faq">
-      <summary>What happens if a file fails to migrate?</summary>
-      <div class="faq-body"><p>PhotoDump automatically retries failed files a few times before marking them as failed. Failed items are listed in the migration log and can be retried manually at any time.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Will PhotoDump ever delete my photos automatically?</summary>
-      <div class="faq-body"><p>No. PhotoDump only marks files as safe to delete — it never deletes anything from your Photos library on its own. Deleting is always a manual action you take.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Can I choose which albums or photos to migrate?</summary>
-      <div class="faq-body"><p>Yes. You can migrate your entire library or pick specific presets and albums from the migration setup screen.</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">Browsing &amp; Search</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>Can I browse my destination like the Photos app?</summary>
-      <div class="faq-body"><p>Yes. Albums, full-screen viewing, and search all work the same way whether a file is still on your phone or already migrated to your destination.</p></div>
-    </details>
-    <details class="faq">
-      <summary>How does search work?</summary>
-      <div class="faq-body"><p>PhotoDump indexes what's in each photo (people, places, objects) and where it was taken, entirely on-device, so you can search by content or location without typing exact filenames or dates.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Does search work when the drive isn't connected?</summary>
-      <div class="faq-body"><p>Search tags are hidden when the source drive isn't currently reachable, so you never get results pointing at content that can't actually be opened right now.</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">Storage &amp; Cache</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>Does PhotoDump use extra storage on my phone?</summary>
-      <div class="faq-body"><p>No meaningful amount. PhotoDump does not keep a second copy of a migrated file in your phone's storage. Small temporary files used during transfer are cleaned up automatically.</p></div>
-    </details>
-    <details class="faq">
-      <summary>What does "Clear Cache" in Settings do?</summary>
-      <div class="faq-body"><p>It clears thumbnails and any temporary files left behind by an interrupted migration or video preview, reclaiming the space immediately rather than waiting for automatic cleanup.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Is USB/SSD storage usage different from S3/REST?</summary>
-      <div class="faq-body"><p>USB/SSD never copies files into your phone's local storage at all — it streams directly to the drive. S3/REST briefly hold a file locally while uploading it, then remove it automatically.</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">Privacy</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>Does PhotoDump collect analytics or tracking data?</summary>
-      <div class="faq-body"><p>No. There is no analytics, crash reporting, or advertising SDK in the app. See the <a href="privacy.html">Privacy Policy</a> for full details.</p></div>
-    </details>
-    <details class="faq">
-      <summary>Who can see my photos?</summary>
-      <div class="faq-body"><p>Only you. Files go directly from your device to the destination you configure. PhotoDump's developer never receives a copy of anything you migrate.</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">Still Need Help?</p>
   <div class="card">
-    <h2><span class="dot"></span>Contact us</h2>
-    <p>If your question isn't covered above, send us a message and we'll get back to you. Please mention your app version and which destination type (USB/S3/REST) you're using — Settings → Send Feedback fills this in automatically.</p>
-    <a class="btn" href="mailto:saparjohnick@gmail.com?subject=PhotoDump%20Feedback">Send Feedback</a>
+    <h2>Tired of paying for iCloud+?</h2>
+    <p>A 2TB plan runs $9.99 a month, forever. Move your library to a drive you own once, then downgrade or cancel.</p>
+    <p><a href="no-icloud-subscription.html">Read more →</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Library bigger than your phone's storage?</h2>
+    <p>A 256GB iPhone can still move a 2TB library to a 2TB SSD — one file at a time, never holding it all at once.</p>
+    <p><a href="transfer-photos-to-external-drive.html">Read more →</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Running your own storage instead of a cloud provider</h2>
+    <p>PhotoDump's S3-compatible and REST server support (Beta) works with a home NAS, a self-hosted object store, or any server you control. PhotoDump itself never holds a copy of anything — files go straight from your phone to whatever destination you set up.</p>
   </div>
 
   <div class="footer">
-    <p>PhotoDump Export App &middot; <a href="privacy.html">Privacy Policy</a></p>
+    <p>PhotoDump Export App &middot; <a href="support.html">Support</a> &middot; <a href="privacy.html">Privacy Policy</a></p>
   </div>
 </div>
 
