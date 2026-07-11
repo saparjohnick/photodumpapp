@@ -18,8 +18,8 @@ Wichtige Fakten:
 
 ## Seiten
 
-- [Support / FAQ](https://saparjohnick.github.io/photodumpapp/de/index.html): 33 Fragen und Antworten zu Einrichtung (USB/SSD, S3, REST), Migrationsverhalten, Safe to Delete, Suche, Speicher/Cache und Datenschutz.
-- [Marketing / Anwendungsfälle](https://saparjohnick.github.io/photodumpapp/de/info.html): detaillierte Szenarien, u. a. die Migration einer 2-TB-Fotobibliothek von einem 256-GB-iPhone direkt auf eine 2-TB-SSD ohne vorherige Freigabe von Telefonspeicher, die Kündigung eines kostenpflichtigen iCloud+-Tarifs, die gemeinsame Nutzung eines Laufwerks durch eine Familie und die Archivierung von 4K/ProRes-Videobibliotheken.
+- [Support / FAQ](https://saparjohnick.github.io/photodumpapp/de/support.html): 33 Fragen und Antworten zu Einrichtung (USB/SSD, S3, REST), Migrationsverhalten, Safe to Delete, Suche, Speicher/Cache und Datenschutz.
+- [Marketing / Anwendungsfälle](https://saparjohnick.github.io/photodumpapp/de/index.html): detaillierte Szenarien, u. a. die Migration einer 2-TB-Fotobibliothek von einem 256-GB-iPhone direkt auf eine 2-TB-SSD ohne vorherige Freigabe von Telefonspeicher, die Kündigung eines kostenpflichtigen iCloud+-Tarifs, die gemeinsame Nutzung eines Laufwerks durch eine Familie und die Archivierung von 4K/ProRes-Videobibliotheken.
 - [Datenschutzerklärung](https://saparjohnick.github.io/photodumpapp/de/privacy.html): formelle Datenschutzerklärung mit eigenen Abschnitten zu DSGVO (EU/UK/Schweiz) und CCPA/CPRA (Kalifornien). Kurzfassung: Der Entwickler sammelt, empfängt oder verarbeitet zu keinem Zeitpunkt personenbezogene Daten — die gesamte Dateiübertragung erfolgt direkt zwischen dem Gerät des Nutzers und dem von ihm konfigurierten Ziel.
 
 Alle drei Seiten sind außerdem vollständig auf Englisch, Russisch, Französisch, Spanisch, Portugiesisch (Brasilien), Chinesisch (vereinfacht), Japanisch, Koreanisch, Arabisch und Kasachisch verfügbar — unter `/ru/`, `/fr/`, `/es/`, `/pt-br/`, `/zh-hans/`, `/ja/`, `/ko/`, `/ar/`, `/kk/` sowie im Stammverzeichnis (Englisch).
