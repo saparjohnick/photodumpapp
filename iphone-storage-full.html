@@ -67,7 +67,23 @@
     <a href="privacy.html">Privacy Policy</a>
   </nav>
 
-  <div class="card">
+  
+  <div class="lang-switcher">
+    <select id="langSwitch" aria-label="Language">
+      <option value="">English</option>
+      <option value="ru/">Русский</option>
+      <option value="de/">Deutsch</option>
+      <option value="fr/">Français</option>
+      <option value="es/">Español</option>
+      <option value="pt-br/">Português (Brasil)</option>
+      <option value="zh-hans/">简体中文</option>
+      <option value="ja/">日本語</option>
+      <option value="ko/">한국어</option>
+      <option value="ar/">العربية</option>
+      <option value="kk/">Қазақша</option>
+    </select>
+  </div>
+<div class="card">
     <h2>The notification that starts most of this</h2>
     <p>Almost nobody opens a photo migration app because they're planning a grand archiving project. Usually it's the "iPhone Storage Almost Full" warning blocking a system update, or a new app that won't install. The instinct is to start deleting things — but deleting is permanent, and picking through thousands of photos to find what's safe to remove isn't realistic.</p>
   </div>
@@ -91,5 +107,22 @@
     <p>PhotoDump &middot; <a href="info.html">Migrate</a> &middot; <a href="index.html">Support</a> &middot; <a href="privacy.html">Privacy Policy</a></p>
   </div>
 </div>
+
+<script>
+(function() {
+  var langs = ["ru","de","fr","es","pt-br","zh-hans","ja","ko","ar","kk"];
+  var parts = location.pathname.split('/').filter(Boolean);
+  var filename = parts[parts.length - 1] || 'index.html';
+  var maybeLang = parts.length >= 2 ? parts[parts.length - 2] : null;
+  var currentPrefix = (maybeLang && langs.indexOf(maybeLang) !== -1) ? maybeLang + '/' : '';
+  var select = document.getElementById('langSwitch');
+  if (select) {
+    select.value = currentPrefix;
+    select.addEventListener('change', function() {
+      location.href = select.value + filename;
+    });
+  }
+})();
+</script>
 </body>
 </html>
