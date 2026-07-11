@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoDump — Assistance</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/index.html">
+<link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/index.html">
+<link rel="alternate" hreflang="de" href="https://saparjohnick.github.io/photodumpapp/de/index.html">
+<link rel="alternate" hreflang="fr" href="https://saparjohnick.github.io/photodumpapp/fr/index.html">
+<link rel="alternate" hreflang="es" href="https://saparjohnick.github.io/photodumpapp/es/index.html">
+<link rel="alternate" hreflang="pt-BR" href="https://saparjohnick.github.io/photodumpapp/pt-br/index.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://saparjohnick.github.io/photodumpapp/zh-hans/index.html">
+<link rel="alternate" hreflang="ja" href="https://saparjohnick.github.io/photodumpapp/ja/index.html">
+<link rel="alternate" hreflang="ko" href="https://saparjohnick.github.io/photodumpapp/ko/index.html">
+<link rel="alternate" hreflang="ar" href="https://saparjohnick.github.io/photodumpapp/ar/index.html">
+<link rel="alternate" hreflang="kk" href="https://saparjohnick.github.io/photodumpapp/kk/index.html">
+<link rel="alternate" hreflang="x-default" href="https://saparjohnick.github.io/photodumpapp/index.html">
+</head>
+<body>
+<div class="wrap">
+  <img class="icon" src="../icon.png" alt="PhotoDump">
+  <h1>Assistance PhotoDump</h1>
+  <p class="subtitle">Réponses aux questions courantes. Vous ne trouvez pas la vôtre ? Envoyez-nous un message.</p>
+
+  <nav class="pages">
+    <a href="info.html">Migrer</a>
+    <a href="index.html" class="active">Assistance</a>
+    <a href="privacy.html">Politique de confidentialité</a>
+  </nav>
+
+  <a class="btn" href="mailto:saparjohnick@gmail.com?subject=Commentaires%20PhotoDump">Envoyer un commentaire</a>
+
+  <p class="section-title">Pour commencer</p>
+  <div class="faq-group">
+    <details class="faq">
+      <summary>Que fait PhotoDump ?</summary>
+      <div class="faq-body"><p>PhotoDump copie vos photos et vidéos, en qualité intégrale y compris les Live Photos, depuis votre iPhone vers une destination que vous contrôlez : un disque USB ou SSD, votre propre stockage compatible S3, ou un serveur REST que vous gérez.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Quelles destinations sont prises en charge ?</summary>
+      <div class="faq-body"><p>Les disques USB/SSD, le stockage objet compatible S3 (AWS S3, MinIO et services compatibles) et les serveurs REST que vous contrôlez. USB/SSD est l'option la plus aboutie aujourd'hui ; S3 et REST sont indiqués comme Bêta.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Dois-je créer un compte ?</summary>
+      <div class="faq-body"><p>Non. Il n'y a ni inscription, ni connexion, ni compte PhotoDump d'aucune sorte. Vous configurez uniquement la destination que vous souhaitez utiliser.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Y a-t-il un abonnement ou un achat intégré ?</summary>
+      <div class="faq-body"><p>Aucun abonnement récurrent. PhotoDump est un achat unique qui débloque toutes les destinations, y compris celles en Bêta.</p></div>
+    </details>
+    <details class="faq">
+      <summary>De quelle version d'iOS ai-je besoin ?</summary>
+      <div class="faq-body"><p>iOS 16 ou une version ultérieure. Certaines fonctionnalités, comme les Live Activities sur l'écran verrouillé, tirent parti des versions d'iOS les plus récentes lorsqu'elles sont disponibles.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Quelles langues PhotoDump prend-il en charge ?</summary>
+      <div class="faq-body"><p>Anglais, russe, allemand, français, espagnol, portugais (Brésil), chinois (simplifié), japonais, coréen, arabe et kazakh. L'application suit automatiquement la langue de votre appareil, ou vous pouvez en choisir une manuellement dans les Réglages.</p></div>
+    </details>
+  </div>
+
+  <p class="section-title">USB et SSD</p>
+  <div class="faq-group">
+    <details class="faq">
+      <summary>Comment connecter un disque USB ou SSD ?</summary>
+      <div class="faq-body"><p>Connectez le disque à votre iPhone (directement ou via un adaptateur), ouvrez PhotoDump et choisissez « Disque USB » comme destination. Autorisez l'accès au dossier lorsque cela vous est demandé.</p></div>
+    </details>
+    <details class="faq">
+      <summary>USB/SSD est-il vraiment 100 % local, sans besoin d'internet ?</summary>
+      <div class="faq-body"><p>Oui. Les fichiers sont transférés directement de votre photothèque vers le disque. Rien n'est envoyé où que ce soit, et aucune connexion internet n'est nécessaire pour le transfert lui-même (sauf pour télécharger les originaux encore stockés dans iCloud plutôt que sur votre appareil).</p></div>
+    </details>
+    <details class="faq">
+      <summary>Puis-je utiliser un même disque avec plusieurs iPhone ?</summary>
+      <div class="faq-body"><p>Oui. Donnez à chaque appareil un nom de dossier de destination différent lors de la configuration, afin que leurs enregistrements restent séparés et que les fichiers de différents téléphones ne se mélangent pas.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Que se passe-t-il si le disque se déconnecte en pleine migration ?</summary>
+      <div class="faq-body"><p>La migration se met automatiquement en pause. Reconnectez le disque et elle reprend exactement là où elle s'était arrêtée — rien n'est recopié ni perdu.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Pourquoi l'application demande-t-elle un nom de dossier ?</summary>
+      <div class="faq-body"><p>Le nom du dossier détermine où sur le disque vos fichiers (et la base de données interne de PhotoDump) sont stockés. C'est ce qui évite que plusieurs appareils partageant un même disque ne mélangent leurs fichiers.</p></div>
+    </details>
+    <details class="faq">
+      <summary>PhotoDump reformate-t-il ou efface-t-il mon disque ?</summary>
+      <div class="faq-body"><p>Non. PhotoDump écrit uniquement dans le dossier de destination que vous choisissez. Il ne reformate, n'efface ni ne touche jamais à quoi que ce soit d'autre sur le disque.</p></div>
+    </details>
+  </div>
+
+  <p class="section-title">S3 et REST (Bêta)</p>
+  <div class="faq-group">
+    <details class="faq">
+      <summary>Comment configurer une destination compatible S3 ?</summary>
+      <div class="faq-body"><p>Choisissez « Stockage S3 » comme destination et saisissez le nom de votre bucket, la région, la clé d'accès et la clé secrète. N'importe quel fournisseur compatible S3 fonctionne, pas seulement AWS.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Amazon S3 est-il le seul fournisseur pris en charge ?</summary>
+      <div class="faq-body"><p>Non. Tout service de stockage qui parle l'API S3 — y compris des options auto-hébergées comme MinIO — fonctionne de la même manière.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Comment configurer une destination de type serveur REST ?</summary>
+      <div class="faq-body"><p>Choisissez « API REST » comme destination et indiquez l'URL de téléversement de votre serveur ainsi que les en-têtes d'authentification requis. Consultez le guide de configuration intégré à l'application pour le format exact des requêtes envoyées par PhotoDump.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Pourquoi S3 et REST sont-ils marqués Bêta ?</summary>
+      <div class="faq-body"><p>Ils sont plus récents que la prise en charge USB/SSD et sont encore en cours de renforcement face à des cas limites comme les coupures réseau ou les particularités propres à certains fournisseurs. Leur utilisation est sûre, mais USB/SSD reste actuellement la voie la plus éprouvée.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Ma clé d'accès S3 est-elle stockée en toute sécurité ?</summary>
+      <div class="faq-body"><p>Oui. Les identifiants sont stockés dans le Trousseau de votre appareil, le même espace de stockage sécurisé qu'iOS utilise pour les mots de passe, et ne sont jamais envoyés ailleurs que directement vers la destination que vous avez configurée.</p></div>
+    </details>
+  </div>
+
+  <p class="section-title">Migration</p>
+  <div class="faq-group">
+    <details class="faq">
+      <summary>Comment fonctionne « Sûr à supprimer » ?</summary>
+      <div class="faq-body"><p>Un fichier n'est marqué comme sûr à supprimer de votre téléphone qu'après que PhotoDump a confirmé son existence sur la destination. Rien n'est jamais proposé à la suppression avant que cette vérification ne soit passée.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Puis-je mettre en pause et reprendre la migration ?</summary>
+      <div class="faq-body"><p>Oui, à tout moment. Fermez l'application, revenez plus tard, et la migration continue exactement là où elle s'était arrêtée au lieu de repartir de zéro.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Pourquoi la migration est-elle lente, ou bloquée en téléchargement depuis iCloud ?</summary>
+      <div class="faq-body"><p>Si une photo ou une vidéo est encore stockée dans iCloud plutôt que sur votre appareil, son téléchargement s'effectue à la vitesse que le service iCloud d'Apple autorise pour votre compte. Ceci est contrôlé par Apple, pas par PhotoDump. Une fois le fichier téléchargé, il ne dépend plus d'iCloud.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Que se passe-t-il si mon téléphone se verrouille pendant la migration ?</summary>
+      <div class="faq-body"><p>PhotoDump empêche l'écran de se verrouiller automatiquement tant que l'écran de migration est ouvert, vous pouvez donc réduire la luminosité sans risque. Si vous verrouillez le téléphone manuellement, la migration se met en pause et reprend dès que vous le déverrouillez à nouveau.</p></div>
+    </details>
+    <details class="faq">
+      <summary>La migration s'exécute-t-elle en arrière-plan ?</summary>
+      <div class="faq-body"><p>iOS limite les téléversements de photos en arrière-plan pour toutes les applications, donc PhotoDump fonctionne mieux lorsque l'application est ouverte. Il utilise les Live Activities pour afficher la progression sur votre écran verrouillé, et vous invite à rouvrir l'application si le temps d'arrière-plan vient à manquer.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Que se passe-t-il si un fichier échoue à migrer ?</summary>
+      <div class="faq-body"><p>PhotoDump retente automatiquement quelques fois les fichiers en échec avant de les marquer comme échoués. Les éléments en échec sont répertoriés dans le journal de migration et peuvent être relancés manuellement à tout moment.</p></div>
+    </details>
+    <details class="faq">
+      <summary>PhotoDump supprimera-t-il un jour mes photos automatiquement ?</summary>
+      <div class="faq-body"><p>Non. PhotoDump marque uniquement les fichiers comme sûrs à supprimer — il ne supprime jamais rien de votre photothèque de lui-même. La suppression est toujours une action manuelle que vous effectuez.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Puis-je choisir quels albums ou photos migrer ?</summary>
+      <div class="faq-body"><p>Oui. Vous pouvez migrer l'intégralité de votre photothèque ou sélectionner des préréglages et albums spécifiques depuis l'écran de configuration de la migration.</p></div>
+    </details>
+  </div>
+
+  <p class="section-title">Navigation et recherche</p>
+  <div class="faq-group">
+    <details class="faq">
+      <summary>Puis-je parcourir ma destination comme l'application Photos ?</summary>
+      <div class="faq-body"><p>Oui. Les albums, l'affichage plein écran et la recherche fonctionnent tous de la même manière, qu'un fichier soit encore sur votre téléphone ou déjà migré vers votre destination.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Comment fonctionne la recherche ?</summary>
+      <div class="faq-body"><p>PhotoDump indexe le contenu de chaque photo (personnes, lieux, objets) et l'endroit où elle a été prise, entièrement sur l'appareil, afin que vous puissiez rechercher par contenu ou par lieu sans taper de noms de fichiers ou de dates exacts.</p></div>
+    </details>
+    <details class="faq">
+      <summary>La recherche fonctionne-t-elle quand le disque n'est pas connecté ?</summary>
+      <div class="faq-body"><p>Les étiquettes de recherche sont masquées lorsque le disque source n'est pas actuellement accessible, afin que vous n'obteniez jamais de résultats pointant vers un contenu qui ne peut pas réellement être ouvert dans l'immédiat.</p></div>
+    </details>
+  </div>
+
+  <p class="section-title">Stockage et cache</p>
+  <div class="faq-group">
+    <details class="faq">
+      <summary>PhotoDump utilise-t-il de l'espace de stockage supplémentaire sur mon téléphone ?</summary>
+      <div class="faq-body"><p>Aucune quantité significative. PhotoDump ne conserve pas une seconde copie d'un fichier migré dans le stockage de votre téléphone. Les petits fichiers temporaires utilisés pendant le transfert sont nettoyés automatiquement.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Que fait « Vider le cache » dans les Réglages ?</summary>
+      <div class="faq-body"><p>Cela efface les vignettes et tout fichier temporaire laissé par une migration interrompue ou un aperçu vidéo, en récupérant l'espace immédiatement plutôt que d'attendre le nettoyage automatique.</p></div>
+    </details>
+    <details class="faq">
+      <summary>L'utilisation du stockage USB/SSD est-elle différente de S3/REST ?</summary>
+      <div class="faq-body"><p>USB/SSD ne copie jamais les fichiers dans le stockage local de votre téléphone — il les transfère directement vers le disque. S3/REST conserve brièvement un fichier localement pendant son téléversement, puis le supprime automatiquement.</p></div>
+    </details>
+  </div>
+
+  <p class="section-title">Confidentialité</p>
+  <div class="faq-group">
+    <details class="faq">
+      <summary>PhotoDump collecte-t-il des données d'analyse ou de suivi ?</summary>
+      <div class="faq-body"><p>Non. L'application n'intègre aucun kit d'analyse, de rapport de plantage ou de publicité. Consultez la <a href="privacy.html">Politique de confidentialité</a> pour tous les détails.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Qui peut voir mes photos ?</summary>
+      <div class="faq-body"><p>Vous seul. Les fichiers vont directement de votre appareil vers la destination que vous configurez. Le développeur de PhotoDump ne reçoit jamais de copie de quoi que ce soit que vous migrez.</p></div>
+    </details>
+  </div>
+
+  <p class="section-title">Besoin d'aide supplémentaire ?</p>
+  <div class="card">
+    <h2><span class="dot"></span>Contactez-nous</h2>
+    <p>Si votre question n'est pas couverte ci-dessus, envoyez-nous un message et nous vous répondrons. Merci de préciser la version de votre application et le type de destination (USB/S3/REST) que vous utilisez — Réglages → Envoyer un commentaire renseigne cela automatiquement.</p>
+    <a class="btn" href="mailto:saparjohnick@gmail.com?subject=Commentaires%20PhotoDump">Envoyer un commentaire</a>
+  </div>
+
+  <div class="footer">
+    <p>PhotoDump &middot; <a href="privacy.html">Politique de confidentialité</a></p>
+  </div>
+</div>
+</body>
+</html>
