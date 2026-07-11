@@ -67,7 +67,23 @@
     <a href="privacy.html">개인정보 처리방침</a>
   </nav>
 
-  <div class="card">
+  
+  <div class="lang-switcher">
+    <select id="langSwitch" aria-label="Language">
+      <option value="">English</option>
+      <option value="ru/">Русский</option>
+      <option value="de/">Deutsch</option>
+      <option value="fr/">Français</option>
+      <option value="es/">Español</option>
+      <option value="pt-br/">Português (Brasil)</option>
+      <option value="zh-hans/">简体中文</option>
+      <option value="ja/">日本語</option>
+      <option value="ko/">한국어</option>
+      <option value="ar/">العربية</option>
+      <option value="kk/">Қазақша</option>
+    </select>
+  </div>
+<div class="card">
     <h2>대부분 이 알림에서 시작됩니다</h2>
     <p>거창한 아카이빙 계획을 세우고 사진 마이그레이션 앱을 여는 사람은 거의 없습니다. 보통은 시스템 업데이트를 막거나 새 앱이 설치되지 않게 하는 "저장공간 거의 가득 참" 경고 때문입니다. 본능적으로 뭔가를 지우기 시작하게 되지만, 삭제는 되돌릴 수 없고, 수천 장의 사진 중에서 안전하게 지울 수 있는 것을 골라내는 일은 현실적이지 않습니다.</p>
   </div>
@@ -91,5 +107,22 @@
     <p>PhotoDump &middot; <a href="info.html">마이그레이션</a> &middot; <a href="index.html">지원</a> &middot; <a href="privacy.html">개인정보 처리방침</a></p>
   </div>
 </div>
+
+<script>
+(function() {
+  var langs = ["ru","de","fr","es","pt-br","zh-hans","ja","ko","ar","kk"];
+  var parts = location.pathname.split('/').filter(Boolean);
+  var filename = parts[parts.length - 1] || 'index.html';
+  var maybeLang = parts.length >= 2 ? parts[parts.length - 2] : null;
+  var currentPrefix = (maybeLang && langs.indexOf(maybeLang) !== -1) ? maybeLang + '/' : '';
+  var select = document.getElementById('langSwitch');
+  if (select) {
+    select.value = currentPrefix;
+    select.addEventListener('change', function() {
+      location.href = select.value + filename;
+    });
+  }
+})();
+</script>
 </body>
 </html>
