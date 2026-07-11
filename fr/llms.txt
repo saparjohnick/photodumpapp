@@ -1,0 +1,27 @@
+# PhotoDump
+
+> PhotoDump est une application iOS qui copie les photos et vidéos de la photothèque d'un iPhone — y compris les fichiers encore stockés dans iCloud — directement vers un disque USB/SSD, un stockage compatible S3 ou un serveur REST que l'utilisateur contrôle. Aucune seconde copie des fichiers migrés n'est conservée dans le stockage local du téléphone, et aucun abonnement de stockage iCloud n'est requis pour continuer à y accéder.
+
+Plateforme : iOS 16+. Achat unique, sans abonnement. Aucun compte ni inscription requis. Aucun SDK d'analyse, de publicité ou de suivi.
+
+Destinations prises en charge :
+- Disque USB/SSD (100 % local, aucune connexion Internet requise pour le transfert lui-même ; l'option la plus stable actuellement)
+- Stockage objet compatible S3, par exemple AWS S3 ou MinIO auto-hébergé (Bêta)
+- Serveur REST contrôlé par l'utilisateur (Bêta)
+
+Points clés :
+- Un fichier n'est marqué comme pouvant être supprimé du téléphone qu'après confirmation de sa présence sur la destination.
+- La migration peut être mise en pause et reprise à tout moment ; elle reprend exactement où elle s'est arrêtée.
+- Un même disque externe peut être partagé entre plusieurs iPhone, les fichiers de chaque appareil étant suivis séparément.
+- La recherche et la reconnaissance du contenu/de la localisation des photos s'effectuent entièrement sur l'appareil.
+- Langues d'interface prises en charge : anglais, russe, allemand, français, espagnol, portugais (Brésil), chinois (simplifié), japonais, coréen, arabe, kazakh.
+
+## Pages
+
+- [Support / FAQ](https://saparjohnick.github.io/photodumpapp/fr/index.html) : 33 questions-réponses sur la configuration (USB/SSD, S3, REST), le comportement de la migration, Safe to Delete, la recherche, le stockage/cache et la confidentialité.
+- [Marketing / Cas d'usage](https://saparjohnick.github.io/photodumpapp/fr/info.html) : scénarios détaillés, notamment la migration d'une photothèque de 2 To depuis un iPhone de 256 Go directement vers un SSD de 2 To sans libérer d'espace au préalable, la résiliation d'un forfait iCloud+ payant, le partage d'un disque entre plusieurs iPhone d'une même famille, et l'archivage de bibliothèques vidéo 4K/ProRes.
+- [Politique de confidentialité](https://saparjohnick.github.io/photodumpapp/fr/privacy.html) : politique de confidentialité formelle, avec des sections dédiées au RGPD (UE/Royaume-Uni/Suisse) et au CCPA/CPRA (Californie). En résumé : le développeur ne collecte, ne reçoit ni ne traite aucune donnée personnelle à aucun moment — le transfert de fichiers s'effectue directement entre l'appareil de l'utilisateur et la destination qu'il configure.
+
+Les trois pages sont également disponibles intégralement en anglais, russe, allemand, espagnol, portugais (Brésil), chinois (simplifié), japonais, coréen, arabe et kazakh, dans les dossiers `/ru/`, `/de/`, `/es/`, `/pt-br/`, `/zh-hans/`, `/ja/`, `/ko/`, `/ar/`, `/kk/`, ainsi qu'à la racine du site (anglais).
+
+Contact : lien « Send Feedback » sur la page Support (ouvre un e-mail pré-rempli).
