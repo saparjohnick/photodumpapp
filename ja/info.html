@@ -3,18 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PhotoDump — iCloudストレージを使わずにiPhoneの写真・動画をUSB/SSDドライブへ移動</title>
-<meta name="description" content="PhotoDumpは、iPhoneの写真ライブラリ（iCloudにまだ保存されているファイルを含む）から、USB/SSDドライブ、S3互換ストレージ、あるいは自分自身のRESTサーバーへ写真や動画を直接移行します。スマートフォンのローカルストレージを圧迫することなく、iCloudストレージのサブスクリプションも不要です。">
-<meta name="keywords" content="iCloudストレージの支払いをやめる, iCloudストレージの代替, iPhoneの写真を外付けドライブに移動, iPhoneの写真をSSDに移行, 写真を削除せずにiPhoneのストレージを空ける, iPhoneの写真をUSBドライブに転送, iCloudを使わないiPhone写真バックアップ, iPhoneの写真をハードドライブにオフロード, iCloud写真を外付けSSDへ, iOS写真移行アプリ">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>PhotoDump — iCloudを使わずにiPhoneの写真と動画をスマートフォンから移動</title>
+<meta name="description" content="PhotoDumpは、iPhoneの写真や動画をUSB/SSDドライブ、S3互換ストレージ、または自分自身のRESTサーバーへ転送します。iCloudにまだ保存されているファイルも含まれます。転送後はiCloudストレージのサブスクリプションも不要です。">
+<meta name="keywords" content="iOS 写真移行アプリ, iPhoneの写真を外付けハードドライブに転送, iCloudストレージの代替, iPhoneのストレージが一杯, iCloudを使わずにiPhoneの写真をバックアップ">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/ja/info.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PhotoDump — iCloudを使わずにiPhoneの写真をUSB/SSDドライブへ移動">
-<meta property="og:description" content="256GBのiPhoneから2TBの写真ライブラリを、スマートフォンの容量を1メガバイトも空けることなく、iCloudストレージのサブスクリプションも使わずに、外付けドライブへ直接移行します。">
+<meta property="og:title" content="PhotoDump — iCloudを使わずにiPhoneの写真と動画をスマートフォンから移動">
+<meta property="og:description" content="自分が所有するドライブへ写真や動画を転送します。iCloudにまだ残っているファイルも含め、iCloudストレージのサブスクリプションなしで。">
 <meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/ja/info.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PhotoDump — iCloudを使わずにiPhoneの写真をUSB/SSDドライブへ移動">
-<meta name="twitter:description" content="256GBのiPhoneから2TBの写真ライブラリを、スマートフォンの容量を1メガバイトも空けることなく、外付けドライブへ直接移行します。">
+<meta name="twitter:title" content="PhotoDump — iCloudを使わずにiPhoneの写真と動画をスマートフォンから移動">
+<meta name="twitter:description" content="自分が所有するドライブへ写真や動画を転送します。iCloudにまだ残っているファイルも含め、iCloudストレージのサブスクリプションなしで。">
 <link rel="stylesheet" href="../style.css">
 <link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/info.html">
 <link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/info.html">
@@ -35,7 +37,7 @@
   "name": "PhotoDump",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "iOS 16+",
-  "description": "PhotoDumpは、iCloudにまだ保存されているファイルを含む、iPhoneの写真ライブラリ内の写真や動画を、USBやSSDドライブ、S3互換ストレージ、またはユーザー自身が管理するRESTサーバーへ直接コピーします。スマートフォンのローカルストレージに2つ目のコピーを保持することはなく、iCloudストレージのサブスクリプションも必要ありません。",
+  "description": "PhotoDumpは、iCloudにまだ保存されているファイルを含む、iPhoneの写真ライブラリ内の写真や動画を、USBまたはSSDドライブ、S3互換ストレージ、あるいはユーザー自身が管理するRESTサーバーへ転送します。ファイルはスマートフォンに二重に保持されることはなく、転送後はiCloudストレージのサブスクリプションも不要です。",
   "offers": {
     "@type": "Offer",
     "price": "4.99",
@@ -43,36 +45,12 @@
   }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "256GBのiPhoneから2TBの写真ライブラリを2TBのSSDへ移行できますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "はい。PhotoDumpは、写真ライブラリ内の各写真や動画を（デバイスにまだ保存されていない場合はまずiCloudからダウンロードした上で）1ファイルずつ外付けドライブへ直接ストリーミングします。転送中はスマートフォンに小さな一時バッファのみを書き込み、ドライブ上でファイルが確認され次第、直ちに削除します。スマートフォンのローカルストレージがライブラリ全体を一度に保持する必要は決してないため、256GBのデバイスでも、事前に容量を空けることなく2TBのライブラリを2TBのドライブへ移行できます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "PhotoDumpはiCloudストレージのサブスクリプションの代わりになりますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "USB/SSDドライブなどの保存先へすでに移行したファイルについては、代わりになります。ファイルが一度ドライブにコピーされれば、PhotoDump自身の閲覧・検索機能を通じてアクセスし続けるためにiCloudに保存しておく必要はなくなります。多くのユーザーは、自分が所有するドライブへライブラリを移行した後、有料のiCloud+ストレージプランをダウングレードまたは解約しています。"
-      }
-    }
-  ]
-}
-</script>
 </head>
 <body>
 <div class="wrap">
   <img class="icon" src="../icon.png" alt="PhotoDump">
-  <h1>iCloudストレージの支払いをやめよう</h1>
-  <p class="subtitle">PhotoDumpは、iPhoneの写真や動画を、あなたが所有するドライブ — USB/SSD、S3、あるいは自分自身のサーバー — へ移動します。スマートフォンの容量を圧迫することはありません。</p>
+  <h1>写真をiPhoneから移そう。借り物のクラウドへではなく</h1>
+  <p class="subtitle">PhotoDumpは、写真や動画をあなたが所有するドライブ — USB/SSD、S3、あるいは自分自身のサーバー — へコピーします。</p>
 
   <nav class="pages">
     <a href="info.html" class="active">移行</a>
@@ -81,58 +59,26 @@
   </nav>
 
   <div class="card">
-    <h2>問題: 写真ライブラリがスマートフォンの容量を超えてしまった</h2>
-    <p>最新のiPhoneはカメラの解像度、4K動画、ProRes形式が、基本ストレージ容量の増加ペースを上回るスピードで進化し続けています。数年分の写真や動画を持つ家族であれば、500GBから2TBものメディアを容易に蓄積する一方で、スマートフォン自体の物理ストレージは128GB、256GB、あるいは512GBといったところです。Appleの回答はiCloud+のサブスクリプションです。毎月、永遠に支払い続けることですべてを「利用可能」な状態に保ちますが、スマートフォンにはそのごく一部だけがローカルにキャッシュされます。</p>
-    <p>PhotoDumpは、これとは異なる答えを軸に作られています。ファイルを、あなたが物理的に所有するドライブへ、一度、一度限りのコストで移動する — 継続的な料金は発生せず、自分自身の思い出にアクセスし続けるためにサブスクリプションを有効なままにしておく必要もありません。</p>
+    <h2>iPhoneのストレージが一杯ですか？</h2>
+    <p>写真や動画を削除する代わりにスマートフォンから移動しましょう — ドライブ上で確認されるまで、削除しても安全とマークされることはありません。</p>
+    <p><a href="iphone-storage-full.html">続きを読む →</a></p>
   </div>
 
-  <h2 class="section-title" style="margin-top:0">ユースケース: 2TBのライブラリ、256GBのスマートフォン、2TBのSSD</h2>
   <div class="card">
-    <h2>具体的なシナリオ</h2>
-    <p>よくある実際のケースを考えてみましょう。物理ストレージ256GBのiPhoneで、「iPhoneのストレージを最適化」を有効にしたiCloud写真を使用しているとします。数年の間に、連携されたiCloud写真ライブラリは2TBまで増加しました。フル解像度のオリジナルはiCloudに存在し、スマートフォンには容量節約用のプレビューと最近閲覧したものだけが保存されており、256GBの容量に十分収まっています。所有者は2TBの外付けSSDを購入し、すべてをそこへ移動したいと考えています。</p>
-    <p>単純に考えると、これは不可能に思えます。256GBのデバイスが、どこかへコピーするのに十分な時間、2TBのデータを「保持」することなどできるのでしょうか？できませんし、その必要もありません。</p>
-    <h2>スマートフォンを圧迫せずにPhotoDumpがそれを実現する方法</h2>
-    <p>PhotoDumpはライブラリを1ファイルずつ（または設定で調整可能な少数のファイルを同時に）処理します。各ファイルに対して、(1) ローカルにまだキャッシュされていない場合はiCloudからオリジナルをリクエストし、(2) そのバイトデータを、ライブラリ全体ではなくその1ファイル分のサイズの小さな一時ファイルとしてスマートフォンにストリーミングし、(3) その一時ファイルを外付けSSDへコピーし、(4) コピーが成功したことを確認し、(5) スマートフォンから一時ファイルを直ちに削除します。次のファイルも同じサイクルを繰り返します。</p>
-    <p>どの瞬間においても、スマートフォンが保持しているのは処理中のわずかなファイルだけです。同時実行設定にもよりますが、通常は合計で数十から数百メガバイト程度であり、2TBのライブラリ全体を保持することは決してありません。移行が完了する頃には、スマートフォンのローカルストレージ使用量は実質的に開始前の状態に戻っており、2TBのデータはすべてSSD上に存在するようになります。</p>
-    <h2>数字で見る</h2>
-    <ul>
-      <li>スマートフォンの物理ストレージ: 256GB</li>
-      <li>写真ライブラリのサイズ（iCloud上）: 2TB</li>
-      <li>保存先SSDのサイズ: 2TB</li>
-      <li>移行中に追加で使用されるスマートフォンストレージのピーク: 同時に処理中の数ファイル分程度のサイズ — 通常は2TBではなく1GB未満</li>
-      <li>移行完了後のスマートフォンのストレージ使用量: 移行開始前と変わらない</li>
-    </ul>
+    <h2>iCloud+の支払いにうんざりしていませんか？</h2>
+    <p>2TBプランは月額$9.99、それが永遠に続きます。ライブラリを一度、自分が所有するドライブへ移動すれば、あとはダウングレードするか解約できます。</p>
+    <p><a href="no-icloud-subscription.html">続きを読む →</a></p>
   </div>
 
-  <h2 class="section-title">ユースケース: 高額なiCloud+プランを解約する</h2>
   <div class="card">
-    <h2>計算してみる</h2>
-    <p>Appleの2TB iCloud+プランは毎月発生する課金です。無期限に毎月支払い続けると、累計金額は際限なく増え続け、支払いを一度でも滞納すればその瞬間に自分自身のファイルへのアクセスが失われます。それに対して、PhotoDumpと同程度の容量の外付けSSDを一度だけ購入すれば、固定の一度限りのコストで済みます。</p>
-    <p>PhotoDumpを使ってライブラリを所有するドライブへ移行した後、多くのユーザーはiCloudプランをより小さな（あるいは無料の）プランへダウングレードします。これは、メディアの長期的な保管場所がiCloudではなくドライブになるためです。</p>
+    <h2>ライブラリがスマートフォンの容量より大きいですか？</h2>
+    <p>256GBのiPhoneでも、2TBのライブラリを2TBのSSDへ移動できます — 1ファイルずつ処理し、すべてを一度に保持することはありません。</p>
+    <p><a href="transfer-photos-to-external-drive.html">続きを読む →</a></p>
   </div>
 
-  <h2 class="section-title">ユースケース: 家族で1台のドライブを共有する</h2>
   <div class="card">
-    <h2>1台のSSD、複数のiPhone</h2>
-    <p>1台の外付けドライブは複数のiPhoneで使用できます。各デバイスは独自の保存先フォルダ名で設定されるため、例えば4台のiPhoneを持つ世帯であれば、全員のライブラリを1台の共有4TBまたは8TBのSSDへ移行でき、各デバイスのファイルは分離されたまま、他のデバイスのものと混ざることはありません。</p>
-  </div>
-
-  <h2 class="section-title">ユースケース: 「ストレージの空き容量がほとんどありません」から抜け出せないスマートフォン</h2>
-  <div class="card">
-    <h2>日常的なきっかけ</h2>
-    <p>人々がPhotoDumpのようなツールを探す最も多い理由は、大掛かりなアーカイブ計画ではなく、システムアップデートや新しいアプリのインストールを妨げる「ストレージの空き容量がほとんどありません」という通知です。移行はライブラリ全体がまずスマートフォンに収まっている必要があるのではなく、ファイル単位でストリーミングされるため、PhotoDumpは長い前処理を待つことなく、数分以内に（ファイルの移行が確認され、削除しても安全とマークされ次第）意味のある実際のストレージの解放を開始できます。</p>
-  </div>
-
-  <h2 class="section-title">ユースケース: 4K/ProRes動画ライブラリのアーカイブ</h2>
-  <div class="card">
-    <h2>スマートフォンの容量を実際に圧迫しているのは動画</h2>
-    <p>4K動画は1分あたり数百メガバイトにもなり、新しいiPhoneのProRes動画はさらに大きくなります。ライブラリを数十ギガバイトからテラバイト規模へと押し上げるのは、通常は写真ではなく動画です。PhotoDumpは動画も写真と同じ方法で扱います — ファイルごとにストリーミングされ、移行され、検証されます。これにより、その映像が一度にスマートフォンに収まる必要なく、何年分もの4K/ProRes映像を外付けドライブへアーカイブすることが実用的になります。</p>
-  </div>
-
-  <h2 class="section-title">ユースケース: iCloudやGoogleフォトの代わりにセルフホスティングする</h2>
-  <div class="card">
-    <h2>プライバシーとインフラを重視するユーザーのために</h2>
-    <p>PhotoDumpのS3互換およびRESTサーバーの保存先（現在ベータ版）を使えば、技術に詳しいユーザーは、商用のクラウド写真サービスではなく、S3互換APIを公開するホームNAS、セルフホスト型のオブジェクトストレージ、あるいは個人サーバーといった、自分自身で運用するインフラへライブラリを移行できます。この転送に、PhotoDumpのアカウントやサーバーが関与することは一切ありません。</p>
+    <h2>クラウドサービスの代わりに自分のストレージを使う</h2>
+    <p>PhotoDumpのS3互換およびRESTサーバー対応（ベータ版）は、ホームNAS、セルフホスト型のオブジェクトストレージ、あるいは自分で管理するあらゆるサーバーで利用できます。PhotoDump自体がファイルのコピーを保持することは一切ありません — ファイルはスマートフォンから、設定した保存先へ直接送られます。</p>
   </div>
 
   <div class="footer">
