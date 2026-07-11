@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>将 iPhone 照片传输到外部硬盘（即使图库比手机存储空间还大）| PhotoDump</title>
+<meta name="description" content="PhotoDump 如何把照片和视频从 iPhone 的照片图库传输到 USB/SSD 硬盘，即使图库比手机自身的存储空间还大。包括 4K/ProRes 视频，以及仅存储在 iCloud 中的文件。">
+<meta name="keywords" content="将 iPhone 照片传输到外部硬盘, 把 iCloud 照片移到外部硬盘, iCloud 照片转移到外部 SSD, 将 iPhone 照片备份到外部存储, 把 iPhone 上的 4K 视频传输到硬盘">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/zh-hans/transfer-photos-to-external-drive.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="将 iPhone 照片传输到外部硬盘 | PhotoDump">
+<meta property="og:description" content="把比 iPhone 自身存储空间还大的照片图库迁移到外部硬盘，不用先腾出空间。">
+<meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/zh-hans/transfer-photos-to-external-drive.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="将 iPhone 照片传输到外部硬盘 | PhotoDump">
+<meta name="twitter:description" content="把比 iPhone 自身存储空间还大的照片图库迁移到外部硬盘，不用先腾出空间。">
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="de" href="https://saparjohnick.github.io/photodumpapp/de/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="fr" href="https://saparjohnick.github.io/photodumpapp/fr/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="es" href="https://saparjohnick.github.io/photodumpapp/es/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="pt-BR" href="https://saparjohnick.github.io/photodumpapp/pt-br/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://saparjohnick.github.io/photodumpapp/zh-hans/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ja" href="https://saparjohnick.github.io/photodumpapp/ja/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ko" href="https://saparjohnick.github.io/photodumpapp/ko/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ar" href="https://saparjohnick.github.io/photodumpapp/ar/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="kk" href="https://saparjohnick.github.io/photodumpapp/kk/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="x-default" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "我能把比 iPhone 存储空间还大的照片图库传输到外部硬盘吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。PhotoDump 逐个文件传输——如果文件还没存在设备上，会先从 iCloud 下载，短暂写入手机，再复制到硬盘，然后删除这份临时副本——因此手机永远不需要一次性容纳整个图库。用这种方式，256GB 的 iPhone 也能把 2TB 的图库迁移到 2TB 的硬盘上。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "这对 4K 和 ProRes 视频也有效吗，不只是照片？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有效，视频和照片的传输方式一样：逐个文件传输，在目标位置验证之后才会标记为完成。通常真正占满图库的是视频而不是照片，因为一分钟的 4K 视频就可能有几百兆字节，ProRes 还要更大。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <img class="icon" src="../icon.png" alt="PhotoDump">
+  <h1>把照片传输到外部硬盘，即使手机装不下</h1>
+  <p class="subtitle">256GB 的 iPhone 依然可以把 2TB 的图库迁移到 2TB 的 SSD 上。下面是实际的运作方式。</p>
+
+  <nav class="pages">
+    <a href="info.html">迁移</a>
+    <a href="index.html">支持</a>
+    <a href="privacy.html">隐私政策</a>
+  </nav>
+
+  <div class="card">
+    <h2>这个场景听起来不可能</h2>
+    <p>一台 256GB 存储空间的 iPhone，开启了“优化 iPhone 存储”的 iCloud 照片，图库在这些年里悄悄涨到了 2TB——手机上一直只保留着预览图和最近打开过的内容。买了一块 2TB 的外置 SSD 之后，明显的问题来了：一台 256GB 的设备怎么把 2TB 的数据搬到任何地方？它得先“装下”全部内容才行，而它做不到。</p>
+  </div>
+
+  <div class="card">
+    <h2>它并不会装下全部内容——也从来不需要</h2>
+    <p>PhotoDump 逐个处理图库中的文件（或同时处理少量几个）。每个文件在需要时会从 iCloud 下载，短暂写入手机，复制到硬盘，确认无误后删除临时副本——全部完成后才开始处理下一个文件。在任何时刻，手机上只保留着正在传输中的内容，总量通常不到 1GB。等整个图库迁移完成，手机的存储占用会回到最初的水平，而这 2TB 数据已经完全存在 SSD 上了。</p>
+  </div>
+
+  <div class="card">
+    <h2>视频通常才是真正的大问题</h2>
+    <p>一分钟的 4K 视频就有几百兆字节，新款 iPhone 上的 ProRes 还要更大——通常是视频而不是照片，把图库从几十 GB 推高到几 TB。视频也经过同样的逐文件传输流程，所以归档多年积累的 4K 或 ProRes 影像，并不需要它们一次性装进手机。</p>
+  </div>
+
+  <div class="card">
+    <h2>一块硬盘，全家共用</h2>
+    <p>同一块硬盘可以存放多台 iPhone 的图库。每台设备都有自己的文件夹，所以一家人可以把所有人的照片放到一块共享的 4TB 或 8TB 硬盘上，而不会有任何人的文件混在一起。</p>
+  </div>
+
+  <div class="card">
+    <h2>相关内容</h2>
+    <p><a href="iphone-storage-full.html">如果你的手机现在已经存满了</a> · <a href="no-icloud-subscription.html">这对你的 iCloud+ 订阅意味着什么</a></p>
+  </div>
+
+  <div class="footer">
+    <p>PhotoDump &middot; <a href="info.html">迁移</a> &middot; <a href="index.html">支持</a> &middot; <a href="privacy.html">隐私政策</a></p>
+  </div>
+</div>
+</body>
+</html>
