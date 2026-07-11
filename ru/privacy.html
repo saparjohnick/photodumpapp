@@ -32,7 +32,23 @@
     <a href="privacy.html" class="active">Политика конфиденциальности</a>
   </nav>
 
-  <div class="card">
+  
+  <div class="lang-switcher">
+    <select id="langSwitch" aria-label="Language">
+      <option value="">English</option>
+      <option value="ru/">Русский</option>
+      <option value="de/">Deutsch</option>
+      <option value="fr/">Français</option>
+      <option value="es/">Español</option>
+      <option value="pt-br/">Português (Brasil)</option>
+      <option value="zh-hans/">简体中文</option>
+      <option value="ja/">日本語</option>
+      <option value="ko/">한국어</option>
+      <option value="ar/">العربية</option>
+      <option value="kk/">Қазақша</option>
+    </select>
+  </div>
+<div class="card">
     <h2>1. Введение</h2>
     <p>Настоящая Политика конфиденциальности описывает, как PhotoDump («Приложение», «мы», «нас») обрабатывает информацию в связи с использованием вами Приложения. Загружая, устанавливая или используя Приложение, вы соглашаетесь с условиями, описанными в настоящей Политике.</p>
   </div>
@@ -102,5 +118,22 @@
     <p>PhotoDump &middot; <a href="index.html">Поддержка</a></p>
   </div>
 </div>
+
+<script>
+(function() {
+  var langs = ["ru","de","fr","es","pt-br","zh-hans","ja","ko","ar","kk"];
+  var parts = location.pathname.split('/').filter(Boolean);
+  var filename = parts[parts.length - 1] || 'index.html';
+  var maybeLang = parts.length >= 2 ? parts[parts.length - 2] : null;
+  var currentPrefix = (maybeLang && langs.indexOf(maybeLang) !== -1) ? maybeLang + '/' : '';
+  var select = document.getElementById('langSwitch');
+  if (select) {
+    select.value = currentPrefix;
+    select.addEventListener('change', function() {
+      location.href = select.value + filename;
+    });
+  }
+})();
+</script>
 </body>
 </html>
