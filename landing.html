@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoDump — Move iPhone Photos and Videos to a USB/SSD Drive Without Using iCloud Storage</title>
+<meta name="description" content="PhotoDump migrates photos and videos directly from an iPhone's Photos library (including files still stored in iCloud) to a USB/SSD drive, S3-compatible storage, or your own REST server — without filling up the phone's local storage, and without an iCloud storage subscription.">
+<meta name="keywords" content="stop paying for icloud storage, icloud storage alternative, move iphone photos to external drive, migrate photos from iphone to ssd, free up iphone storage without deleting photos, transfer photos from iphone to usb drive, iphone photo backup no icloud, offload iphone photos to hard drive, icloud photos to external ssd, photo migration app ios">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/landing.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PhotoDump — Move iPhone Photos to a USB/SSD Drive Without iCloud">
+<meta property="og:description" content="Migrate a 2TB photo library off a 256GB iPhone straight to an external drive, without freeing a single megabyte on the phone and without an iCloud storage subscription.">
+<meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/landing.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PhotoDump — Move iPhone Photos to a USB/SSD Drive Without iCloud">
+<meta name="twitter:description" content="Migrate a 2TB photo library off a 256GB iPhone straight to an external drive, without freeing a single megabyte on the phone.">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PhotoDump",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "iOS 16+",
+  "description": "PhotoDump copies photos and videos from an iPhone's Photos library, including files still stored in iCloud, directly to a USB or SSD drive, S3-compatible storage, or a REST server the user controls — without keeping a second copy in the phone's local storage and without requiring an iCloud storage subscription.",
+  "offers": {
+    "@type": "Offer",
+    "price": "4.99",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I migrate a 2TB photo library from a 256GB iPhone to a 2TB SSD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. PhotoDump streams each photo or video from the Photos library (downloading it from iCloud first if it is not already stored on the device) directly to the external drive one file at a time, writing only a small temporary buffer to the phone during the transfer and deleting it immediately after the file is confirmed on the drive. The phone's local storage never has to hold the full library at once, so a 256GB device can migrate a 2TB library to a 2TB drive without freeing space in advance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does PhotoDump replace an iCloud storage subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For files already migrated to a destination like a USB/SSD drive, yes — once a file is copied to the drive, it no longer needs to be stored in iCloud to remain accessible through PhotoDump's own browsing and search. Users commonly downgrade or cancel a paid iCloud+ storage tier after migrating their library to a drive they own."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="icon">📦</div>
+  <h1>Stop Paying for iCloud Storage</h1>
+  <p class="subtitle">PhotoDump moves your iPhone's photos and videos to a drive you own — USB/SSD, S3, or your own server — without filling up your phone.</p>
+
+  <nav class="pages">
+    <a href="landing.html" class="active">Migrate</a>
+    <a href="index.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+
+  <div class="card">
+    <h2>The problem: your photo library outgrew your phone</h2>
+    <p>Modern iPhones keep growing their camera resolution, 4K video, and ProRes formats faster than base storage tiers grow. A family with a few years of photos and video easily accumulates 500GB–2TB of media, while the phone itself might have 128GB, 256GB, or 512GB of physical storage. Apple's answer is an iCloud+ subscription: pay monthly, forever, to keep everything "available" while your phone only caches a fraction of it locally.</p>
+    <p>PhotoDump is built around a different answer: move the files to a drive you physically own, once, for a one-time cost — no recurring fee, no dependency on a subscription staying active to keep access to your own memories.</p>
+  </div>
+
+  <h2 class="section-title" style="margin-top:0">Use Case: 2TB Library, 256GB Phone, 2TB SSD</h2>
+  <div class="card">
+    <h2>The exact scenario</h2>
+    <p>Take a common real-world case: an iPhone with 256GB of physical storage, running iCloud Photos with "Optimize iPhone Storage" enabled. Over several years the linked iCloud Photos library has grown to 2TB — full-resolution originals live in iCloud, and the phone only keeps space-saving previews plus whatever was recently viewed, fitting comfortably within its 256GB. The owner buys a 2TB external SSD and wants everything moved there.</p>
+    <p>Naively, this looks impossible: how can a 256GB device "hold" 2TB of data long enough to copy it anywhere? It cannot, and it does not have to.</p>
+    <h2>How PhotoDump does it without filling the phone</h2>
+    <p>PhotoDump processes the library one file at a time (or a small number of files concurrently, configurable in Settings). For each file, it: (1) requests the original from iCloud if it is not already cached locally, (2) streams the bytes into a small temporary file on the phone — sized to that single file, not the library, (3) copies that temporary file to the external SSD, (4) confirms the copy succeeded, and (5) deletes the temporary file from the phone immediately. The next file then repeats the same cycle.</p>
+    <p>At any given moment, the phone is only ever holding a handful of in-flight files — typically tens to a few hundred megabytes total, depending on concurrency settings — never the full 2TB library. By the time migration finishes, the phone's local storage usage is back to essentially where it started; the 2TB now lives entirely on the SSD.</p>
+    <h2>Numbers</h2>
+    <ul>
+      <li>Phone physical storage: 256GB</li>
+      <li>Photo library size (in iCloud): 2TB</li>
+      <li>Destination SSD size: 2TB</li>
+      <li>Peak additional phone storage used during migration: roughly the size of a few in-flight files at once — typically well under 1GB, not 2TB</li>
+      <li>Phone storage used after migration completes: unchanged from before migration started</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">Use Case: Cancel an Expensive iCloud+ Plan</h2>
+  <div class="card">
+    <h2>The math</h2>
+    <p>Apple's 2TB iCloud+ tier is a recurring monthly charge. Paid every month indefinitely, the running total grows without bound — and stops providing access to your own files the moment a payment is missed. A one-time purchase of both PhotoDump and a comparably sized external SSD is a fixed, one-time cost by comparison.</p>
+    <p>After migrating a library to an owned drive with PhotoDump, many users downgrade their iCloud plan to a smaller (or free) tier, since the drive — not iCloud — is now the long-term home for their media.</p>
+  </div>
+
+  <h2 class="section-title">Use Case: A Family Sharing One Drive</h2>
+  <div class="card">
+    <h2>One SSD, several iPhones</h2>
+    <p>A single external drive can be used by more than one iPhone. Each device is set up with its own destination folder name, so a household with, say, four iPhones can migrate everyone's library onto one shared 4TB or 8TB SSD, each device's files kept separate and never mixed with another device's.</p>
+  </div>
+
+  <h2 class="section-title">Use Case: A Phone Stuck at "Storage Almost Full"</h2>
+  <div class="card">
+    <h2>The everyday trigger</h2>
+    <p>The most common reason people look for a tool like PhotoDump isn't a grand archiving project — it's the "Storage Almost Full" notification blocking a system update or a new app install. Because migration streams file-by-file rather than requiring the whole library to fit on the phone first, PhotoDump can start freeing meaningful, real storage (once files are confirmed migrated and marked safe to delete) within minutes, not after a lengthy pre-processing step.</p>
+  </div>
+
+  <h2 class="section-title">Use Case: Archiving 4K/ProRes Video Libraries</h2>
+  <div class="card">
+    <h2>Video is what actually fills a phone</h2>
+    <p>A minute of 4K video can be several hundred megabytes; ProRes video on newer iPhones is larger still. Video, not photos, is usually what pushes a library from tens of gigabytes into the terabyte range. PhotoDump handles video the same way as photos — streamed, migrated, and verified per file — making it practical to archive years of 4K/ProRes footage onto an external drive without ever needing that footage to fit on the phone at once.</p>
+  </div>
+
+  <h2 class="section-title">Use Case: Self-Hosting Instead of iCloud or Google Photos</h2>
+  <div class="card">
+    <h2>For the privacy- and infrastructure-conscious</h2>
+    <p>PhotoDump's S3-compatible and REST server destinations (currently in Beta) let a technically inclined user migrate their library to infrastructure they run themselves — a home NAS exposing an S3-compatible API, a self-hosted object store, or a personal server — rather than a commercial cloud photo service. No PhotoDump account or server is involved in that transfer at any point.</p>
+  </div>
+
+  <div class="footer">
+    <p>PhotoDump &middot; <a href="index.html">Support</a> &middot; <a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</div>
+</body>
+</html>
