@@ -18,8 +18,8 @@
 
 ## 页面
 
-- [支持 / 常见问题](https://saparjohnick.github.io/photodumpapp/zh-hans/index.html)：33 个问答，涵盖设置（USB/SSD、S3、REST）、迁移行为、"可安全删除"机制、搜索、存储/缓存以及隐私相关内容。
-- [产品介绍 / 使用场景](https://saparjohnick.github.io/photodumpapp/zh-hans/info.html)：详细使用场景，包括将 256GB iPhone 上 2TB 的照片库直接迁移到 2TB SSD 而无需提前腾出手机空间、取消付费的 iCloud+ 套餐、一家人共用一块硬盘，以及归档 4K/ProRes 视频库。
+- [支持 / 常见问题](https://saparjohnick.github.io/photodumpapp/zh-hans/support.html)：33 个问答，涵盖设置（USB/SSD、S3、REST）、迁移行为、"可安全删除"机制、搜索、存储/缓存以及隐私相关内容。
+- [产品介绍 / 使用场景](https://saparjohnick.github.io/photodumpapp/zh-hans/index.html)：详细使用场景，包括将 256GB iPhone 上 2TB 的照片库直接迁移到 2TB SSD 而无需提前腾出手机空间、取消付费的 iCloud+ 套餐、一家人共用一块硬盘，以及归档 4K/ProRes 视频库。
 - [隐私政策](https://saparjohnick.github.io/photodumpapp/zh-hans/privacy.html)：正式的隐私政策，包含专门针对 GDPR（欧盟/英国/瑞士）和 CCPA/CPRA（加利福尼亚州）的章节。概要：开发者在任何时候都不会收集、接收或处理任何个人数据——所有文件传输都直接发生在用户设备与其配置的目标位置之间。
 
 以上三个页面还提供完整的英语、俄语、德语、法语、西班牙语、葡萄牙语（巴西）、日语、韩语、阿拉伯语和哈萨克语版本，分别位于 `/ru/`、`/de/`、`/fr/`、`/es/`、`/pt-br/`、`/ja/`、`/ko/`、`/ar/`、`/kk/` 文件夹以及网站根目录（英语）。
