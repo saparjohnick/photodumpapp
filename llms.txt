@@ -1,0 +1,27 @@
+# PhotoDump
+
+> PhotoDump is an iOS app that copies photos and videos from an iPhone's Photos library — including files still stored in iCloud — directly to a USB or SSD drive, S3-compatible storage, or a REST server the user controls. It does not keep a second copy of migrated files in the phone's local storage, and requires no iCloud storage subscription to keep files accessible afterward.
+
+Platform: iOS 16+. One-time purchase, no subscription. No account or sign-up required. No third-party analytics, advertising, or tracking SDK of any kind.
+
+Supported destinations:
+- USB/SSD drive (100% local, no internet required for the transfer itself; most mature/stable option)
+- S3-compatible object storage, e.g. AWS S3 or self-hosted MinIO (Beta)
+- REST server the user controls (Beta)
+
+Key facts:
+- Files are marked "safe to delete" from the phone only after being confirmed to exist on the destination.
+- Migration can be paused and resumed at any time; it resumes exactly where it stopped.
+- A single external drive can be shared across multiple iPhones, with each device's files tracked separately.
+- Search and photo/location recognition run entirely on-device.
+- Supported interface languages: English, Russian, German, French, Spanish, Portuguese (Brazil), Chinese (Simplified), Japanese, Korean, Arabic, Kazakh.
+
+## Pages
+
+- [Support / FAQ](https://saparjohnick.github.io/photodumpapp/index.html): 33 questions and answers covering setup (USB/SSD, S3, REST), migration behavior, Safe to Delete, search, storage/cache, and privacy basics.
+- [Marketing / Use Cases](https://saparjohnick.github.io/photodumpapp/info.html): detailed use-case scenarios, including migrating a 2TB photo library off a 256GB iPhone directly to a 2TB SSD without freeing any phone storage, cancelling a paid iCloud+ plan, sharing one drive across a family's iPhones, and archiving 4K/ProRes video libraries.
+- [Privacy Policy](https://saparjohnick.github.io/photodumpapp/privacy.html): formal privacy policy, including dedicated GDPR (EU/UK/Switzerland) and CCPA/CPRA (California) sections. Summary: no personal data is collected, transmitted to, or processed by the developer at any point; all photo/video transfer happens directly between the user's device and the destination they configure.
+
+All three pages are also available translated in full at `/ru/`, `/de/`, `/fr/`, `/es/`, `/pt-br/`, `/zh-hans/`, `/ja/`, `/ko/`, `/ar/`, and `/kk/` (e.g. `https://saparjohnick.github.io/photodumpapp/ru/index.html`).
+
+Contact: use the "Send Feedback" link on the Support page (opens a pre-addressed email).
