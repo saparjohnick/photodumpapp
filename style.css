@@ -5,18 +5,29 @@
   --text: #1c1c1e;
   --text-secondary: #6e6e73;
   --accent: #ff9500;
+  --accent2: #ff5e3a;
   --card-bg: rgba(255, 255, 255, 0.55);
-  --card-border: rgba(255, 255, 255, 0.6);
+  --card-bg-strong: rgba(255, 255, 255, 0.68);
+  --card-border: rgba(255, 255, 255, 0.7);
+  --specular: rgba(255, 255, 255, 0.9);
+  --orb-1: rgba(255, 149, 0, 0.35);
+  --orb-2: rgba(88, 86, 214, 0.28);
+  --orb-3: rgba(52, 199, 89, 0.22);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-top: #1c1c1e;
+    --bg-top: #17171a;
     --bg-bottom: #000000;
     --text: #f5f5f7;
     --text-secondary: #9a9aa0;
-    --card-bg: rgba(40, 40, 45, 0.55);
+    --card-bg: rgba(40, 40, 45, 0.5);
+    --card-bg-strong: rgba(48, 48, 54, 0.62);
     --card-border: rgba(255, 255, 255, 0.14);
+    --specular: rgba(255, 255, 255, 0.22);
+    --orb-1: rgba(255, 149, 0, 0.28);
+    --orb-2: rgba(94, 92, 230, 0.3);
+    --orb-3: rgba(48, 209, 88, 0.2);
   }
 }
 
@@ -35,55 +46,134 @@ body {
   display: flex;
   justify-content: center;
   padding: clamp(28px, 8vw, 48px) clamp(14px, 5vw, 20px) 80px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Ambient blurred gradient orbs — the "liquid" behind the glass */
+body::before, body::after, .orb-3 {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(70px);
+  z-index: -1;
+  pointer-events: none;
+  animation: drift 22s ease-in-out infinite alternate;
+}
+
+body::before {
+  width: 46vmax;
+  height: 46vmax;
+  top: -18vmax;
+  left: -14vmax;
+  background: var(--orb-1);
+}
+
+body::after {
+  width: 40vmax;
+  height: 40vmax;
+  bottom: -16vmax;
+  right: -12vmax;
+  background: var(--orb-2);
+  animation-delay: -8s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes drift {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(4vmax, 3vmax) scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before, body::after { animation: none; }
 }
 
 .wrap {
   width: 100%;
   max-width: min(640px, 100%);
+  position: relative;
 }
 
 .icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #ff9500, #ff5e3a);
+  width: 76px;
+  height: 76px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 34px;
-  margin: 0 auto 20px;
-  box-shadow: 0 10px 24px rgba(255, 94, 58, 0.35);
+  font-size: 36px;
+  margin: 0 auto 22px;
+  box-shadow:
+    0 14px 30px rgba(255, 94, 58, 0.4),
+    0 2px 0 rgba(255, 255, 255, 0.35) inset,
+    0 -8px 16px rgba(0, 0, 0, 0.12) inset;
+  position: relative;
+}
+
+.icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255,255,255,0.45), transparent 55%);
+  pointer-events: none;
 }
 
 h1 {
   text-align: center;
-  font-size: clamp(22px, 6vw, 28px);
-  font-weight: 700;
-  margin: 0 0 6px;
-  letter-spacing: -0.02em;
+  font-size: clamp(26px, 7vw, 34px);
+  font-weight: 800;
+  margin: 0 0 8px;
+  letter-spacing: -0.03em;
+  background: linear-gradient(180deg, var(--text) 30%, var(--text-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
   text-align: center;
   color: var(--text-secondary);
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.5;
   margin: 0 0 36px;
   padding: 0 8px;
 }
 
-.card {
+/* Liquid Glass card base */
+.card, .faq-group {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 20px;
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  padding: clamp(18px, 5vw, 24px) clamp(16px, 5vw, 26px);
+  border-radius: 22px;
+  backdrop-filter: blur(34px) saturate(190%);
+  -webkit-backdrop-filter: blur(34px) saturate(190%);
+  box-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.5) inset,
+    0 20px 40px -12px rgba(20, 20, 30, 0.18),
+    0 2px 8px rgba(20, 20, 30, 0.06);
+  position: relative;
+  isolation: isolate;
+}
+
+/* Specular top highlight — the bright edge glass catches light on */
+.card::before, .faq-group::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--specular), transparent);
+  opacity: 0.8;
+}
+
+.card {
+  padding: clamp(20px, 5vw, 26px) clamp(18px, 5vw, 28px);
   margin-bottom: 18px;
 }
 
 .card h2 {
   font-size: 17px;
+  font-weight: 700;
   margin: 0 0 10px;
   display: flex;
   align-items: center;
@@ -92,7 +182,7 @@ h1 {
 
 .card p, .card li {
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--text);
   margin: 0 0 10px;
 }
@@ -106,6 +196,7 @@ h1 {
   height: 8px;
   border-radius: 50%;
   background: var(--accent);
+  box-shadow: 0 0 10px 1px var(--accent);
   display: inline-block;
 }
 
@@ -115,16 +206,30 @@ h1 {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 14px 20px;
-  border-radius: 14px;
-  background: var(--text);
-  color: var(--bg-top);
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #2c2c2e, #101012);
+  color: #fff;
   font-weight: 600;
   font-size: 16px;
   text-decoration: none;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   cursor: pointer;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.18) inset,
+    0 12px 24px -8px rgba(0, 0, 0, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  margin-bottom: 18px;
 }
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.22) inset,
+    0 16px 30px -8px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active { transform: translateY(0); }
 
 .footer {
   text-align: center;
@@ -138,21 +243,36 @@ h1 {
 nav.pages {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 4px;
   margin-bottom: 28px;
   font-size: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 5px;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 1px 1px rgba(255,255,255,0.5) inset, 0 8px 20px rgba(20,20,30,0.1);
 }
 
 nav.pages a {
   color: var(--text-secondary);
   text-decoration: none;
-  padding: 6px 4px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 nav.pages a.active {
-  color: var(--text);
+  color: #fff;
   font-weight: 600;
-  border-bottom: 2px solid var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 4px 12px rgba(255, 94, 58, 0.35);
 }
 
 a, .btn { word-break: break-word; overflow-wrap: break-word; }
@@ -161,22 +281,17 @@ a, .btn { word-break: break-word; overflow-wrap: break-word; }
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: var(--text-secondary);
-  margin: 32px 4px 10px;
+  margin: 34px 6px 12px;
 }
 
 .section-title:first-of-type { margin-top: 8px; }
 
 .faq-group {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 18px;
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
   overflow: hidden;
   margin-bottom: 8px;
+  border-radius: 20px;
 }
 
 details.faq {
@@ -188,13 +303,18 @@ details.faq:last-child { border-bottom: none; }
 details.faq summary {
   list-style: none;
   cursor: pointer;
-  padding: 16px 20px;
+  padding: 17px 20px;
   font-size: 15px;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  transition: background 0.15s ease;
+}
+
+details.faq summary:hover {
+  background: rgba(255, 149, 0, 0.06);
 }
 
 details.faq summary::-webkit-details-marker { display: none; }
@@ -204,8 +324,8 @@ details.faq summary::after {
   flex: 0 0 auto;
   width: 9px;
   height: 9px;
-  border-right: 2px solid var(--text-secondary);
-  border-bottom: 2px solid var(--text-secondary);
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
   transform: rotate(45deg);
   transition: transform 0.2s ease;
   margin-top: -4px;
@@ -219,7 +339,7 @@ details.faq[open] summary::after {
 details.faq .faq-body {
   padding: 0 20px 18px;
   font-size: 14.5px;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--text-secondary);
 }
 
@@ -227,12 +347,13 @@ details.faq .faq-body p { margin: 0 0 8px; }
 details.faq .faq-body p:last-child { margin-bottom: 0; }
 
 @media (max-width: 480px) {
-  nav.pages { gap: 12px; font-size: 13px; }
-  .card { border-radius: 16px; }
+  nav.pages { gap: 2px; font-size: 13px; }
+  nav.pages a { padding: 7px 11px; }
+  .card { border-radius: 18px; }
   .card h2 { font-size: 16px; }
   .card p, .card li { font-size: 14px; }
-  .btn { font-size: 15px; padding: 13px 16px; }
+  .btn { font-size: 15px; padding: 14px 16px; }
   details.faq summary { padding: 14px 16px; font-size: 14px; }
   details.faq .faq-body { padding: 0 16px 16px; font-size: 14px; }
-  .section-title { font-size: 12px; margin: 26px 2px 8px; }
+  .section-title { font-size: 12px; margin: 26px 4px 10px; }
 }
