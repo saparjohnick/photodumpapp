@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>نقل صور الآيفون إلى محرك أقراص خارجي (حتى لو كانت أكبر من هاتفك) | PhotoDump</title>
+<meta name="description" content="كيف ينقل PhotoDump الصور ومقاطع الفيديو من مكتبة الصور في هاتف آيفون إلى محرك USB/SSD، حتى عندما تكون المكتبة أكبر من سعة تخزين الهاتف نفسه. يشمل ذلك فيديو 4K/ProRes والملفات المخزنة فقط في iCloud.">
+<meta name="keywords" content="نقل صور الآيفون إلى محرك خارجي, نقل صور iCloud إلى محرك خارجي, صور iCloud إلى SSD خارجي, نسخ صور الآيفون احتياطيًا إلى تخزين خارجي, نقل فيديو 4K من الآيفون إلى القرص الصلب">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/ar/transfer-photos-to-external-drive.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="نقل صور الآيفون إلى محرك أقراص خارجي | PhotoDump">
+<meta property="og:description" content="انقل مكتبة صور أكبر من سعة تخزين هاتفك الآيفون إلى محرك خارجي، دون الحاجة إلى تحرير مساحة أولًا.">
+<meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/ar/transfer-photos-to-external-drive.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="نقل صور الآيفون إلى محرك أقراص خارجي | PhotoDump">
+<meta name="twitter:description" content="انقل مكتبة صور أكبر من سعة تخزين هاتفك الآيفون إلى محرك خارجي، دون الحاجة إلى تحرير مساحة أولًا.">
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="de" href="https://saparjohnick.github.io/photodumpapp/de/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="fr" href="https://saparjohnick.github.io/photodumpapp/fr/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="es" href="https://saparjohnick.github.io/photodumpapp/es/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="pt-BR" href="https://saparjohnick.github.io/photodumpapp/pt-br/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://saparjohnick.github.io/photodumpapp/zh-hans/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ja" href="https://saparjohnick.github.io/photodumpapp/ja/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ko" href="https://saparjohnick.github.io/photodumpapp/ko/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ar" href="https://saparjohnick.github.io/photodumpapp/ar/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="kk" href="https://saparjohnick.github.io/photodumpapp/kk/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="x-default" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "هل يمكنني نقل مكتبة صور أكبر من سعة تخزين آيفوني إلى محرك خارجي؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم. ينقل PhotoDump ملفًا واحدًا في كل مرة — يُنزّله من iCloud أولًا إذا لم يكن موجودًا بالفعل على الجهاز، ويكتبه بشكل مؤقت على الهاتف، وينسخه إلى المحرك، ثم يحذف النسخة المؤقتة — بحيث لا يحتاج الهاتف أبدًا إلى احتواء المكتبة كاملة دفعة واحدة. بهذه الطريقة يمكن لآيفون بسعة 256 جيجابايت نقل مكتبة بحجم 2 تيرابايت إلى محرك بحجم 2 تيرابايت."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يعمل هذا مع فيديو 4K وProRes، وليس الصور فقط؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم، ينتقل الفيديو بنفس طريقة الصور: ملفًا واحدًا في كل مرة، ويُتحقق منه في الوجهة قبل وسمه بالاكتمال. الفيديو هو عادةً ما يملأ المكتبة فعليًا، إذ يمكن أن تصل دقيقة واحدة من فيديو 4K إلى عدة مئات من الميغابايتات، بينما ProRes أكبر حجمًا."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <img class="icon" src="../icon.png" alt="PhotoDump">
+  <h1>انقل الصور إلى محرك خارجي، حتى لو لم تكن تتسع على هاتفك</h1>
+  <p class="subtitle">لا يزال بإمكان آيفون بسعة 256 جيجابايت نقل مكتبة بحجم 2 تيرابايت إلى SSD بحجم 2 تيرابايت. إليك الآلية الفعلية.</p>
+
+  <nav class="pages">
+    <a href="info.html">النقل</a>
+    <a href="index.html">الدعم</a>
+    <a href="privacy.html">سياسة الخصوصية</a>
+  </nav>
+
+  <div class="card">
+    <h2>الحالة التي تبدو مستحيلة</h2>
+    <p>آيفون بسعة تخزين 256 جيجابايت، مع تفعيل خاصية iCloud Photos وميزة "تحسين تخزين الآيفون"، ومكتبة نمت بهدوء لتصل إلى 2 تيرابايت في iCloud على مر السنين — احتفظ الهاتف فقط بمعاينات وما فُتح مؤخرًا. تشتري SSD خارجيًا بسعة 2 تيرابايت، ويطرح السؤال البديهي نفسه: كيف ينقل جهاز بسعة 256 جيجابايت 2 تيرابايت من البيانات إلى أي مكان؟ سيحتاج إلى "احتواء" كل ذلك أولًا، وهو لا يستطيع.</p>
+  </div>
+
+  <div class="card">
+    <h2>لا يحتوي كل ذلك — ولا يحتاج إلى ذلك أبدًا</h2>
+    <p>يعالج PhotoDump المكتبة ملفًا واحدًا في كل مرة (أو عددًا قليلًا في آنٍ واحد). يُنزَّل كل ملف من iCloud عند الحاجة، ويُكتب بشكل مؤقت على الهاتف، ويُنسخ إلى المحرك، ويُؤكَّد، وتُحذف النسخة المؤقتة — كل ذلك قبل أن يبدأ الملف التالي. في أي لحظة معينة، لا يحتفظ الهاتف إلا بما هو قيد النقل حاليًا، وعادة أقل من جيجابايت واحد إجمالًا. وبحلول الوقت الذي تنتقل فيه المكتبة بأكملها، تعود مساحة تخزين الهاتف إلى ما كانت عليه في البداية، ويصبح الـ 2 تيرابايت مقيمًا بالكامل على SSD.</p>
+  </div>
+
+  <div class="card">
+    <h2>الفيديو هو غالبًا المشكلة الأكبر</h2>
+    <p>تصل دقيقة واحدة من فيديو 4K إلى عدة مئات من الميغابايتات، وProRes على أجهزة آيفون الأحدث أكبر حجمًا. الفيديو، وليس الصور، هو غالبًا ما يدفع المكتبة من عشرات الجيجابايتات إلى نطاق التيرابايت. ينتقل عبر نفس عملية النقل ملفًا تلو الآخر، لذا فإن أرشفة سنوات من لقطات 4K أو ProRes لا تتطلب أبدًا أن تتسع دفعة واحدة على الهاتف.</p>
+  </div>
+
+  <div class="card">
+    <h2>محرك واحد للعائلة بأكملها</h2>
+    <p>يمكن للمحرك نفسه أن يحتوي على مكتبات أكثر من هاتف آيفون واحد. يحصل كل جهاز على مجلده الخاص، بحيث يمكن لعائلة وضع صور الجميع على محرك مشترك بسعة 4 أو 8 تيرابايت دون اختلاط ملفات أحد بملفات آخر.</p>
+  </div>
+
+  <div class="card">
+    <h2>ذو صلة</h2>
+    <p><a href="iphone-storage-full.html">إذا كان هاتفك ممتلئًا بالفعل الآن</a> · <a href="no-icloud-subscription.html">ماذا يعني هذا لاشتراك iCloud+ الخاص بك</a></p>
+  </div>
+
+  <div class="footer">
+    <p>PhotoDump &middot; <a href="info.html">النقل</a> &middot; <a href="index.html">الدعم</a> &middot; <a href="privacy.html">سياسة الخصوصية</a></p>
+  </div>
+</div>
+</body>
+</html>
