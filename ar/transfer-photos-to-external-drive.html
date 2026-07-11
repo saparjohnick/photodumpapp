@@ -117,14 +117,17 @@
 (function() {
   var langs = ["ru","de","fr","es","pt-br","zh-hans","ja","ko","ar","kk"];
   var parts = location.pathname.split('/').filter(Boolean);
-  var filename = parts[parts.length - 1] || 'index.html';
-  var maybeLang = parts.length >= 2 ? parts[parts.length - 2] : null;
+  if (parts.length === 0) return;
+  var base = parts[0];
+  var rest = parts.slice(1);
+  var filename = rest[rest.length - 1] || 'index.html';
+  var maybeLang = rest.length >= 2 ? rest[rest.length - 2] : null;
   var currentPrefix = (maybeLang && langs.indexOf(maybeLang) !== -1) ? maybeLang + '/' : '';
   var select = document.getElementById('langSwitch');
   if (select) {
     select.value = currentPrefix;
     select.addEventListener('change', function() {
-      location.href = select.value + filename;
+      location.href = '/' + base + '/' + select.value + filename;
     });
   }
 })();
