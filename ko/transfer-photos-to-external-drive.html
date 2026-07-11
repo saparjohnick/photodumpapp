@@ -67,7 +67,23 @@
     <a href="privacy.html">개인정보 처리방침</a>
   </nav>
 
-  <div class="card">
+  
+  <div class="lang-switcher">
+    <select id="langSwitch" aria-label="Language">
+      <option value="">English</option>
+      <option value="ru/">Русский</option>
+      <option value="de/">Deutsch</option>
+      <option value="fr/">Français</option>
+      <option value="es/">Español</option>
+      <option value="pt-br/">Português (Brasil)</option>
+      <option value="zh-hans/">简体中文</option>
+      <option value="ja/">日本語</option>
+      <option value="ko/">한국어</option>
+      <option value="ar/">العربية</option>
+      <option value="kk/">Қазақша</option>
+    </select>
+  </div>
+<div class="card">
     <h2>불가능해 보이는 경우</h2>
     <p>저장공간 256GB인 iPhone에서 "iPhone 저장공간 최적화"를 켠 채 iCloud 사진을 사용해왔고, 보관함은 몇 년에 걸쳐 iCloud에서 조용히 2TB까지 늘어났습니다 — 휴대폰에는 미리보기와 최근에 연 것만 남아 있었습니다. 2TB짜리 외장 SSD를 사면 당연한 의문이 생깁니다: 256GB짜리 기기가 어떻게 2TB의 데이터를 어딘가로 옮길 수 있을까요? 먼저 전부를 "담아둬야" 할 텐데, 그럴 수는 없습니다.</p>
   </div>
@@ -96,5 +112,22 @@
     <p>PhotoDump &middot; <a href="info.html">마이그레이션</a> &middot; <a href="index.html">지원</a> &middot; <a href="privacy.html">개인정보 처리방침</a></p>
   </div>
 </div>
+
+<script>
+(function() {
+  var langs = ["ru","de","fr","es","pt-br","zh-hans","ja","ko","ar","kk"];
+  var parts = location.pathname.split('/').filter(Boolean);
+  var filename = parts[parts.length - 1] || 'index.html';
+  var maybeLang = parts.length >= 2 ? parts[parts.length - 2] : null;
+  var currentPrefix = (maybeLang && langs.indexOf(maybeLang) !== -1) ? maybeLang + '/' : '';
+  var select = document.getElementById('langSwitch');
+  if (select) {
+    select.value = currentPrefix;
+    select.addEventListener('change', function() {
+      location.href = select.value + filename;
+    });
+  }
+})();
+</script>
 </body>
 </html>
