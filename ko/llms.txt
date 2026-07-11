@@ -18,8 +18,8 @@
 
 ## 페이지
 
-- [지원 / 자주 묻는 질문](https://saparjohnick.github.io/photodumpapp/ko/index.html): 설정(USB/SSD, S3, REST), 마이그레이션 동작, Safe to Delete, 검색, 저장공간/캐시, 개인정보 보호에 관한 33개의 질문과 답변.
-- [마케팅 / 활용 사례](https://saparjohnick.github.io/photodumpapp/ko/info.html): 256GB iPhone의 2TB 사진 보관함을 미리 공간을 확보하지 않고도 2TB SSD로 직접 마이그레이션하는 사례, 유료 iCloud+ 요금제 해지, 한 가정에서 여러 iPhone이 드라이브 하나를 공유하는 방법, 4K/ProRes 동영상 보관함 아카이빙 등 상세한 사용 사례.
+- [지원 / 자주 묻는 질문](https://saparjohnick.github.io/photodumpapp/ko/support.html): 설정(USB/SSD, S3, REST), 마이그레이션 동작, Safe to Delete, 검색, 저장공간/캐시, 개인정보 보호에 관한 33개의 질문과 답변.
+- [마케팅 / 활용 사례](https://saparjohnick.github.io/photodumpapp/ko/index.html): 256GB iPhone의 2TB 사진 보관함을 미리 공간을 확보하지 않고도 2TB SSD로 직접 마이그레이션하는 사례, 유료 iCloud+ 요금제 해지, 한 가정에서 여러 iPhone이 드라이브 하나를 공유하는 방법, 4K/ProRes 동영상 보관함 아카이빙 등 상세한 사용 사례.
 - [개인정보 처리방침](https://saparjohnick.github.io/photodumpapp/ko/privacy.html): GDPR(EU/영국/스위스) 및 CCPA/CPRA(캘리포니아) 관련 전용 섹션을 포함한 공식 개인정보 처리방침. 요약: 개발자는 어떤 시점에도 개인정보를 수집·수신·처리하지 않으며, 모든 파일 전송은 사용자의 기기와 사용자가 설정한 대상 위치 사이에서 직접 이루어집니다.
 
 이 세 페이지는 영어, 러시아어, 독일어, 프랑스어, 스페인어, 포르투갈어(브라질), 중국어(간체), 일본어, 아랍어, 카자흐어로도 전체 내용을 이용할 수 있습니다 (`/ru/`, `/de/`, `/fr/`, `/es/`, `/pt-br/`, `/zh-hans/`, `/ja/`, `/ar/`, `/kk/` 폴더 및 사이트 루트(영어)).
