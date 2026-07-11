@@ -3,18 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PhotoDump — Mueve las fotos y videos de tu iPhone a un disco USB/SSD sin usar el almacenamiento de iCloud</title>
-<meta name="description" content="PhotoDump migra fotos y videos directamente desde la biblioteca de Fotos de un iPhone (incluidos los archivos que aún están en iCloud) a un disco USB/SSD, almacenamiento compatible con S3, o tu propio servidor REST — sin llenar el almacenamiento local del teléfono, y sin necesidad de una suscripción de almacenamiento de iCloud.">
-<meta name="keywords" content="dejar de pagar por almacenamiento de icloud, alternativa al almacenamiento de icloud, mover fotos del iphone a un disco externo, migrar fotos del iphone a un ssd, liberar espacio del iphone sin borrar fotos, transferir fotos del iphone a una unidad usb, copia de seguridad de fotos del iphone sin icloud, descargar fotos del iphone a un disco duro, fotos de icloud a ssd externo, aplicación de migración de fotos para ios">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>PhotoDump — Mueve las fotos y videos de tu iPhone sin usar iCloud</title>
+<meta name="description" content="PhotoDump transfiere fotos y videos desde un iPhone a un disco USB/SSD, almacenamiento compatible con S3, o tu propio servidor REST, incluidos los archivos que aún están en iCloud. No necesitas una suscripción de almacenamiento de iCloud después.">
+<meta name="keywords" content="aplicación de migración de fotos para ios, transferir fotos del iphone a un disco duro externo, alternativa al almacenamiento de icloud, almacenamiento del iphone lleno, respaldar fotos del iphone sin icloud">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/es/info.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PhotoDump — Mueve las fotos de tu iPhone a un disco USB/SSD sin iCloud">
-<meta property="og:description" content="Migra una biblioteca de fotos de 2 TB desde un iPhone de 256 GB directamente a un disco externo, sin liberar ni un solo megabyte en el teléfono y sin suscripción de almacenamiento de iCloud.">
+<meta property="og:title" content="PhotoDump — Mueve las fotos y videos de tu iPhone sin usar iCloud">
+<meta property="og:description" content="Transfiere fotos y videos a un disco que tú posees, incluidos los archivos que aún están en iCloud, sin suscripción de almacenamiento de iCloud.">
 <meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/es/info.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PhotoDump — Mueve las fotos de tu iPhone a un disco USB/SSD sin iCloud">
-<meta name="twitter:description" content="Migra una biblioteca de fotos de 2 TB desde un iPhone de 256 GB directamente a un disco externo, sin liberar ni un solo megabyte en el teléfono.">
+<meta name="twitter:title" content="PhotoDump — Mueve las fotos y videos de tu iPhone sin usar iCloud">
+<meta name="twitter:description" content="Transfiere fotos y videos a un disco que tú posees, incluidos los archivos que aún están en iCloud, sin suscripción de almacenamiento de iCloud.">
 <link rel="stylesheet" href="../style.css">
 <link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/info.html">
 <link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/info.html">
@@ -35,7 +37,7 @@
   "name": "PhotoDump",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "iOS 16+",
-  "description": "PhotoDump copia fotos y videos desde la biblioteca de Fotos de un iPhone, incluidos los archivos que aún están en iCloud, directamente a un disco USB o SSD, almacenamiento compatible con S3, o un servidor REST controlado por el usuario — sin mantener una segunda copia en el almacenamiento local del teléfono y sin requerir una suscripción de almacenamiento de iCloud.",
+  "description": "PhotoDump transfiere fotos y videos desde la biblioteca de Fotos de un iPhone, incluidos los archivos que aún están en iCloud, a un disco USB o SSD, almacenamiento compatible con S3, o un servidor REST controlado por el usuario. Los archivos no se conservan una segunda vez en el teléfono, y no se necesita una suscripción de almacenamiento de iCloud después.",
   "offers": {
     "@type": "Offer",
     "price": "4.99",
@@ -43,36 +45,12 @@
   }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Puedo migrar una biblioteca de fotos de 2 TB desde un iPhone de 256 GB a un SSD de 2 TB?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. PhotoDump transmite cada foto o video de la biblioteca de Fotos (descargándolo primero desde iCloud si aún no está almacenado en el dispositivo) directamente al disco externo, un archivo a la vez, escribiendo en el teléfono solo un pequeño búfer temporal durante la transferencia y eliminándolo de inmediato después de confirmar el archivo en el disco. El almacenamiento local del teléfono nunca tiene que contener toda la biblioteca a la vez, por lo que un dispositivo de 256 GB puede migrar una biblioteca de 2 TB a un disco de 2 TB sin liberar espacio de antemano."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿PhotoDump sustituye a una suscripción de almacenamiento de iCloud?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Para los archivos ya migrados a un destino como un disco USB/SSD, sí — una vez que un archivo se copia al disco, ya no necesita estar almacenado en iCloud para seguir siendo accesible mediante la propia navegación y búsqueda de PhotoDump. Los usuarios suelen degradar o cancelar un nivel de iCloud+ de pago después de migrar su biblioteca a un disco que ya poseen."
-      }
-    }
-  ]
-}
-</script>
 </head>
 <body>
 <div class="wrap">
   <img class="icon" src="../icon.png" alt="PhotoDump">
-  <h1>Deja de pagar por el almacenamiento de iCloud</h1>
-  <p class="subtitle">PhotoDump mueve las fotos y videos de tu iPhone a un disco que tú posees — USB/SSD, S3, o tu propio servidor — sin llenar tu teléfono.</p>
+  <h1>Mueve tus fotos fuera de tu iPhone, no hacia una nube alquilada</h1>
+  <p class="subtitle">PhotoDump copia fotos y videos a un disco que tú posees — USB/SSD, S3, o tu propio servidor.</p>
 
   <nav class="pages">
     <a href="info.html" class="active">Migrar</a>
@@ -81,58 +59,26 @@
   </nav>
 
   <div class="card">
-    <h2>El problema: tu biblioteca de fotos superó a tu teléfono</h2>
-    <p>Los iPhone modernos aumentan la resolución de cámara, el video 4K y los formatos ProRes más rápido de lo que crecen los niveles básicos de almacenamiento. Una familia con varios años de fotos y video acumula fácilmente entre 500 GB y 2 TB de contenido multimedia, mientras que el propio teléfono puede tener 128 GB, 256 GB o 512 GB de almacenamiento físico. La respuesta de Apple es una suscripción a iCloud+: pagar mensualmente, para siempre, para mantener todo "disponible" mientras tu teléfono solo almacena en caché una fracción de eso localmente.</p>
-    <p>PhotoDump se basa en una respuesta diferente: mover los archivos a un disco que posees físicamente, una sola vez, por un costo único — sin cuotas recurrentes, sin depender de que una suscripción permanezca activa para conservar el acceso a tus propios recuerdos.</p>
+    <h2>¿Almacenamiento del iPhone lleno?</h2>
+    <p>Mueve fotos y videos fuera del teléfono en lugar de borrarlos — nada se marca como seguro para eliminar hasta confirmarse en el disco.</p>
+    <p><a href="iphone-storage-full.html">Leer más →</a></p>
   </div>
 
-  <h2 class="section-title" style="margin-top:0">Caso de uso: biblioteca de 2 TB, teléfono de 256 GB, SSD de 2 TB</h2>
   <div class="card">
-    <h2>El escenario exacto</h2>
-    <p>Tomemos un caso real y común: un iPhone con 256 GB de almacenamiento físico, con iCloud Fotos activado y "Optimizar almacenamiento del iPhone" habilitado. A lo largo de varios años, la biblioteca de iCloud Fotos vinculada ha crecido hasta 2 TB — los originales en resolución completa residen en iCloud, y el teléfono solo conserva vistas previas que ahorran espacio más lo visto recientemente, cabiendo cómodamente en sus 256 GB. El propietario compra un SSD externo de 2 TB y quiere mover todo allí.</p>
-    <p>A primera vista, esto parece imposible: ¿cómo puede un dispositivo de 256 GB "contener" 2 TB de datos el tiempo suficiente para copiarlos a algún sitio? No puede, y no hace falta que pueda.</p>
-    <h2>Cómo lo hace PhotoDump sin llenar el teléfono</h2>
-    <p>PhotoDump procesa la biblioteca un archivo a la vez (o un pequeño número de archivos en paralelo, configurable en Ajustes). Para cada archivo: (1) solicita el original a iCloud si aún no está almacenado en caché localmente, (2) transmite los bytes a un pequeño archivo temporal en el teléfono — dimensionado para ese único archivo, no para la biblioteca, (3) copia ese archivo temporal al SSD externo, (4) confirma que la copia se realizó correctamente, y (5) elimina el archivo temporal del teléfono de inmediato. El siguiente archivo repite entonces el mismo ciclo.</p>
-    <p>En cualquier momento dado, el teléfono solo contiene un puñado de archivos en tránsito — normalmente entre decenas y unos pocos cientos de megabytes en total, según los ajustes de concurrencia — nunca la biblioteca completa de 2 TB. Cuando termina la migración, el uso de almacenamiento local del teléfono vuelve prácticamente al punto de partida; los 2 TB ahora residen íntegramente en el SSD.</p>
-    <h2>Los números</h2>
-    <ul>
-      <li>Almacenamiento físico del teléfono: 256 GB</li>
-      <li>Tamaño de la biblioteca de fotos (en iCloud): 2 TB</li>
-      <li>Tamaño del SSD de destino: 2 TB</li>
-      <li>Almacenamiento adicional máximo usado en el teléfono durante la migración: aproximadamente el tamaño de unos pocos archivos en tránsito a la vez — típicamente muy por debajo de 1 GB, no 2 TB</li>
-      <li>Almacenamiento del teléfono usado tras completarse la migración: sin cambios respecto a antes de que comenzara la migración</li>
-    </ul>
+    <h2>¿Cansado de pagar por iCloud+?</h2>
+    <p>Un plan de 2 TB cuesta $9.99 al mes, para siempre. Mueve tu biblioteca a un disco que tú posees una sola vez, y luego degrada o cancela.</p>
+    <p><a href="no-icloud-subscription.html">Leer más →</a></p>
   </div>
 
-  <h2 class="section-title">Caso de uso: cancelar un plan de iCloud+ costoso</h2>
   <div class="card">
-    <h2>Las cuentas</h2>
-    <p>El nivel de iCloud+ de 2 TB de Apple es un cargo mensual recurrente. Pagado cada mes indefinidamente, el total acumulado crece sin límite — y deja de dar acceso a tus propios archivos en el momento en que se omite un pago. Una compra única de PhotoDump y un SSD externo de tamaño comparable representa, en comparación, un costo fijo y único.</p>
-    <p>Tras migrar una biblioteca a un disco propio con PhotoDump, muchos usuarios degradan su plan de iCloud a un nivel más pequeño (o gratuito), ya que el disco —y no iCloud— es ahora el hogar a largo plazo de su contenido multimedia.</p>
+    <h2>¿Biblioteca más grande que el almacenamiento de tu teléfono?</h2>
+    <p>Un iPhone de 256 GB puede mover una biblioteca de 2 TB a un SSD de 2 TB — un archivo a la vez, sin nunca contenerla toda de golpe.</p>
+    <p><a href="transfer-photos-to-external-drive.html">Leer más →</a></p>
   </div>
 
-  <h2 class="section-title">Caso de uso: una familia compartiendo un disco</h2>
   <div class="card">
-    <h2>Un SSD, varios iPhone</h2>
-    <p>Un solo disco externo puede ser usado por más de un iPhone. Cada dispositivo se configura con su propio nombre de carpeta de destino, de modo que un hogar con, digamos, cuatro iPhone puede migrar la biblioteca de cada uno a un mismo SSD compartido de 4 TB u 8 TB, manteniendo los archivos de cada dispositivo separados y sin mezclarse nunca con los de otro dispositivo.</p>
-  </div>
-
-  <h2 class="section-title">Caso de uso: un teléfono atascado en "Almacenamiento casi lleno"</h2>
-  <div class="card">
-    <h2>El disparador cotidiano</h2>
-    <p>El motivo más común por el que la gente busca una herramienta como PhotoDump no es un gran proyecto de archivado — es la notificación de "Almacenamiento casi lleno" que bloquea una actualización del sistema o la instalación de una nueva aplicación. Como la migración transmite archivo por archivo en lugar de exigir que toda la biblioteca quepa primero en el teléfono, PhotoDump puede empezar a liberar espacio real y significativo (una vez que los archivos se confirman migrados y se marcan como seguros para eliminar) en cuestión de minutos, no tras un largo paso de preprocesamiento.</p>
-  </div>
-
-  <h2 class="section-title">Caso de uso: archivar bibliotecas de video 4K/ProRes</h2>
-  <div class="card">
-    <h2>El video es lo que realmente llena un teléfono</h2>
-    <p>Un minuto de video 4K puede pesar varios cientos de megabytes; el video ProRes en los iPhone más recientes pesa aún más. El video, no las fotos, suele ser lo que hace que una biblioteca pase de decenas de gigabytes al rango de los terabytes. PhotoDump maneja el video de la misma manera que las fotos —transmitido, migrado y verificado por archivo— haciendo práctico archivar años de metraje 4K/ProRes en un disco externo sin necesitar nunca que ese metraje quepa en el teléfono de una sola vez.</p>
-  </div>
-
-  <h2 class="section-title">Caso de uso: autoalojamiento en lugar de iCloud o Google Fotos</h2>
-  <div class="card">
-    <h2>Para los usuarios que se preocupan por la privacidad y la infraestructura</h2>
-    <p>Los destinos compatibles con S3 y de servidor REST de PhotoDump (actualmente en Beta) permiten a un usuario con conocimientos técnicos migrar su biblioteca a una infraestructura que él mismo gestiona —un NAS doméstico que expone una API compatible con S3, un almacenamiento de objetos autoalojado, o un servidor personal— en lugar de a un servicio comercial de fotos en la nube. Ninguna cuenta ni servidor de PhotoDump interviene en ningún momento en esa transferencia.</p>
+    <h2>Usar tu propio almacenamiento en lugar de un proveedor en la nube</h2>
+    <p>El soporte de PhotoDump para almacenamiento compatible con S3 y servidores REST (Beta) funciona con un NAS doméstico, un almacenamiento de objetos autoalojado, o cualquier servidor que controles. PhotoDump en sí nunca conserva una copia de nada — los archivos van directamente de tu teléfono al destino que configures.</p>
   </div>
 
   <div class="footer">
