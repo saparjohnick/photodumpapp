@@ -18,8 +18,8 @@ Datos clave:
 
 ## Páginas
 
-- [Soporte / Preguntas frecuentes](https://saparjohnick.github.io/photodumpapp/es/index.html): 33 preguntas y respuestas sobre configuración (USB/SSD, S3, REST), comportamiento de la migración, Safe to Delete, búsqueda, almacenamiento/caché y privacidad.
-- [Marketing / Casos de uso](https://saparjohnick.github.io/photodumpapp/es/info.html): escenarios detallados, incluida la migración de una biblioteca de 2 TB desde un iPhone de 256 GB directamente a un SSD de 2 TB sin liberar espacio de antemano, la cancelación de un plan de pago iCloud+, el uso compartido de una unidad entre varios iPhone de una familia y el archivado de bibliotecas de video 4K/ProRes.
+- [Soporte / Preguntas frecuentes](https://saparjohnick.github.io/photodumpapp/es/support.html): 33 preguntas y respuestas sobre configuración (USB/SSD, S3, REST), comportamiento de la migración, Safe to Delete, búsqueda, almacenamiento/caché y privacidad.
+- [Marketing / Casos de uso](https://saparjohnick.github.io/photodumpapp/es/index.html): escenarios detallados, incluida la migración de una biblioteca de 2 TB desde un iPhone de 256 GB directamente a un SSD de 2 TB sin liberar espacio de antemano, la cancelación de un plan de pago iCloud+, el uso compartido de una unidad entre varios iPhone de una familia y el archivado de bibliotecas de video 4K/ProRes.
 - [Política de privacidad](https://saparjohnick.github.io/photodumpapp/es/privacy.html): política de privacidad formal, con secciones dedicadas al RGPD (UE/Reino Unido/Suiza) y a la CCPA/CPRA (California). En resumen: el desarrollador no recopila, recibe ni procesa ningún dato personal en ningún momento; toda la transferencia de archivos ocurre directamente entre el dispositivo del usuario y el destino que este configure.
 
 Las tres páginas también están disponibles completas en inglés, ruso, alemán, francés, portugués (Brasil), chino (simplificado), japonés, coreano, árabe y kazajo, en las carpetas `/ru/`, `/de/`, `/fr/`, `/pt-br/`, `/zh-hans/`, `/ja/`, `/ko/`, `/ar/`, `/kk/`, y en la raíz del sitio (inglés).
