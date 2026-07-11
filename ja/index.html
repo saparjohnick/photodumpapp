@@ -5,8 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="../icon.png">
 <link rel="apple-touch-icon" href="../icon.png">
-<title>PhotoDump Export App — サポート</title>
-<meta name="description" content="PhotoDump Export App — 設定、移行、USB/SSD、S3、REST、プライバシーに関するサポートとよくある質問への回答。">
+<title>PhotoDump Export App — iCloudを使わずにiPhoneの写真と動画をスマートフォンから移動</title>
+<meta name="description" content="PhotoDump Export Appは、iPhoneの写真や動画をUSB/SSDドライブ、S3互換ストレージ、または自分自身のRESTサーバーへ転送します。iCloudにまだ保存されているファイルも含まれます。転送後はiCloudストレージのサブスクリプションも不要です。">
+<meta name="keywords" content="iOS 写真移行アプリ, iPhoneの写真を外付けハードドライブに転送, iCloudストレージの代替, iPhoneのストレージが一杯, iCloudを使わずにiPhoneの写真をバックアップ">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/ja/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PhotoDump — iCloudを使わずにiPhoneの写真と動画をスマートフォンから移動">
+<meta property="og:description" content="自分が所有するドライブへ写真や動画を転送します。iCloudにまだ残っているファイルも含め、iCloudストレージのサブスクリプションなしで。">
+<meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/ja/index.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PhotoDump — iCloudを使わずにiPhoneの写真と動画をスマートフォンから移動">
+<meta name="twitter:description" content="自分が所有するドライブへ写真や動画を転送します。iCloudにまだ残っているファイルも含め、iCloudストレージのサブスクリプションなしで。">
 <link rel="stylesheet" href="../style.css">
 <link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/index.html">
 <link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/index.html">
@@ -20,16 +30,31 @@
 <link rel="alternate" hreflang="ar" href="https://saparjohnick.github.io/photodumpapp/ar/index.html">
 <link rel="alternate" hreflang="kk" href="https://saparjohnick.github.io/photodumpapp/kk/index.html">
 <link rel="alternate" hreflang="x-default" href="https://saparjohnick.github.io/photodumpapp/index.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PhotoDump Export App",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "iOS 16+",
+  "description": "PhotoDumpは、iCloudにまだ保存されているファイルを含む、iPhoneの写真ライブラリ内の写真や動画を、USBまたはSSDドライブ、S3互換ストレージ、あるいはユーザー自身が管理するRESTサーバーへ転送します。ファイルはスマートフォンに二重に保持されることはなく、転送後はiCloudストレージのサブスクリプションも不要です。",
+  "offers": {
+    "@type": "Offer",
+    "price": "4.99",
+    "priceCurrency": "USD"
+  }
+}
+</script>
 </head>
 <body>
 <div class="wrap">
   <img class="icon" src="../icon.png" alt="PhotoDump">
-  <h1>PhotoDump サポート</h1>
-  <p class="subtitle">よくある質問への回答です。見つからない場合は、メッセージをお送りください。</p>
+  <h1>写真をiPhoneから移そう。借り物のクラウドへではなく</h1>
+  <p class="subtitle">PhotoDump Export Appは、写真や動画をあなたが所有するドライブ — USB/SSD、S3、あるいは自分自身のサーバー — へコピーします。</p>
 
   <nav class="pages">
-    <a href="info.html">移行</a>
-    <a href="index.html" class="active">サポート</a>
+    <a href="index.html" class="active">移行</a>
+    <a href="support.html">サポート</a>
     <a href="privacy.html">プライバシーポリシー</a>
   </nav>
 
@@ -49,177 +74,31 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-<a class="btn" href="mailto:saparjohnick@gmail.com?subject=PhotoDump%20フィードバック">フィードバックを送る</a>
-
-  <p class="section-title">はじめに</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>PhotoDumpは何をするアプリですか？</summary>
-      <div class="faq-body"><p>PhotoDumpは、Live Photosを含む写真や動画を、フル画質のままiPhoneから、USBやSSDドライブ、自分で用意したS3互換ストレージ、あるいは自分で運用するRESTサーバーなど、自分で管理する保存先へコピーします。</p></div>
-    </details>
-    <details class="faq">
-      <summary>どの保存先に対応していますか？</summary>
-      <div class="faq-body"><p>USB/SSDドライブ、S3互換オブジェクトストレージ（AWS S3、MinIO、および互換サービス）、そして自分で管理するRESTサーバーに対応しています。現時点で最も安定しているのはUSB/SSDで、S3とRESTはベータ版として提供されています。</p></div>
-    </details>
-    <details class="faq">
-      <summary>アカウントを作成する必要はありますか？</summary>
-      <div class="faq-body"><p>いいえ。サインアップやログイン、PhotoDumpアカウントの類は一切ありません。使用したい保存先を設定するだけです。</p></div>
-    </details>
-    <details class="faq">
-      <summary>サブスクリプションやアプリ内課金はありますか？</summary>
-      <div class="faq-body"><p>継続課金はありません。PhotoDumpは一度限りの買い切り購入で、ベータ版の保存先を含むすべての保存先が利用可能になります。</p></div>
-    </details>
-    <details class="faq">
-      <summary>必要なiOSのバージョンは？</summary>
-      <div class="faq-body"><p>iOS 16以降が必要です。ロック画面のライブアクティビティなど、一部の機能は新しいiOSバージョンが利用可能な場合にその機能を活用します。</p></div>
-    </details>
-    <details class="faq">
-      <summary>PhotoDumpはどの言語に対応していますか？</summary>
-      <div class="faq-body"><p>英語、ロシア語、ドイツ語、フランス語、スペイン語、ポルトガル語（ブラジル）、中国語（簡体字）、日本語、韓国語、アラビア語、カザフ語に対応しています。アプリはデバイスの言語設定に自動的に従いますが、設定画面から手動で言語を選択することもできます。</p></div>
-    </details>
+<div class="card">
+    <h2>iPhoneのストレージが一杯ですか？</h2>
+    <p>写真や動画を削除する代わりにスマートフォンから移動しましょう — ドライブ上で確認されるまで、削除しても安全とマークされることはありません。</p>
+    <p><a href="iphone-storage-full.html">続きを読む →</a></p>
   </div>
 
-  <p class="section-title">USBとSSD</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>USBやSSDドライブはどう接続しますか？</summary>
-      <div class="faq-body"><p>ドライブをiPhoneに（直接、またはアダプター経由で）接続し、PhotoDumpを開いて保存先として「USBドライブ」を選択します。プロンプトが表示されたらフォルダへのアクセスを許可してください。</p></div>
-    </details>
-    <details class="faq">
-      <summary>USB/SSDは本当に100%ローカルで、インターネット接続は不要ですか？</summary>
-      <div class="faq-body"><p>はい。ファイルは写真ライブラリからドライブへ直接ストリーミングされます。どこにもアップロードされることはなく、転送自体にインターネット接続は必要ありません（デバイスではなくiCloudにまだ保存されているオリジナルをダウンロードする場合にのみ必要です）。</p></div>
-    </details>
-    <details class="faq">
-      <summary>1台のドライブを複数のiPhoneで使うことはできますか？</summary>
-      <div class="faq-body"><p>はい。セットアップ時に各デバイスに異なる保存先フォルダ名を設定すれば、それぞれの記録が分離され、異なる端末のファイルが混ざることはありません。</p></div>
-    </details>
-    <details class="faq">
-      <summary>移行の途中でドライブが切断されたらどうなりますか？</summary>
-      <div class="faq-body"><p>移行は自動的に一時停止します。ドライブを再接続すれば、中断した場所から正確に再開されます。ファイルが再コピーされたり失われたりすることはありません。</p></div>
-    </details>
-    <details class="faq">
-      <summary>なぜアプリはフォルダ名の入力を求めるのですか？</summary>
-      <div class="faq-body"><p>フォルダ名によって、ドライブ上のどこにファイル（およびPhotoDumpの内部記録データベース）が保存されるかが決まります。これにより、1台のドライブを複数のデバイスで共有していてもファイルが混ざらないようになっています。</p></div>
-    </details>
-    <details class="faq">
-      <summary>PhotoDumpはドライブをフォーマットしたり消去したりしますか？</summary>
-      <div class="faq-body"><p>いいえ。PhotoDumpは選択した保存先フォルダにのみ書き込みを行います。ドライブ上の他の内容をフォーマットしたり、消去したり、変更したりすることは一切ありません。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">S3とREST（ベータ版）</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>S3互換の保存先はどう設定しますか？</summary>
-      <div class="faq-body"><p>保存先として「S3ストレージ」を選択し、バケット名、リージョン、アクセスキー、シークレットキーを入力します。AWSに限らず、S3互換のプロバイダーであればどれでも利用できます。</p></div>
-    </details>
-    <details class="faq">
-      <summary>対応しているのはAmazon S3だけですか？</summary>
-      <div class="faq-body"><p>いいえ。S3 APIに対応したストレージサービスであれば、MinIOのようなセルフホスト型のものを含め、同じように利用できます。</p></div>
-    </details>
-    <details class="faq">
-      <summary>RESTサーバーの保存先はどう設定しますか？</summary>
-      <div class="faq-body"><p>保存先として「REST API」を選択し、サーバーのアップロードURLと必要な認証ヘッダーを入力します。PhotoDumpが送信するリクエストの正確な形式については、アプリ内のセットアップガイドを参照してください。</p></div>
-    </details>
-    <details class="faq">
-      <summary>なぜS3とRESTはベータ版と表示されているのですか？</summary>
-      <div class="faq-body"><p>これらはUSB/SSD対応よりも新しく、ネットワークの中断やプロバイダー固有の癖といったエッジケースへの対応がまだ強化中です。安全に使用できますが、現時点で最も実績があるのはUSB/SSDです。</p></div>
-    </details>
-    <details class="faq">
-      <summary>S3のアクセスキーは安全に保存されますか？</summary>
-      <div class="faq-body"><p>はい。認証情報はデバイスのキーチェーンに保存されます。これはiOSがパスワードの保存に使用しているのと同じ安全なストレージであり、設定した保存先以外に送信されることは一切ありません。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">移行</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>「削除しても安全」はどのように機能しますか？</summary>
-      <div class="faq-body"><p>ファイルは、PhotoDumpが保存先にそのファイルが存在することを確認した後にのみ、スマートフォンから削除しても安全とマークされます。この確認が完了する前に削除が提案されることはありません。</p></div>
-    </details>
-    <details class="faq">
-      <summary>移行を一時停止して再開することはできますか？</summary>
-      <div class="faq-body"><p>はい、いつでも可能です。アプリを閉じて後で戻ってきても、移行は最初からではなく、停止した場所から正確に再開されます。</p></div>
-    </details>
-    <details class="faq">
-      <summary>なぜ移行が遅かったり、iCloudからのダウンロードで止まったりするのですか？</summary>
-      <div class="faq-body"><p>写真や動画がデバイスではなくまだiCloudに保存されている場合、そのダウンロード速度はAppleのiCloudサービスがあなたのアカウントに許可する速度に依存します。これはPhotoDumpではなくAppleによって制御されています。ファイルが一度ダウンロードされれば、それ以降はiCloudに依存しなくなります。</p></div>
-    </details>
-    <details class="faq">
-      <summary>移行中にスマートフォンがロックされたらどうなりますか？</summary>
-      <div class="faq-body"><p>移行画面が開いている間、PhotoDumpは画面が自動的にロックされないようにするため、明るさを下げても安全です。手動でロックした場合は移行が一時停止し、再度ロックを解除すると再開されます。</p></div>
-    </details>
-    <details class="faq">
-      <summary>移行はバックグラウンドで実行されますか？</summary>
-      <div class="faq-body"><p>iOSはすべてのアプリに対してバックグラウンドでの写真アップロードを制限しているため、PhotoDumpはアプリを開いた状態で使用するのが最適です。ロック画面での進捗表示にはライブアクティビティを使用し、バックグラウンドの実行時間がなくなった場合はアプリを再度開くよう通知します。</p></div>
-    </details>
-    <details class="faq">
-      <summary>ファイルの移行に失敗した場合はどうなりますか？</summary>
-      <div class="faq-body"><p>PhotoDumpは失敗したファイルを失敗と判定する前に自動的に数回再試行します。失敗した項目は移行ログに一覧表示され、いつでも手動で再試行できます。</p></div>
-    </details>
-    <details class="faq">
-      <summary>PhotoDumpが写真を自動的に削除することはありますか？</summary>
-      <div class="faq-body"><p>いいえ。PhotoDumpはファイルに「削除しても安全」とマークするだけで、写真ライブラリから自ら何かを削除することは一切ありません。削除は常にユーザー自身が行う手動の操作です。</p></div>
-    </details>
-    <details class="faq">
-      <summary>移行するアルバムや写真を選ぶことはできますか？</summary>
-      <div class="faq-body"><p>はい。ライブラリ全体を移行することも、移行のセットアップ画面から特定のプリセットやアルバムを選ぶこともできます。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">閲覧と検索</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>保存先を写真アプリのように閲覧できますか？</summary>
-      <div class="faq-body"><p>はい。アルバム、全画面表示、検索はすべて、ファイルがまだスマートフォンにある場合でも、すでに保存先へ移行済みの場合でも同じように機能します。</p></div>
-    </details>
-    <details class="faq">
-      <summary>検索はどのように機能しますか？</summary>
-      <div class="faq-body"><p>PhotoDumpは各写真に写っているもの（人物、場所、物体）や撮影場所を、すべてデバイス上でインデックス化します。そのため、正確なファイル名や日付を入力しなくても、内容や場所で検索できます。</p></div>
-    </details>
-    <details class="faq">
-      <summary>ドライブが接続されていないときも検索は機能しますか？</summary>
-      <div class="faq-body"><p>元のドライブに現在アクセスできない場合、検索タグは非表示になります。そのため、実際には今開けないコンテンツを指す検索結果が表示されることはありません。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">ストレージとキャッシュ</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>PhotoDumpはスマートフォンの追加ストレージを消費しますか？</summary>
-      <div class="faq-body"><p>意味のある量は消費しません。PhotoDumpは移行済みファイルの2つ目のコピーをスマートフォンのストレージに保持しません。転送中に使用される小さな一時ファイルは自動的に削除されます。</p></div>
-    </details>
-    <details class="faq">
-      <summary>設定にある「キャッシュを消去」は何をしますか？</summary>
-      <div class="faq-body"><p>サムネイルや、中断された移行や動画プレビューによって残された一時ファイルを消去し、自動クリーンアップを待たずに即座に容量を解放します。</p></div>
-    </details>
-    <details class="faq">
-      <summary>USB/SSDとS3/RESTでストレージの使い方は違いますか？</summary>
-      <div class="faq-body"><p>USB/SSDはファイルをスマートフォンのローカルストレージに一切コピーせず、ドライブへ直接ストリーミングします。S3/RESTはアップロード中に一時的にファイルをローカルに保持し、その後自動的に削除します。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">プライバシー</p>
-  <div class="faq-group">
-    <details class="faq">
-      <summary>PhotoDumpは分析データやトラッキングデータを収集しますか？</summary>
-      <div class="faq-body"><p>いいえ。アプリには分析、クラッシュレポート、広告SDKの類は一切含まれていません。詳細は<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p></div>
-    </details>
-    <details class="faq">
-      <summary>自分の写真を見ることができるのは誰ですか？</summary>
-      <div class="faq-body"><p>あなただけです。ファイルはデバイスから設定した保存先へ直接送られます。PhotoDumpの開発者が、移行したもののコピーを受け取ることは一切ありません。</p></div>
-    </details>
-  </div>
-
-  <p class="section-title">それでも解決しない場合は？</p>
   <div class="card">
-    <h2><span class="dot"></span>お問い合わせ</h2>
-    <p>上記で解決しない場合は、メッセージをお送りください。返信いたします。アプリのバージョンと使用している保存先の種類（USB/S3/REST）を明記してください。設定 → フィードバックを送るからは自動的に入力されます。</p>
-    <a class="btn" href="mailto:saparjohnick@gmail.com?subject=PhotoDump%20フィードバック">フィードバックを送る</a>
+    <h2>iCloud+の支払いにうんざりしていませんか？</h2>
+    <p>2TBプランは月額$9.99、それが永遠に続きます。ライブラリを一度、自分が所有するドライブへ移動すれば、あとはダウングレードするか解約できます。</p>
+    <p><a href="no-icloud-subscription.html">続きを読む →</a></p>
+  </div>
+
+  <div class="card">
+    <h2>ライブラリがスマートフォンの容量より大きいですか？</h2>
+    <p>256GBのiPhoneでも、2TBのライブラリを2TBのSSDへ移動できます — 1ファイルずつ処理し、すべてを一度に保持することはありません。</p>
+    <p><a href="transfer-photos-to-external-drive.html">続きを読む →</a></p>
+  </div>
+
+  <div class="card">
+    <h2>クラウドサービスの代わりに自分のストレージを使う</h2>
+    <p>PhotoDumpのS3互換およびRESTサーバー対応（ベータ版）は、ホームNAS、セルフホスト型のオブジェクトストレージ、あるいは自分で管理するあらゆるサーバーで利用できます。PhotoDump自体がファイルのコピーを保持することは一切ありません — ファイルはスマートフォンから、設定した保存先へ直接送られます。</p>
   </div>
 
   <div class="footer">
-    <p>PhotoDump Export App &middot; <a href="privacy.html">プライバシーポリシー</a></p>
+    <p>PhotoDump Export App &middot; <a href="support.html">サポート</a> &middot; <a href="privacy.html">プライバシーポリシー</a></p>
   </div>
 </div>
 
