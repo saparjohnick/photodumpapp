@@ -67,7 +67,23 @@
     <a href="privacy.html">Politique de confidentialité</a>
   </nav>
 
-  <div class="card">
+  
+  <div class="lang-switcher">
+    <select id="langSwitch" aria-label="Language">
+      <option value="">English</option>
+      <option value="ru/">Русский</option>
+      <option value="de/">Deutsch</option>
+      <option value="fr/">Français</option>
+      <option value="es/">Español</option>
+      <option value="pt-br/">Português (Brasil)</option>
+      <option value="zh-hans/">简体中文</option>
+      <option value="ja/">日本語</option>
+      <option value="ko/">한국어</option>
+      <option value="ar/">العربية</option>
+      <option value="kk/">Қазақша</option>
+    </select>
+  </div>
+<div class="card">
     <h2>Ce que coûte réellement iCloud+</h2>
     <p>Le palier gratuit d'Apple est de 5 Go — quelques dizaines de photos. Au-delà, 2 To coûte $9.99 par mois, 6 To coûte $29.99, et 12 To coûte $59.99. Aucun de ces forfaits n'a de réduction annuelle, donc un forfait de 2 To représente environ $120 par an, chaque année, indéfiniment. Manquez un paiement ou laissez une carte expirer, et Apple restreint l'accès à tout ce qui dépasse le palier gratuit jusqu'à ce que vous payiez à nouveau.</p>
     <p>Vous ne payez pas pour posséder quoi que ce soit. Vous payez un loyer pour de l'espace destiné à des fichiers que vous avez déjà.</p>
@@ -93,5 +109,22 @@
     <p>PhotoDump &middot; <a href="info.html">Migrer</a> &middot; <a href="index.html">Assistance</a> &middot; <a href="privacy.html">Politique de confidentialité</a></p>
   </div>
 </div>
+
+<script>
+(function() {
+  var langs = ["ru","de","fr","es","pt-br","zh-hans","ja","ko","ar","kk"];
+  var parts = location.pathname.split('/').filter(Boolean);
+  var filename = parts[parts.length - 1] || 'index.html';
+  var maybeLang = parts.length >= 2 ? parts[parts.length - 2] : null;
+  var currentPrefix = (maybeLang && langs.indexOf(maybeLang) !== -1) ? maybeLang + '/' : '';
+  var select = document.getElementById('langSwitch');
+  if (select) {
+    select.value = currentPrefix;
+    select.addEventListener('change', function() {
+      location.href = select.value + filename;
+    });
+  }
+})();
+</script>
 </body>
 </html>
