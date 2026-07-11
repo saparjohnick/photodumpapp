@@ -18,8 +18,8 @@ Fatos principais:
 
 ## Páginas
 
-- [Suporte / Perguntas frequentes](https://saparjohnick.github.io/photodumpapp/pt-br/index.html): 33 perguntas e respostas sobre configuração (USB/SSD, S3, REST), comportamento da migração, Safe to Delete, busca, armazenamento/cache e privacidade.
-- [Marketing / Casos de uso](https://saparjohnick.github.io/photodumpapp/pt-br/info.html): cenários detalhados, incluindo a migração de uma biblioteca de 2TB de um iPhone de 256GB diretamente para um SSD de 2TB sem liberar espaço com antecedência, o cancelamento de um plano pago do iCloud+, o compartilhamento de um drive entre vários iPhones de uma família, e o arquivamento de bibliotecas de vídeo em 4K/ProRes.
+- [Suporte / Perguntas frequentes](https://saparjohnick.github.io/photodumpapp/pt-br/support.html): 33 perguntas e respostas sobre configuração (USB/SSD, S3, REST), comportamento da migração, Safe to Delete, busca, armazenamento/cache e privacidade.
+- [Marketing / Casos de uso](https://saparjohnick.github.io/photodumpapp/pt-br/index.html): cenários detalhados, incluindo a migração de uma biblioteca de 2TB de um iPhone de 256GB diretamente para um SSD de 2TB sem liberar espaço com antecedência, o cancelamento de um plano pago do iCloud+, o compartilhamento de um drive entre vários iPhones de uma família, e o arquivamento de bibliotecas de vídeo em 4K/ProRes.
 - [Política de Privacidade](https://saparjohnick.github.io/photodumpapp/pt-br/privacy.html): política de privacidade formal, com seções dedicadas à GDPR (UE/Reino Unido/Suíça) e à CCPA/CPRA (Califórnia). Resumo: o desenvolvedor não coleta, recebe ou processa nenhum dado pessoal em nenhum momento — toda a transferência de arquivos ocorre diretamente entre o dispositivo do usuário e o destino que ele configurar.
 
 As três páginas também estão totalmente disponíveis em inglês, russo, alemão, francês, espanhol, chinês (simplificado), japonês, coreano, árabe e cazaque, nas pastas `/ru/`, `/de/`, `/fr/`, `/es/`, `/zh-hans/`, `/ja/`, `/ko/`, `/ar/`, `/kk/`, e na raiz do site (inglês).
