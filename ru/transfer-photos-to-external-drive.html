@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Перенос фото с iPhone на внешний жёсткий диск (даже если их больше, чем память телефона) | PhotoDump</title>
+<meta name="description" content="Как PhotoDump переносит фото и видео из библиотеки «Фото» iPhone на USB/SSD-накопитель, даже когда библиотека больше, чем память самого телефона. Включая видео в 4K/ProRes и файлы, которые пока хранятся только в iCloud.">
+<meta name="keywords" content="перенос фото с iphone на внешний жёсткий диск, перенести фото icloud на внешний диск, фото icloud на внешний ssd, резервное копирование фото iphone на внешний накопитель, перенос 4k видео с iphone на жёсткий диск">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/ru/transfer-photos-to-external-drive.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Перенос фото с iPhone на внешний жёсткий диск | PhotoDump">
+<meta property="og:description" content="Перенесите библиотеку фото, которая больше, чем память вашего iPhone, на внешний накопитель — без предварительного освобождения места.">
+<meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/ru/transfer-photos-to-external-drive.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Перенос фото с iPhone на внешний жёсткий диск | PhotoDump">
+<meta name="twitter:description" content="Перенесите библиотеку фото, которая больше, чем память вашего iPhone, на внешний накопитель — без предварительного освобождения места.">
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="de" href="https://saparjohnick.github.io/photodumpapp/de/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="fr" href="https://saparjohnick.github.io/photodumpapp/fr/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="es" href="https://saparjohnick.github.io/photodumpapp/es/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="pt-BR" href="https://saparjohnick.github.io/photodumpapp/pt-br/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://saparjohnick.github.io/photodumpapp/zh-hans/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ja" href="https://saparjohnick.github.io/photodumpapp/ja/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ko" href="https://saparjohnick.github.io/photodumpapp/ko/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ar" href="https://saparjohnick.github.io/photodumpapp/ar/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="kk" href="https://saparjohnick.github.io/photodumpapp/kk/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="x-default" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Можно ли перенести библиотеку фото, которая больше памяти iPhone, на внешний накопитель?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. PhotoDump передаёт файлы по одному — сначала загружая файл из iCloud, если его ещё нет на устройстве, ненадолго записывая его на телефон, копируя на накопитель, а затем удаляя временную копию, — поэтому телефону никогда не нужно вмещать всю библиотеку сразу. Так iPhone на 256 ГБ может перенести библиотеку на 2 ТБ на накопитель объёмом 2 ТБ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Это работает для видео в 4K и ProRes, а не только для фото?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, видео переносится так же, как и фото: по одному файлу за раз, с проверкой в месте назначения перед тем, как файл будет помечен завершённым. Именно видео обычно заполняет библиотеку, ведь минута 4K может весить несколько сотен мегабайт, а ProRes — ещё больше."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <img class="icon" src="../icon.png" alt="PhotoDump">
+  <h1>Перенос фото на внешний накопитель, даже если они не помещаются на телефоне</h1>
+  <p class="subtitle">iPhone на 256 ГБ всё равно может перенести библиотеку на 2 ТБ на SSD объёмом 2 ТБ. Вот как это на самом деле работает.</p>
+
+  <nav class="pages">
+    <a href="info.html">Миграция</a>
+    <a href="index.html">Поддержка</a>
+    <a href="privacy.html">Политика конфиденциальности</a>
+  </nav>
+
+  <div class="card">
+    <h2>Случай, который кажется невозможным</h2>
+    <p>iPhone с 256 ГБ памяти, «Фото iCloud» с включённой опцией «Оптимизация хранилища iPhone», и библиотека, которая за годы незаметно выросла до 2 ТБ в iCloud, — телефон всё это время хранил только превью и то, что недавно открывалось. Вы покупаете внешний SSD на 2 ТБ, и напрашивается вопрос: как устройство с 256 ГБ памяти вообще может куда-то перенести 2 ТБ данных? Ему пришлось бы сначала «вместить» всё это, а оно не может.</p>
+  </div>
+
+  <div class="card">
+    <h2>Оно не вмещает всё сразу — и ему это не нужно</h2>
+    <p>PhotoDump обрабатывает библиотеку по одному файлу за раз (или небольшими группами одновременно). Каждый файл при необходимости загружается из iCloud, ненадолго записывается на телефон, копируется на накопитель, подтверждается, а временная копия удаляется — всё это прежде, чем начнётся следующий файл. В любой момент времени телефон хранит только то, что сейчас находится в процессе передачи, — обычно меньше гигабайта в сумме. К тому моменту, когда переносится вся библиотека, память телефона возвращается к исходному состоянию, а все 2 ТБ целиком оказываются на SSD.</p>
+  </div>
+
+  <div class="card">
+    <h2>Видео обычно и есть главная проблема</h2>
+    <p>Минута видео в 4K весит несколько сотен мегабайт, а ProRes на новых iPhone — ещё больше: обычно именно видео, а не фото, выталкивает библиотеку из десятков гигабайт в терабайты. Видео проходит через тот же процесс переноса по одному файлу, поэтому архивирование многолетних съёмок в 4K или ProRes не требует, чтобы всё это когда-либо помещалось на телефоне.</p>
+  </div>
+
+  <div class="card">
+    <h2>Один накопитель для всей семьи</h2>
+    <p>На одном накопителе может храниться библиотека не одного iPhone, а нескольких. Для каждого устройства создаётся своя папка, поэтому семья может разместить фото всех участников на одном общем накопителе на 4 ТБ или 8 ТБ, и файлы разных людей никогда не перемешаются.</p>
+  </div>
+
+  <div class="card">
+    <h2>Также по теме</h2>
+    <p><a href="iphone-storage-full.html">Если память телефона уже заполнена прямо сейчас</a> · <a href="no-icloud-subscription.html">Что это значит для вашей подписки iCloud+</a></p>
+  </div>
+
+  <div class="footer">
+    <p>PhotoDump &middot; <a href="info.html">Миграция</a> &middot; <a href="index.html">Поддержка</a> &middot; <a href="privacy.html">Политика конфиденциальности</a></p>
+  </div>
+</div>
+</body>
+</html>
