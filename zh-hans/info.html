@@ -3,18 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PhotoDump — 无需 iCloud 存储，将 iPhone 照片和视频迁移到 USB/SSD 硬盘</title>
-<meta name="description" content="PhotoDump 可将照片和视频直接从 iPhone 的照片图库（包括仍存储在 iCloud 中的文件）迁移到 USB/SSD 硬盘、S3 兼容存储或你自己的 REST 服务器——不会占满手机本地存储空间，也无需 iCloud 存储订阅。">
-<meta name="keywords" content="停止支付 iCloud 存储费用, iCloud 存储替代方案, 将 iPhone 照片迁移到外部硬盘, 把照片从 iPhone 迁移到 SSD, 不删除照片释放 iPhone 存储空间, 将照片从 iPhone 传输到 USB 硬盘, 无需 iCloud 的 iPhone 照片备份, 将 iPhone 照片转移到硬盘, iCloud 照片转移到外部 SSD, iOS 照片迁移应用">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>PhotoDump — 无需 iCloud，将 iPhone 照片和视频移出手机</title>
+<meta name="description" content="PhotoDump 可将照片和视频从 iPhone 传输到 USB/SSD 硬盘、S3 兼容存储或你自己的 REST 服务器，包括仍存储在 iCloud 中的文件。之后无需 iCloud 存储订阅。">
+<meta name="keywords" content="iOS 照片迁移应用, 将 iPhone 照片传输到外部硬盘, iCloud 存储替代方案, iPhone 存储空间已满, 不用 iCloud 备份 iPhone 照片">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/zh-hans/info.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PhotoDump — 无需 iCloud，将 iPhone 照片迁移到 USB/SSD 硬盘">
-<meta property="og:description" content="将 2TB 的照片图库从 256GB 的 iPhone 直接迁移到外部硬盘，无需在手机上腾出哪怕一兆字节的空间，也无需 iCloud 存储订阅。">
+<meta property="og:title" content="PhotoDump — 无需 iCloud，将 iPhone 照片和视频移出手机">
+<meta property="og:description" content="将照片和视频传输到你自己拥有的硬盘，包括仍在 iCloud 中的文件，无需 iCloud 存储订阅。">
 <meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/zh-hans/info.html">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PhotoDump — 无需 iCloud，将 iPhone 照片迁移到 USB/SSD 硬盘">
-<meta name="twitter:description" content="将 2TB 的照片图库从 256GB 的 iPhone 直接迁移到外部硬盘，无需在手机上腾出哪怕一兆字节的空间。">
+<meta name="twitter:title" content="PhotoDump — 无需 iCloud，将 iPhone 照片和视频移出手机">
+<meta name="twitter:description" content="将照片和视频传输到你自己拥有的硬盘，包括仍在 iCloud 中的文件，无需 iCloud 存储订阅。">
 <link rel="stylesheet" href="../style.css">
 <link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/info.html">
 <link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/info.html">
@@ -35,7 +37,7 @@
   "name": "PhotoDump",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "iOS 16+",
-  "description": "PhotoDump 会将照片和视频从 iPhone 的照片图库（包括仍存储在 iCloud 中的文件）直接复制到 USB 或 SSD 硬盘、S3 兼容存储，或用户自己掌控的 REST 服务器——不会在手机本地存储中保留第二份副本，也不需要 iCloud 存储订阅。",
+  "description": "PhotoDump 会将照片和视频从 iPhone 的照片图库传输到 USB 或 SSD 硬盘、S3 兼容存储，或用户自己掌控的 REST 服务器，包括仍存储在 iCloud 中的文件。文件不会在手机上保留第二份副本，之后也不需要 iCloud 存储订阅。",
   "offers": {
     "@type": "Offer",
     "price": "4.99",
@@ -43,36 +45,12 @@
   }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "我可以将 2TB 的照片图库从 256GB 的 iPhone 迁移到 2TB 的 SSD 吗？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "可以。PhotoDump 会逐个文件地将照片图库中的每张照片或视频（如果尚未存储在设备本地，会先从 iCloud 下载）直接流式传输到外部硬盘，传输过程中只会在手机上写入一个很小的临时缓冲文件，并在文件在硬盘上确认存在后立即删除该缓冲文件。手机本地存储永远不需要一次性容纳整个图库，因此一台 256GB 的设备可以在无需提前腾出空间的情况下，将 2TB 的图库迁移到 2TB 的硬盘上。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "PhotoDump 可以替代 iCloud 存储订阅吗？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "对于已经迁移到 USB/SSD 硬盘等目标位置的文件而言，可以——文件一旦复制到硬盘上，就不再需要存储在 iCloud 中，依然可以通过 PhotoDump 自身的浏览和搜索功能访问。许多用户在将图库迁移到自己拥有的硬盘后，会降级或取消付费的 iCloud+ 存储套餐。"
-      }
-    }
-  ]
-}
-</script>
 </head>
 <body>
 <div class="wrap">
   <img class="icon" src="../icon.png" alt="PhotoDump">
-  <h1>停止支付 iCloud 存储费用</h1>
-  <p class="subtitle">PhotoDump 会将你 iPhone 上的照片和视频迁移到你自己拥有的硬盘——USB/SSD、S3 或你自己的服务器——而不会占满你的手机。</p>
+  <h1>把照片从 iPhone 移出来，而不是搬进你租来的云端</h1>
+  <p class="subtitle">PhotoDump 会把照片和视频复制到你自己拥有的硬盘——USB/SSD、S3 或你自己的服务器。</p>
 
   <nav class="pages">
     <a href="info.html" class="active">迁移</a>
@@ -81,58 +59,26 @@
   </nav>
 
   <div class="card">
-    <h2>问题：你的照片图库已经超出了手机的容量</h2>
-    <p>现代 iPhone 的摄像头分辨率、4K 视频和 ProRes 格式的增长速度，远远超过了基础存储容量的增长速度。一个积累了几年照片和视频的家庭，很容易就会积累 500GB 到 2TB 的媒体内容，而手机本身可能只有 128GB、256GB 或 512GB 的物理存储空间。Apple 给出的答案是 iCloud+ 订阅：每月付费，永久持续，让一切内容保持“可用”，而你的手机本地只缓存其中一小部分。</p>
-    <p>PhotoDump 采用了不同的解决方式：将文件一次性迁移到你自己实际拥有的硬盘上，只需一次性付费——没有持续费用，也不需要依赖订阅持续有效才能访问自己的回忆。</p>
+    <h2>iPhone 存储空间已满？</h2>
+    <p>把照片和视频移出手机，而不是删除它们——只有在硬盘上确认存在后，文件才会被标记为可以安全删除。</p>
+    <p><a href="iphone-storage-full.html">阅读更多 →</a></p>
   </div>
 
-  <h2 class="section-title" style="margin-top:0">使用场景：2TB 图库、256GB 手机、2TB SSD</h2>
   <div class="card">
-    <h2>真实场景</h2>
-    <p>以一个常见的真实案例为例：一台拥有 256GB 物理存储的 iPhone，开启了 iCloud 照片并启用了“优化 iPhone 存储”。经过几年的积累，关联的 iCloud 照片图库已经增长到 2TB——全分辨率原始文件存储在 iCloud 中，手机本地只保留节省空间的预览版本以及最近查看过的内容，完全可以放进 256GB 的空间里。设备主人买了一块 2TB 的外置 SSD，想把所有内容都迁移过去。</p>
-    <p>乍看之下这似乎不可能：一台 256GB 的设备怎么可能“容纳”下 2TB 的数据，再把它复制到别处？事实上它做不到，也不需要这样做。</p>
-    <h2>PhotoDump 如何在不占满手机的情况下完成迁移</h2>
-    <p>PhotoDump 会逐个文件处理图库（也可以在“设置”中配置少量文件并发处理）。对于每个文件，它会：(1) 如果原始文件尚未缓存在本地，则从 iCloud 请求原始文件；(2) 将数据流式写入手机上的一个小型临时文件——大小仅对应这一个文件，而非整个图库；(3) 将该临时文件复制到外置 SSD；(4) 确认复制成功；(5) 立即从手机上删除该临时文件。下一个文件则重复同样的流程。</p>
-    <p>在任何时刻，手机上只会保留少数几个正在处理中的文件——根据并发设置，总计通常只有几十到几百兆字节——而不会保留整个 2TB 图库。迁移完成后，手机本地存储的使用量基本恢复到迁移开始前的水平；这 2TB 数据此时已完全存储在 SSD 上。</p>
-    <h2>数字概览</h2>
-    <ul>
-      <li>手机物理存储：256GB</li>
-      <li>照片图库大小（存储在 iCloud 中）：2TB</li>
-      <li>目标 SSD 容量：2TB</li>
-      <li>迁移过程中手机额外占用的存储峰值：大致相当于同时处理的几个文件的大小——通常远低于 1GB，而非 2TB</li>
-      <li>迁移完成后手机的存储占用：与迁移开始前相比没有变化</li>
-    </ul>
+    <h2>厌倦了为 iCloud+ 付费？</h2>
+    <p>2TB 套餐每月 $9.99，而且永远要付下去。把图库一次性迁移到你自己拥有的硬盘，然后降级或取消订阅。</p>
+    <p><a href="no-icloud-subscription.html">阅读更多 →</a></p>
   </div>
 
-  <h2 class="section-title">使用场景：取消昂贵的 iCloud+ 套餐</h2>
   <div class="card">
-    <h2>算一笔账</h2>
-    <p>Apple 的 2TB iCloud+ 套餐是按月持续收费的。只要一直每月支付，累计金额就会无限增长——而一旦漏缴，就会立刻无法访问你自己的文件。相比之下，一次性购买 PhotoDump 和一块容量相当的外置 SSD，是一笔固定的一次性支出。</p>
-    <p>使用 PhotoDump 将图库迁移到自己拥有的硬盘后，许多用户会将 iCloud 套餐降级为更小的（或免费的）档位，因为此时硬盘——而不是 iCloud——才是他们媒体内容的长期归宿。</p>
+    <h2>图库比手机存储空间还大？</h2>
+    <p>256GB 的 iPhone 依然可以把 2TB 的图库迁移到 2TB 的 SSD 上——逐个文件传输，从不需要一次性容纳全部内容。</p>
+    <p><a href="transfer-photos-to-external-drive.html">阅读更多 →</a></p>
   </div>
 
-  <h2 class="section-title">使用场景：一家人共用一个硬盘</h2>
   <div class="card">
-    <h2>一块 SSD，多台 iPhone</h2>
-    <p>一块外置硬盘可以供多台 iPhone 共同使用。每台设备都会设置各自的目标文件夹名称，因此一个拥有比如四台 iPhone 的家庭，可以把每个人的图库都迁移到一块共享的 4TB 或 8TB SSD 上，每台设备的文件都保持独立，不会与其他设备的文件混在一起。</p>
-  </div>
-
-  <h2 class="section-title">使用场景：手机一直显示“存储空间几乎已满”</h2>
-  <div class="card">
-    <h2>日常触发场景</h2>
-    <p>人们寻找 PhotoDump 这类工具，最常见的原因并不是什么宏大的归档计划——而是“存储空间几乎已满”的提示挡住了系统更新或新应用的安装。由于迁移是逐个文件流式进行的，而不要求整个图库先塞进手机，PhotoDump 可以在几分钟内（一旦文件确认迁移完成并被标记为可安全删除）就开始真正释放有意义的存储空间，而不需要经过漫长的预处理步骤。</p>
-  </div>
-
-  <h2 class="section-title">使用场景：归档 4K/ProRes 视频图库</h2>
-  <div class="card">
-    <h2>真正占满手机的是视频</h2>
-    <p>一分钟的 4K 视频可能有几百兆字节；新款 iPhone 上的 ProRes 视频更大。通常是视频而非照片，把图库从几十 GB 推高到几 TB 的量级。PhotoDump 处理视频的方式与照片相同——逐个文件流式传输、迁移并验证——因此可以把多年积累的 4K/ProRes 视频实际归档到外置硬盘上，而不需要这些视频一次性全部装进手机。</p>
-  </div>
-
-  <h2 class="section-title">使用场景：用自建方案取代 iCloud 或 Google 相册</h2>
-  <div class="card">
-    <h2>献给注重隐私和基础设施自主的用户</h2>
-    <p>PhotoDump 的 S3 兼容和 REST 服务器目标位置（目前为测试版）让具备技术能力的用户可以将图库迁移到自己运行的基础设施上——例如提供 S3 兼容 API 的家用 NAS、自建对象存储，或个人服务器——而不是商业云相册服务。整个传输过程中不涉及任何 PhotoDump 账户或服务器。</p>
+    <h2>用自己的存储代替云服务商</h2>
+    <p>PhotoDump 对 S3 兼容存储和 REST 服务器的支持（测试版）适用于家用 NAS、自建对象存储，或任何你自己掌控的服务器。PhotoDump 本身不会保留任何文件的副本——文件直接从你的手机传输到你设置的目标位置。</p>
   </div>
 
   <div class="footer">
