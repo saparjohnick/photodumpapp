@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>iPhoneの写真を外付けハードドライブへ転送する（スマートフォンより容量が大きくても）| PhotoDump</title>
+<meta name="description" content="PhotoDumpが、iPhoneの写真ライブラリから写真や動画をUSB/SSDドライブへ、ライブラリがスマートフォン自体のストレージよりも大きい場合でもどう移動するか。4K/ProRes動画や、iCloudにのみ保存されているファイルも含みます。">
+<meta name="keywords" content="iPhoneの写真を外付けハードドライブに転送, iCloudの写真を外付けハードドライブに移動, iCloud写真を外付けSSDへ, iPhoneの写真を外部ストレージにバックアップ, iPhoneの4K動画をハードドライブに転送">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://saparjohnick.github.io/photodumpapp/ja/transfer-photos-to-external-drive.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="iPhoneの写真を外付けハードドライブへ転送 | PhotoDump">
+<meta property="og:description" content="iPhone自体のストレージより大きい写真ライブラリを、事前に容量を空けることなく外付けドライブへ移動します。">
+<meta property="og:url" content="https://saparjohnick.github.io/photodumpapp/ja/transfer-photos-to-external-drive.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iPhoneの写真を外付けハードドライブへ転送 | PhotoDump">
+<meta name="twitter:description" content="iPhone自体のストレージより大きい写真ライブラリを、事前に容量を空けることなく外付けドライブへ移動します。">
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ru" href="https://saparjohnick.github.io/photodumpapp/ru/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="de" href="https://saparjohnick.github.io/photodumpapp/de/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="fr" href="https://saparjohnick.github.io/photodumpapp/fr/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="es" href="https://saparjohnick.github.io/photodumpapp/es/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="pt-BR" href="https://saparjohnick.github.io/photodumpapp/pt-br/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://saparjohnick.github.io/photodumpapp/zh-hans/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ja" href="https://saparjohnick.github.io/photodumpapp/ja/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ko" href="https://saparjohnick.github.io/photodumpapp/ko/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="ar" href="https://saparjohnick.github.io/photodumpapp/ar/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="kk" href="https://saparjohnick.github.io/photodumpapp/kk/transfer-photos-to-external-drive.html">
+<link rel="alternate" hreflang="x-default" href="https://saparjohnick.github.io/photodumpapp/transfer-photos-to-external-drive.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "iPhoneのストレージより大きい写真ライブラリを外付けドライブへ転送できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。PhotoDumpは1ファイルずつ転送します — デバイスにまだ存在しない場合はまずiCloudからダウンロードし、スマートフォンへ一時的に書き込み、ドライブへコピーしてから、一時コピーを削除します。そのため、スマートフォンがライブラリ全体を一度に保持する必要はありません。この方法なら、256GBのiPhoneでも2TBのライブラリを2TBのドライブへ移動できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "写真だけでなく、4KやProResの動画にも対応していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、動画も写真と同じ方法で転送されます。1ファイルずつ処理され、保存先で検証されてから完了とマークされます。1分の4K動画で数百メガバイトになり、ProResはさらに大きくなるため、ライブラリを実際に圧迫しているのは通常写真ではなく動画です。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <img class="icon" src="../icon.png" alt="PhotoDump">
+  <h1>スマートフォンに収まらなくても、写真を外付けドライブへ転送する</h1>
+  <p class="subtitle">256GBのiPhoneでも、2TBのライブラリを2TBのSSDへ移動できます。ここでは実際の仕組みを説明します。</p>
+
+  <nav class="pages">
+    <a href="info.html">移行</a>
+    <a href="index.html">サポート</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+  </nav>
+
+  <div class="card">
+    <h2>不可能に思えるケース</h2>
+    <p>ストレージ256GBのiPhoneで、「iPhoneのストレージを最適化」を有効にしたiCloud写真を使っていて、ライブラリは何年もかけて静かにiCloud上で2TBまで膨らんでいた — スマートフォンにはプレビューと最近開いたものだけが保存されていました。2TBの外付けSSDを購入すると、当然こんな疑問が浮かびます。256GBのデバイスがどうやって2TBのデータをどこかへ移動できるのか？まずすべてを「保持」する必要があるはずですが、それはできません。</p>
+  </div>
+
+  <div class="card">
+    <h2>すべてを保持することはない — その必要がそもそもない</h2>
+    <p>PhotoDumpはライブラリを1ファイルずつ（または設定可能な少数のファイルを同時に）処理します。各ファイルは、必要であればiCloudからダウンロードされ、スマートフォンに一時的に書き込まれ、ドライブへコピーされ、確認され、一時コピーが削除されます — これがすべて次のファイルが始まる前に完了します。どの瞬間においても、スマートフォンが保持しているのは現在転送中のものだけで、通常は合計1ギガバイト未満です。ライブラリ全体の移動が終わる頃には、スマートフォンのストレージは開始時の状態に戻っており、2TBはすべてSSD上に存在しています。</p>
+  </div>
+
+  <div class="card">
+    <h2>多くの場合、大きな問題は動画</h2>
+    <p>1分の4K動画は数百メガバイトにもなり、新しいiPhoneのProResはさらに大きくなります — ライブラリを数十ギガバイトからテラバイト規模へ押し上げるのは、写真ではなく通常は動画です。動画も同じ1ファイルずつのプロセスで移動するため、何年分もの4KやProResの映像をアーカイブするのに、それらが一度にスマートフォンへ収まる必要はありません。</p>
+  </div>
+
+  <div class="card">
+    <h2>1台のドライブを家族全員で</h2>
+    <p>同じドライブに複数のiPhoneのライブラリを保存できます。各デバイスは専用のフォルダを持つため、たとえば家族全員が1台の共有4TBまたは8TBドライブに写真を保存しても、それぞれのファイルが混ざり合うことはありません。</p>
+  </div>
+
+  <div class="card">
+    <h2>関連情報</h2>
+    <p><a href="iphone-storage-full.html">今すでにスマートフォンが一杯の場合</a> · <a href="no-icloud-subscription.html">これがiCloud+のサブスクリプションにとって何を意味するか</a></p>
+  </div>
+
+  <div class="footer">
+    <p>PhotoDump &middot; <a href="info.html">移行</a> &middot; <a href="index.html">サポート</a> &middot; <a href="privacy.html">プライバシーポリシー</a></p>
+  </div>
+</div>
+</body>
+</html>
