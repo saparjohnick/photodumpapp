@@ -74,35 +74,7 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-  <div class="section-title">実際の画面</div>
-  <div class="gallery">
-    <figure>
-      <img src="img/shot-storage.png" alt="何が移行済みで、ドライブにどれだけ空き容量があるかが一目でわかります。" loading="lazy">
-      <figcaption>何が移行済みで、ドライブにどれだけ空き容量があるかが一目でわかります。</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-destinations.png" alt="写真の移動先を選べます——USB/SSD、自分の S3 バケット、または自分で管理する REST サーバー。" loading="lazy">
-      <figcaption>写真の移動先を選べます——USB/SSD、自分の S3 バケット、または自分で管理する REST サーバー。</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-presets.png" alt="よくあるケース向けのプリセット：すべて、お気に入りのみ、動画のみ、1年以上前のものすべて。" loading="lazy">
-      <figcaption>よくあるケース向けのプリセット：すべて、お気に入りのみ、動画のみ、1年以上前のものすべて。</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-progress.png" alt="必要に応じて iCloud からダウンロードし、そのままドライブに書き込みます。" loading="lazy">
-      <figcaption>必要に応じて iCloud からダウンロードし、そのままドライブに書き込みます。</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-counters.png" alt="完了・失敗・残りをリアルタイムで確認できます——iPad でも同様です。" loading="lazy">
-      <figcaption>完了・失敗・残りをリアルタイムで確認できます——iPad でも同様です。</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-browse.jpg" alt="移行後のライブラリをドライブから直接閲覧できます。まるで一度も電話から離れなかったかのように。" loading="lazy">
-      <figcaption>移行後のライブラリをドライブから直接閲覧できます。まるで一度も電話から離れなかったかのように。</figcaption>
-    </figure>
-  </div>
-
-<div class="card">
+  <div class="card">
     <h2>iPhoneのストレージが一杯ですか？</h2>
     <p>写真や動画を削除する代わりにスマートフォンから移動しましょう — ドライブ上で確認されるまで、削除しても安全とマークされることはありません。</p>
     <p><a href="iphone-storage-full.html">続きを読む →</a></p>
@@ -123,6 +95,56 @@
   <div class="card">
     <h2>クラウドサービスの代わりに自分のストレージを使う</h2>
     <p>PhotoDumpのS3互換およびRESTサーバー対応（ベータ版）は、ホームNAS、セルフホスト型のオブジェクトストレージ、あるいは自分で管理するあらゆるサーバーで利用できます。PhotoDump自体がファイルのコピーを保持することは一切ありません — ファイルはスマートフォンから、設定した保存先へ直接送られます。</p>
+  </div>
+
+  <div class="section-title">実際の画面</div>
+  <div class="gallery-tabs">
+    <button type="button" class="active" data-tab="iphone">iPhone</button>
+    <button type="button" data-tab="ipad">iPad</button>
+  </div>
+  <div class="gallery-panel" data-panel="iphone">
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-storage.png" alt="何が移行済みで、ドライブにどれだけ空き容量があるかが一目でわかります。" loading="lazy">
+        <figcaption>何が移行済みで、ドライブにどれだけ空き容量があるかが一目でわかります。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-destinations.png" alt="写真の移動先を選べます——USB/SSD、自分の S3 バケット、または自分で管理する REST サーバー。" loading="lazy">
+        <figcaption>写真の移動先を選べます——USB/SSD、自分の S3 バケット、または自分で管理する REST サーバー。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-presets.png" alt="よくあるケース向けのプリセット：すべて、お気に入りのみ、動画のみ、1年以上前のものすべて。" loading="lazy">
+        <figcaption>よくあるケース向けのプリセット：すべて、お気に入りのみ、動画のみ、1年以上前のものすべて。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-progress.png" alt="必要に応じて iCloud からダウンロードし、そのままドライブに書き込みます。" loading="lazy">
+        <figcaption>必要に応じて iCloud からダウンロードし、そのままドライブに書き込みます。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-browse.jpg" alt="移行後のライブラリをドライブから直接閲覧できます。まるで一度も電話から離れなかったかのように。" loading="lazy">
+        <figcaption>移行後のライブラリをドライブから直接閲覧できます。まるで一度も電話から離れなかったかのように。</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="gallery-panel" data-panel="ipad" hidden>
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-counters.png" alt="完了・失敗・残りをリアルタイムで確認できます——iPad でも同様です。" loading="lazy">
+        <figcaption>完了・失敗・残りをリアルタイムで確認できます——iPad でも同様です。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-destinations.png" alt="iPad でも同じです——USB/SSD、自分の S3 バケット、または REST サーバーを選べます。" loading="lazy">
+        <figcaption>iPad でも同じです——USB/SSD、自分の S3 バケット、または REST サーバーを選べます。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-progress.png" alt="iPad 上でもリアルタイムの転送進捗をファイル単位で確認できます。" loading="lazy">
+        <figcaption>iPad 上でもリアルタイムの転送進捗をファイル単位で確認できます。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-stop.png" alt="いつでも一時停止し、中断した場所から正確に再開できます。" loading="lazy">
+        <figcaption>いつでも一時停止し、中断した場所から正確に再開できます。</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="footer">
@@ -147,6 +169,20 @@
       location.href = '/' + base + '/' + select.value + filename;
     });
   }
+})();
+</script>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.gallery-tabs button');
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-panel').forEach(function(p) {
+        p.hidden = p.getAttribute('data-panel') !== btn.getAttribute('data-tab');
+      });
+    });
+  });
 })();
 </script>
 </body>
