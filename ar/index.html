@@ -74,35 +74,7 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-  <div class="section-title">هكذا يبدو الأمر</div>
-  <div class="gallery">
-    <figure>
-      <img src="img/shot-storage.png" alt="تابع ما تم نقله ومقدار المساحة المتاحة على القرص." loading="lazy">
-      <figcaption>تابع ما تم نقله ومقدار المساحة المتاحة على القرص.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-destinations.png" alt="اختر إلى أين تذهب صورك — USB/SSD، أو حاوية S3 الخاصة بك، أو خادم REST تتحكم فيه بنفسك." loading="lazy">
-      <figcaption>اختر إلى أين تذهب صورك — USB/SSD، أو حاوية S3 الخاصة بك، أو خادم REST تتحكم فيه بنفسك.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-presets.png" alt="إعدادات مسبقة للحالات الشائعة: الكل، المفضلة فقط، الفيديوهات فقط، أو كل ما هو أقدم من سنة." loading="lazy">
-      <figcaption>إعدادات مسبقة للحالات الشائعة: الكل، المفضلة فقط، الفيديوهات فقط، أو كل ما هو أقدم من سنة.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-progress.png" alt="يقوم بالتنزيل من iCloud عند الحاجة، ثم يكتب مباشرة إلى القرص." loading="lazy">
-      <figcaption>يقوم بالتنزيل من iCloud عند الحاجة، ثم يكتب مباشرة إلى القرص.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-counters.png" alt="المكتمل والفاشل والمتبقي، يتم تتبعها مباشرة — على iPad أيضًا." loading="lazy">
-      <figcaption>المكتمل والفاشل والمتبقي، يتم تتبعها مباشرة — على iPad أيضًا.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-browse.jpg" alt="تصفح مكتبتك المنقولة مباشرة من القرص، وكأنها لم تغادر هاتفك أبدًا." loading="lazy">
-      <figcaption>تصفح مكتبتك المنقولة مباشرة من القرص، وكأنها لم تغادر هاتفك أبدًا.</figcaption>
-    </figure>
-  </div>
-
-<div class="card">
+  <div class="card">
     <h2>تخزين آيفون ممتلئ؟</h2>
     <p>انقل الصور ومقاطع الفيديو من الهاتف بدلًا من حذفها — لا يُوسَم أي ملف بأنه آمن للحذف حتى يُؤكَّد وجوده على المحرك.</p>
     <p><a href="iphone-storage-full.html">اقرأ المزيد ←</a></p>
@@ -123,6 +95,56 @@
   <div class="card">
     <h2>تشغيل تخزينك الخاص بدلًا من مزود خدمة سحابية</h2>
     <p>يعمل دعم PhotoDump لتخزين S3 المتوافق وخوادم REST (تجريبي) مع جهاز NAS منزلي، أو مخزن كائنات مستضاف ذاتيًا، أو أي خادم تتحكم به بنفسك. لا يحتفظ PhotoDump نفسه بنسخة من أي شيء أبدًا — تنتقل الملفات مباشرة من هاتفك إلى الوجهة التي تحددها.</p>
+  </div>
+
+  <div class="section-title">هكذا يبدو الأمر</div>
+  <div class="gallery-tabs">
+    <button type="button" class="active" data-tab="iphone">iPhone</button>
+    <button type="button" data-tab="ipad">iPad</button>
+  </div>
+  <div class="gallery-panel" data-panel="iphone">
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-storage.png" alt="تابع ما تم نقله ومقدار المساحة المتاحة على القرص." loading="lazy">
+        <figcaption>تابع ما تم نقله ومقدار المساحة المتاحة على القرص.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-destinations.png" alt="اختر إلى أين تذهب صورك — USB/SSD، أو حاوية S3 الخاصة بك، أو خادم REST تتحكم فيه بنفسك." loading="lazy">
+        <figcaption>اختر إلى أين تذهب صورك — USB/SSD، أو حاوية S3 الخاصة بك، أو خادم REST تتحكم فيه بنفسك.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-presets.png" alt="إعدادات مسبقة للحالات الشائعة: الكل، المفضلة فقط، الفيديوهات فقط، أو كل ما هو أقدم من سنة." loading="lazy">
+        <figcaption>إعدادات مسبقة للحالات الشائعة: الكل، المفضلة فقط، الفيديوهات فقط، أو كل ما هو أقدم من سنة.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-progress.png" alt="يقوم بالتنزيل من iCloud عند الحاجة، ثم يكتب مباشرة إلى القرص." loading="lazy">
+        <figcaption>يقوم بالتنزيل من iCloud عند الحاجة، ثم يكتب مباشرة إلى القرص.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-browse.jpg" alt="تصفح مكتبتك المنقولة مباشرة من القرص، وكأنها لم تغادر هاتفك أبدًا." loading="lazy">
+        <figcaption>تصفح مكتبتك المنقولة مباشرة من القرص، وكأنها لم تغادر هاتفك أبدًا.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="gallery-panel" data-panel="ipad" hidden>
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-counters.png" alt="المكتمل والفاشل والمتبقي، يتم تتبعها مباشرة — على iPad أيضًا." loading="lazy">
+        <figcaption>المكتمل والفاشل والمتبقي، يتم تتبعها مباشرة — على iPad أيضًا.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-destinations.png" alt="الأمر نفسه على iPad — اختر USB/SSD، حاوية S3 الخاصة بك، أو خادم REST." loading="lazy">
+        <figcaption>الأمر نفسه على iPad — اختر USB/SSD، حاوية S3 الخاصة بك، أو خادم REST.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-progress.png" alt="تقدم النقل مباشرة، ملفًا تلو الآخر — مباشرة على iPad." loading="lazy">
+        <figcaption>تقدم النقل مباشرة، ملفًا تلو الآخر — مباشرة على iPad.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-stop.png" alt="أوقف مؤقتًا في أي وقت واستأنف بالضبط من حيث توقفت." loading="lazy">
+        <figcaption>أوقف مؤقتًا في أي وقت واستأنف بالضبط من حيث توقفت.</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="footer">
@@ -147,6 +169,20 @@
       location.href = '/' + base + '/' + select.value + filename;
     });
   }
+})();
+</script>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.gallery-tabs button');
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-panel').forEach(function(p) {
+        p.hidden = p.getAttribute('data-panel') !== btn.getAttribute('data-tab');
+      });
+    });
+  });
 })();
 </script>
 </body>
