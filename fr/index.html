@@ -74,35 +74,7 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-  <div class="section-title">Voici à quoi ça ressemble</div>
-  <div class="gallery">
-    <figure>
-      <img src="img/shot-storage.png" alt="Suivez ce qui a été transféré et l'espace libre restant sur le disque." loading="lazy">
-      <figcaption>Suivez ce qui a été transféré et l'espace libre restant sur le disque.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-destinations.png" alt="Choisissez où vont vos photos — USB/SSD, votre propre bucket S3 ou un serveur REST que vous contrôlez." loading="lazy">
-      <figcaption>Choisissez où vont vos photos — USB/SSD, votre propre bucket S3 ou un serveur REST que vous contrôlez.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-presets.png" alt="Des préréglages pour les cas courants : tout, uniquement les favoris, uniquement les vidéos, ou tout ce qui a plus d'un an." loading="lazy">
-      <figcaption>Des préréglages pour les cas courants : tout, uniquement les favoris, uniquement les vidéos, ou tout ce qui a plus d'un an.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-progress.png" alt="Télécharge depuis iCloud si nécessaire, puis écrit directement sur le disque." loading="lazy">
-      <figcaption>Télécharge depuis iCloud si nécessaire, puis écrit directement sur le disque.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-counters.png" alt="Terminé, échoué et restant, suivis en direct — sur iPad aussi." loading="lazy">
-      <figcaption>Terminé, échoué et restant, suivis en direct — sur iPad aussi.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-browse.jpg" alt="Parcourez votre photothèque transférée directement depuis le disque, comme si elle n'avait jamais quitté votre téléphone." loading="lazy">
-      <figcaption>Parcourez votre photothèque transférée directement depuis le disque, comme si elle n'avait jamais quitté votre téléphone.</figcaption>
-    </figure>
-  </div>
-
-<div class="card">
+  <div class="card">
     <h2>Stockage iPhone plein ?</h2>
     <p>Déplacez les photos et vidéos hors du téléphone au lieu de les supprimer — rien n'est marqué sûr à supprimer avant d'être confirmé sur le disque.</p>
     <p><a href="iphone-storage-full.html">En savoir plus →</a></p>
@@ -123,6 +95,56 @@
   <div class="card">
     <h2>Héberger votre propre stockage plutôt qu'un fournisseur cloud</h2>
     <p>La prise en charge S3 et serveur REST de PhotoDump (Bêta) fonctionne avec un NAS domestique, un stockage objet auto-hébergé, ou tout serveur que vous contrôlez. PhotoDump lui-même ne conserve jamais de copie de quoi que ce soit — les fichiers vont directement de votre téléphone vers la destination que vous avez configurée.</p>
+  </div>
+
+  <div class="section-title">Voici à quoi ça ressemble</div>
+  <div class="gallery-tabs">
+    <button type="button" class="active" data-tab="iphone">iPhone</button>
+    <button type="button" data-tab="ipad">iPad</button>
+  </div>
+  <div class="gallery-panel" data-panel="iphone">
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-storage.png" alt="Suivez ce qui a été transféré et l'espace libre restant sur le disque." loading="lazy">
+        <figcaption>Suivez ce qui a été transféré et l'espace libre restant sur le disque.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-destinations.png" alt="Choisissez où vont vos photos — USB/SSD, votre propre bucket S3 ou un serveur REST que vous contrôlez." loading="lazy">
+        <figcaption>Choisissez où vont vos photos — USB/SSD, votre propre bucket S3 ou un serveur REST que vous contrôlez.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-presets.png" alt="Des préréglages pour les cas courants : tout, uniquement les favoris, uniquement les vidéos, ou tout ce qui a plus d'un an." loading="lazy">
+        <figcaption>Des préréglages pour les cas courants : tout, uniquement les favoris, uniquement les vidéos, ou tout ce qui a plus d'un an.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-progress.png" alt="Télécharge depuis iCloud si nécessaire, puis écrit directement sur le disque." loading="lazy">
+        <figcaption>Télécharge depuis iCloud si nécessaire, puis écrit directement sur le disque.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-browse.jpg" alt="Parcourez votre photothèque transférée directement depuis le disque, comme si elle n'avait jamais quitté votre téléphone." loading="lazy">
+        <figcaption>Parcourez votre photothèque transférée directement depuis le disque, comme si elle n'avait jamais quitté votre téléphone.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="gallery-panel" data-panel="ipad" hidden>
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-counters.png" alt="Terminé, échoué et restant, suivis en direct — sur iPad aussi." loading="lazy">
+        <figcaption>Terminé, échoué et restant, suivis en direct — sur iPad aussi.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-destinations.png" alt="Pareil sur iPad — choisissez USB/SSD, votre bucket S3 ou un serveur REST." loading="lazy">
+        <figcaption>Pareil sur iPad — choisissez USB/SSD, votre bucket S3 ou un serveur REST.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-progress.png" alt="Progression du transfert en direct, fichier par fichier — directement sur iPad." loading="lazy">
+        <figcaption>Progression du transfert en direct, fichier par fichier — directement sur iPad.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-stop.png" alt="Mettez en pause à tout moment et reprenez exactement où vous en étiez." loading="lazy">
+        <figcaption>Mettez en pause à tout moment et reprenez exactement où vous en étiez.</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="footer">
@@ -147,6 +169,20 @@
       location.href = '/' + base + '/' + select.value + filename;
     });
   }
+})();
+</script>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.gallery-tabs button');
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-panel').forEach(function(p) {
+        p.hidden = p.getAttribute('data-panel') !== btn.getAttribute('data-tab');
+      });
+    });
+  });
 })();
 </script>
 </body>
