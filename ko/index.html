@@ -74,35 +74,7 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-  <div class="section-title">실제 화면</div>
-  <div class="gallery">
-    <figure>
-      <img src="img/shot-storage.png" alt="이미 이전된 항목과 드라이브에 남은 공간을 한눈에 확인하세요." loading="lazy">
-      <figcaption>이미 이전된 항목과 드라이브에 남은 공간을 한눈에 확인하세요.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-destinations.png" alt="사진이 어디로 갈지 선택하세요 — USB/SSD, 직접 소유한 S3 버킷, 또는 직접 관리하는 REST 서버." loading="lazy">
-      <figcaption>사진이 어디로 갈지 선택하세요 — USB/SSD, 직접 소유한 S3 버킷, 또는 직접 관리하는 REST 서버.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-presets.png" alt="자주 쓰는 상황을 위한 프리셋: 전체, 즐겨찾기만, 동영상만, 또는 1년 이상 지난 항목." loading="lazy">
-      <figcaption>자주 쓰는 상황을 위한 프리셋: 전체, 즐겨찾기만, 동영상만, 또는 1년 이상 지난 항목.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-progress.png" alt="필요하면 iCloud에서 다운로드한 뒤 바로 드라이브에 씁니다." loading="lazy">
-      <figcaption>필요하면 iCloud에서 다운로드한 뒤 바로 드라이브에 씁니다.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-counters.png" alt="완료, 실패, 남은 항목을 실시간으로 추적합니다 — iPad에서도 동일합니다." loading="lazy">
-      <figcaption>완료, 실패, 남은 항목을 실시간으로 추적합니다 — iPad에서도 동일합니다.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-browse.jpg" alt="이전된 보관함을 드라이브에서 바로 둘러보세요. 마치 휴대폰을 떠난 적이 없는 것처럼." loading="lazy">
-      <figcaption>이전된 보관함을 드라이브에서 바로 둘러보세요. 마치 휴대폰을 떠난 적이 없는 것처럼.</figcaption>
-    </figure>
-  </div>
-
-<div class="card">
+  <div class="card">
     <h2>iPhone 저장공간이 가득 찼나요?</h2>
     <p>사진과 동영상을 삭제하는 대신 휴대폰에서 옮기세요 — 드라이브에서 확인되기 전까지는 아무것도 삭제해도 안전하다고 표시되지 않습니다.</p>
     <p><a href="iphone-storage-full.html">자세히 보기 →</a></p>
@@ -123,6 +95,56 @@
   <div class="card">
     <h2>클라우드 서비스 대신 나만의 스토리지 운영하기</h2>
     <p>PhotoDump의 S3 호환 및 REST 서버 지원(베타)은 홈 NAS, 셀프 호스팅 오브젝트 스토리지, 또는 사용자가 관리하는 어떤 서버에서도 작동합니다. PhotoDump 자체는 어떤 파일의 사본도 보관하지 않습니다 — 파일은 휴대폰에서 설정한 대상으로 곧바로 전송됩니다.</p>
+  </div>
+
+  <div class="section-title">실제 화면</div>
+  <div class="gallery-tabs">
+    <button type="button" class="active" data-tab="iphone">iPhone</button>
+    <button type="button" data-tab="ipad">iPad</button>
+  </div>
+  <div class="gallery-panel" data-panel="iphone">
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-storage.png" alt="이미 이전된 항목과 드라이브에 남은 공간을 한눈에 확인하세요." loading="lazy">
+        <figcaption>이미 이전된 항목과 드라이브에 남은 공간을 한눈에 확인하세요.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-destinations.png" alt="사진이 어디로 갈지 선택하세요 — USB/SSD, 직접 소유한 S3 버킷, 또는 직접 관리하는 REST 서버." loading="lazy">
+        <figcaption>사진이 어디로 갈지 선택하세요 — USB/SSD, 직접 소유한 S3 버킷, 또는 직접 관리하는 REST 서버.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-presets.png" alt="자주 쓰는 상황을 위한 프리셋: 전체, 즐겨찾기만, 동영상만, 또는 1년 이상 지난 항목." loading="lazy">
+        <figcaption>자주 쓰는 상황을 위한 프리셋: 전체, 즐겨찾기만, 동영상만, 또는 1년 이상 지난 항목.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-progress.png" alt="필요하면 iCloud에서 다운로드한 뒤 바로 드라이브에 씁니다." loading="lazy">
+        <figcaption>필요하면 iCloud에서 다운로드한 뒤 바로 드라이브에 씁니다.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-browse.jpg" alt="이전된 보관함을 드라이브에서 바로 둘러보세요. 마치 휴대폰을 떠난 적이 없는 것처럼." loading="lazy">
+        <figcaption>이전된 보관함을 드라이브에서 바로 둘러보세요. 마치 휴대폰을 떠난 적이 없는 것처럼.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="gallery-panel" data-panel="ipad" hidden>
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-counters.png" alt="완료, 실패, 남은 항목을 실시간으로 추적합니다 — iPad에서도 동일합니다." loading="lazy">
+        <figcaption>완료, 실패, 남은 항목을 실시간으로 추적합니다 — iPad에서도 동일합니다.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-destinations.png" alt="iPad에서도 동일합니다 — USB/SSD, S3 버킷, 또는 REST 서버를 선택하세요." loading="lazy">
+        <figcaption>iPad에서도 동일합니다 — USB/SSD, S3 버킷, 또는 REST 서버를 선택하세요.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-progress.png" alt="iPad에서도 파일 단위로 실시간 전송 진행 상황을 확인하세요." loading="lazy">
+        <figcaption>iPad에서도 파일 단위로 실시간 전송 진행 상황을 확인하세요.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-stop.png" alt="언제든 일시정지하고 멈춘 지점부터 정확히 다시 시작하세요." loading="lazy">
+        <figcaption>언제든 일시정지하고 멈춘 지점부터 정확히 다시 시작하세요.</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="footer">
@@ -147,6 +169,20 @@
       location.href = '/' + base + '/' + select.value + filename;
     });
   }
+})();
+</script>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.gallery-tabs button');
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-panel').forEach(function(p) {
+        p.hidden = p.getAttribute('data-panel') !== btn.getAttribute('data-tab');
+      });
+    });
+  });
 })();
 </script>
 </body>
