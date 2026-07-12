@@ -74,35 +74,7 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-  <div class="section-title">Бұл қалай көрінеді</div>
-  <div class="gallery">
-    <figure>
-      <img src="img/shot-storage.png" alt="Не тасымалданғаны және дискіде қанша орын бос екені көрінеді." loading="lazy">
-      <figcaption>Не тасымалданғаны және дискіде қанша орын бос екені көрінеді.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-destinations.png" alt="Фотосуреттер қайда баратынын таңдайсыз — USB/SSD, өз S3 бакетіңіз немесе өзіңіз басқаратын REST-сервер." loading="lazy">
-      <figcaption>Фотосуреттер қайда баратынын таңдайсыз — USB/SSD, өз S3 бакетіңіз немесе өзіңіз басқаратын REST-сервер.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-presets.png" alt="Жиі кездесетін жағдайларға арналған пресеттер: барлығы, тек таңдаулылар, тек бейнелер немесе бір жылдан асқандар." loading="lazy">
-      <figcaption>Жиі кездесетін жағдайларға арналған пресеттер: барлығы, тек таңдаулылар, тек бейнелер немесе бір жылдан асқандар.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-progress.png" alt="Қажет болса iCloud-тан жүктеп алады да, бірден дискіге жазады." loading="lazy">
-      <figcaption>Қажет болса iCloud-тан жүктеп алады да, бірден дискіге жазады.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-counters.png" alt="Аяқталғаны, қатесі және қалғаны нақты уақытта көрінеді — iPad-та да." loading="lazy">
-      <figcaption>Аяқталғаны, қатесі және қалғаны нақты уақытта көрінеді — iPad-та да.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-browse.jpg" alt="Тасымалданған кітапхананы дискіден тікелей қараңыз, ол телефоннан ешқашан кетпегендей." loading="lazy">
-      <figcaption>Тасымалданған кітапхананы дискіден тікелей қараңыз, ол телефоннан ешқашан кетпегендей.</figcaption>
-    </figure>
-  </div>
-
-<div class="card">
+  <div class="card">
     <h2>iPhone жады толып қалды ма?</h2>
     <p>Фотосуреттер мен бейнелерді жою орнына телефоннан тасымалдаңыз — файл дискіде расталғанға дейін ол жоюға қауіпсіз деп белгіленбейді.</p>
     <p><a href="iphone-storage-full.html">Толығырақ →</a></p>
@@ -123,6 +95,56 @@
   <div class="card">
     <h2>Бұлтты провайдер орнына өз жадыңызды пайдалану</h2>
     <p>PhotoDump-тың S3 үйлесімді және REST сервер қолдауы (бета) үй NAS-ымен, self-hosted объектілік жадымен немесе өзіңіз басқаратын кез келген сервермен жұмыс істейді. PhotoDump-тың өзі ешқашан ешнәрсенің көшірмесін сақтамайды — файлдар тікелей телефоныңыздан сіз орнатқан орынға барады.</p>
+  </div>
+
+  <div class="section-title">Бұл қалай көрінеді</div>
+  <div class="gallery-tabs">
+    <button type="button" class="active" data-tab="iphone">iPhone</button>
+    <button type="button" data-tab="ipad">iPad</button>
+  </div>
+  <div class="gallery-panel" data-panel="iphone">
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-storage.png" alt="Не тасымалданғаны және дискіде қанша орын бос екені көрінеді." loading="lazy">
+        <figcaption>Не тасымалданғаны және дискіде қанша орын бос екені көрінеді.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-destinations.png" alt="Фотосуреттер қайда баратынын таңдайсыз — USB/SSD, өз S3 бакетіңіз немесе өзіңіз басқаратын REST-сервер." loading="lazy">
+        <figcaption>Фотосуреттер қайда баратынын таңдайсыз — USB/SSD, өз S3 бакетіңіз немесе өзіңіз басқаратын REST-сервер.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-presets.png" alt="Жиі кездесетін жағдайларға арналған пресеттер: барлығы, тек таңдаулылар, тек бейнелер немесе бір жылдан асқандар." loading="lazy">
+        <figcaption>Жиі кездесетін жағдайларға арналған пресеттер: барлығы, тек таңдаулылар, тек бейнелер немесе бір жылдан асқандар.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-progress.png" alt="Қажет болса iCloud-тан жүктеп алады да, бірден дискіге жазады." loading="lazy">
+        <figcaption>Қажет болса iCloud-тан жүктеп алады да, бірден дискіге жазады.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-browse.jpg" alt="Тасымалданған кітапхананы дискіден тікелей қараңыз, ол телефоннан ешқашан кетпегендей." loading="lazy">
+        <figcaption>Тасымалданған кітапхананы дискіден тікелей қараңыз, ол телефоннан ешқашан кетпегендей.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="gallery-panel" data-panel="ipad" hidden>
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-counters.png" alt="Аяқталғаны, қатесі және қалғаны нақты уақытта көрінеді — iPad-та да." loading="lazy">
+        <figcaption>Аяқталғаны, қатесі және қалғаны нақты уақытта көрінеді — iPad-та да.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-destinations.png" alt="iPad-та да солай — USB/SSD, өз S3 немесе REST-серверді таңдайсыз." loading="lazy">
+        <figcaption>iPad-та да солай — USB/SSD, өз S3 немесе REST-серверді таңдайсыз.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-progress.png" alt="Нақты уақыттағы тасымал, файл бойынша файл — тікелей iPad-та." loading="lazy">
+        <figcaption>Нақты уақыттағы тасымал, файл бойынша файл — тікелей iPad-та.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-stop.png" alt="Кез келген уақытта тоқтата тұрыңыз да, дәл сол жерден жалғастырыңыз." loading="lazy">
+        <figcaption>Кез келген уақытта тоқтата тұрыңыз да, дәл сол жерден жалғастырыңыз.</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="footer">
@@ -147,6 +169,20 @@
       location.href = '/' + base + '/' + select.value + filename;
     });
   }
+})();
+</script>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.gallery-tabs button');
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-panel').forEach(function(p) {
+        p.hidden = p.getAttribute('data-panel') !== btn.getAttribute('data-tab');
+      });
+    });
+  });
 })();
 </script>
 </body>
