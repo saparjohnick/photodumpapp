@@ -74,35 +74,7 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-  <div class="section-title">See It In Action</div>
-  <div class="gallery">
-    <figure>
-      <img src="img/shot-storage.png" alt="Track what's migrated and how much space is free on the drive." loading="lazy">
-      <figcaption>Track what's migrated and how much space is free on the drive.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-destinations.png" alt="Pick where photos go — USB/SSD, your own S3 bucket, or a REST server you control." loading="lazy">
-      <figcaption>Pick where photos go — USB/SSD, your own S3 bucket, or a REST server you control.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-presets.png" alt="Presets for common cases: everything, just favorites, just videos, or anything older than a year." loading="lazy">
-      <figcaption>Presets for common cases: everything, just favorites, just videos, or anything older than a year.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-progress.png" alt="Downloads from iCloud when needed, then writes straight to the drive." loading="lazy">
-      <figcaption>Downloads from iCloud when needed, then writes straight to the drive.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-counters.png" alt="Completed, failed, and remaining, tracked live — on iPad too." loading="lazy">
-      <figcaption>Completed, failed, and remaining, tracked live — on iPad too.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-browse.jpg" alt="Browse your migrated library right off the drive, like it never left your phone." loading="lazy">
-      <figcaption>Browse your migrated library right off the drive, like it never left your phone.</figcaption>
-    </figure>
-  </div>
-
-<div class="card">
+  <div class="card">
     <h2>iPhone storage full?</h2>
     <p>Move photos and videos off the phone instead of deleting them — nothing gets marked safe to delete until it's confirmed on the drive.</p>
     <p><a href="iphone-storage-full.html">Read more →</a></p>
@@ -123,6 +95,56 @@
   <div class="card">
     <h2>Running your own storage instead of a cloud provider</h2>
     <p>PhotoDump's S3-compatible and REST server support (Beta) works with a home NAS, a self-hosted object store, or any server you control. PhotoDump itself never holds a copy of anything — files go straight from your phone to whatever destination you set up.</p>
+  </div>
+
+  <div class="section-title">See It In Action</div>
+  <div class="gallery-tabs">
+    <button type="button" class="active" data-tab="iphone">iPhone</button>
+    <button type="button" data-tab="ipad">iPad</button>
+  </div>
+  <div class="gallery-panel" data-panel="iphone">
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-storage.png" alt="Track what's migrated and how much space is free on the drive." loading="lazy">
+        <figcaption>Track what's migrated and how much space is free on the drive.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-destinations.png" alt="Pick where photos go — USB/SSD, your own S3 bucket, or a REST server you control." loading="lazy">
+        <figcaption>Pick where photos go — USB/SSD, your own S3 bucket, or a REST server you control.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-presets.png" alt="Presets for common cases: everything, just favorites, just videos, or anything older than a year." loading="lazy">
+        <figcaption>Presets for common cases: everything, just favorites, just videos, or anything older than a year.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-progress.png" alt="Downloads from iCloud when needed, then writes straight to the drive." loading="lazy">
+        <figcaption>Downloads from iCloud when needed, then writes straight to the drive.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-browse.jpg" alt="Browse your migrated library right off the drive, like it never left your phone." loading="lazy">
+        <figcaption>Browse your migrated library right off the drive, like it never left your phone.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="gallery-panel" data-panel="ipad" hidden>
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-counters.png" alt="Completed, failed, and remaining, tracked live — on iPad too." loading="lazy">
+        <figcaption>Completed, failed, and remaining, tracked live — on iPad too.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-destinations.png" alt="Same on iPad — pick USB/SSD, your S3 bucket, or a REST server." loading="lazy">
+        <figcaption>Same on iPad — pick USB/SSD, your S3 bucket, or a REST server.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-progress.png" alt="Live transfer progress, file by file, right on iPad." loading="lazy">
+        <figcaption>Live transfer progress, file by file, right on iPad.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-stop.png" alt="Pause anytime and pick up exactly where you left off." loading="lazy">
+        <figcaption>Pause anytime and pick up exactly where you left off.</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="footer">
@@ -147,6 +169,20 @@
       location.href = '/' + base + '/' + select.value + filename;
     });
   }
+})();
+</script>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.gallery-tabs button');
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-panel').forEach(function(p) {
+        p.hidden = p.getAttribute('data-panel') !== btn.getAttribute('data-tab');
+      });
+    });
+  });
 })();
 </script>
 </body>
