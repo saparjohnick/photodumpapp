@@ -74,35 +74,7 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-  <div class="section-title">Как это выглядит</div>
-  <div class="gallery">
-    <figure>
-      <img src="img/shot-storage.png" alt="Видно, что уже перенесено и сколько места свободно на диске." loading="lazy">
-      <figcaption>Видно, что уже перенесено и сколько места свободно на диске.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-destinations.png" alt="Выбираете, куда идут фото — USB/SSD, свой бакет S3 или REST-сервер, который вы контролируете." loading="lazy">
-      <figcaption>Выбираете, куда идут фото — USB/SSD, свой бакет S3 или REST-сервер, который вы контролируете.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-presets.png" alt="Пресеты под частые случаи: всё, только избранное, только видео или всё старше года." loading="lazy">
-      <figcaption>Пресеты под частые случаи: всё, только избранное, только видео или всё старше года.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-progress.png" alt="Скачивает из iCloud, если нужно, и сразу пишет на диск." loading="lazy">
-      <figcaption>Скачивает из iCloud, если нужно, и сразу пишет на диск.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-counters.png" alt="Готово, ошибки и осталось — в реальном времени, и на iPad тоже." loading="lazy">
-      <figcaption>Готово, ошибки и осталось — в реальном времени, и на iPad тоже.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-browse.jpg" alt="Просматривайте перенесённую библиотеку прямо с диска, как будто она никуда не уходила с телефона." loading="lazy">
-      <figcaption>Просматривайте перенесённую библиотеку прямо с диска, как будто она никуда не уходила с телефона.</figcaption>
-    </figure>
-  </div>
-
-<div class="card">
+  <div class="card">
     <h2>Память iPhone заполнена?</h2>
     <p>Переносите фото и видео с телефона вместо того, чтобы их удалять — файл помечается как безопасный для удаления только после подтверждения, что он уже на накопителе.</p>
     <p><a href="iphone-storage-full.html">Подробнее →</a></p>
@@ -123,6 +95,56 @@
   <div class="card">
     <h2>Собственное хранилище вместо облачного провайдера</h2>
     <p>Поддержка S3-совместимого и REST-сервера (бета) в PhotoDump работает с домашним NAS, self-hosted объектным хранилищем или любым сервером, который вы контролируете. Сам PhotoDump никогда не хранит копию файлов — они идут напрямую с телефона на выбранное вами хранилище.</p>
+  </div>
+
+  <div class="section-title">Как это выглядит</div>
+  <div class="gallery-tabs">
+    <button type="button" class="active" data-tab="iphone">iPhone</button>
+    <button type="button" data-tab="ipad">iPad</button>
+  </div>
+  <div class="gallery-panel" data-panel="iphone">
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-storage.png" alt="Видно, что уже перенесено и сколько места свободно на диске." loading="lazy">
+        <figcaption>Видно, что уже перенесено и сколько места свободно на диске.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-destinations.png" alt="Выбираете, куда идут фото — USB/SSD, свой бакет S3 или REST-сервер, который вы контролируете." loading="lazy">
+        <figcaption>Выбираете, куда идут фото — USB/SSD, свой бакет S3 или REST-сервер, который вы контролируете.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-presets.png" alt="Пресеты под частые случаи: всё, только избранное, только видео или всё старше года." loading="lazy">
+        <figcaption>Пресеты под частые случаи: всё, только избранное, только видео или всё старше года.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-progress.png" alt="Скачивает из iCloud, если нужно, и сразу пишет на диск." loading="lazy">
+        <figcaption>Скачивает из iCloud, если нужно, и сразу пишет на диск.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-browse.jpg" alt="Просматривайте перенесённую библиотеку прямо с диска, как будто она никуда не уходила с телефона." loading="lazy">
+        <figcaption>Просматривайте перенесённую библиотеку прямо с диска, как будто она никуда не уходила с телефона.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="gallery-panel" data-panel="ipad" hidden>
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-counters.png" alt="Готово, ошибки и осталось — в реальном времени, и на iPad тоже." loading="lazy">
+        <figcaption>Готово, ошибки и осталось — в реальном времени, и на iPad тоже.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-destinations.png" alt="То же самое на iPad — выбираете USB/SSD, свой S3 или REST-сервер." loading="lazy">
+        <figcaption>То же самое на iPad — выбираете USB/SSD, свой S3 или REST-сервер.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-progress.png" alt="Перенос в реальном времени, файл за файлом — прямо на iPad." loading="lazy">
+        <figcaption>Перенос в реальном времени, файл за файлом — прямо на iPad.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-stop.png" alt="Ставьте на паузу в любой момент и продолжайте ровно с того же места." loading="lazy">
+        <figcaption>Ставьте на паузу в любой момент и продолжайте ровно с того же места.</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="footer">
@@ -147,6 +169,20 @@
       location.href = '/' + base + '/' + select.value + filename;
     });
   }
+})();
+</script>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.gallery-tabs button');
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-panel').forEach(function(p) {
+        p.hidden = p.getAttribute('data-panel') !== btn.getAttribute('data-tab');
+      });
+    });
+  });
 })();
 </script>
 </body>
