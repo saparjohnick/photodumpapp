@@ -74,35 +74,7 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-  <div class="section-title">So sieht es aus</div>
-  <div class="gallery">
-    <figure>
-      <img src="img/shot-storage.png" alt="Sehen Sie, was bereits übertragen wurde und wie viel Platz auf dem Laufwerk frei ist." loading="lazy">
-      <figcaption>Sehen Sie, was bereits übertragen wurde und wie viel Platz auf dem Laufwerk frei ist.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-destinations.png" alt="Wählen Sie, wohin Ihre Fotos gehen — USB/SSD, Ihr eigener S3-Bucket oder ein REST-Server, den Sie kontrollieren." loading="lazy">
-      <figcaption>Wählen Sie, wohin Ihre Fotos gehen — USB/SSD, Ihr eigener S3-Bucket oder ein REST-Server, den Sie kontrollieren.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-presets.png" alt="Presets für häufige Fälle: alles, nur Favoriten, nur Videos oder alles, was älter als ein Jahr ist." loading="lazy">
-      <figcaption>Presets für häufige Fälle: alles, nur Favoriten, nur Videos oder alles, was älter als ein Jahr ist.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-progress.png" alt="Lädt bei Bedarf aus iCloud herunter und schreibt dann direkt auf das Laufwerk." loading="lazy">
-      <figcaption>Lädt bei Bedarf aus iCloud herunter und schreibt dann direkt auf das Laufwerk.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-counters.png" alt="Abgeschlossen, fehlgeschlagen und verbleibend — live verfolgt, auch auf dem iPad." loading="lazy">
-      <figcaption>Abgeschlossen, fehlgeschlagen und verbleibend — live verfolgt, auch auf dem iPad.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-browse.jpg" alt="Durchsuchen Sie Ihre übertragene Mediathek direkt vom Laufwerk, als hätte sie das Telefon nie verlassen." loading="lazy">
-      <figcaption>Durchsuchen Sie Ihre übertragene Mediathek direkt vom Laufwerk, als hätte sie das Telefon nie verlassen.</figcaption>
-    </figure>
-  </div>
-
-<div class="card">
+  <div class="card">
     <h2>iPhone-Speicher voll?</h2>
     <p>Verschieben Sie Fotos und Videos vom Telefon, statt sie zu löschen — eine Datei wird erst als sicher löschbar markiert, wenn sie auf dem Laufwerk bestätigt ist.</p>
     <p><a href="iphone-storage-full.html">Mehr erfahren →</a></p>
@@ -123,6 +95,56 @@
   <div class="card">
     <h2>Eigenen Speicher statt eines Cloud-Anbieters nutzen</h2>
     <p>Die S3-kompatible und REST-Server-Unterstützung von PhotoDump (Beta) funktioniert mit einem heimischen NAS, einem selbst gehosteten Objektspeicher oder jedem Server, den Sie kontrollieren. PhotoDump selbst behält niemals eine Kopie von irgendetwas — Dateien gehen direkt von Ihrem Telefon zu dem von Ihnen eingerichteten Ziel.</p>
+  </div>
+
+  <div class="section-title">So sieht es aus</div>
+  <div class="gallery-tabs">
+    <button type="button" class="active" data-tab="iphone">iPhone</button>
+    <button type="button" data-tab="ipad">iPad</button>
+  </div>
+  <div class="gallery-panel" data-panel="iphone">
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-storage.png" alt="Sehen Sie, was bereits übertragen wurde und wie viel Platz auf dem Laufwerk frei ist." loading="lazy">
+        <figcaption>Sehen Sie, was bereits übertragen wurde und wie viel Platz auf dem Laufwerk frei ist.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-destinations.png" alt="Wählen Sie, wohin Ihre Fotos gehen — USB/SSD, Ihr eigener S3-Bucket oder ein REST-Server, den Sie kontrollieren." loading="lazy">
+        <figcaption>Wählen Sie, wohin Ihre Fotos gehen — USB/SSD, Ihr eigener S3-Bucket oder ein REST-Server, den Sie kontrollieren.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-presets.png" alt="Presets für häufige Fälle: alles, nur Favoriten, nur Videos oder alles, was älter als ein Jahr ist." loading="lazy">
+        <figcaption>Presets für häufige Fälle: alles, nur Favoriten, nur Videos oder alles, was älter als ein Jahr ist.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-progress.png" alt="Lädt bei Bedarf aus iCloud herunter und schreibt dann direkt auf das Laufwerk." loading="lazy">
+        <figcaption>Lädt bei Bedarf aus iCloud herunter und schreibt dann direkt auf das Laufwerk.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-browse.jpg" alt="Durchsuchen Sie Ihre übertragene Mediathek direkt vom Laufwerk, als hätte sie das Telefon nie verlassen." loading="lazy">
+        <figcaption>Durchsuchen Sie Ihre übertragene Mediathek direkt vom Laufwerk, als hätte sie das Telefon nie verlassen.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="gallery-panel" data-panel="ipad" hidden>
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-counters.png" alt="Abgeschlossen, fehlgeschlagen und verbleibend — live verfolgt, auch auf dem iPad." loading="lazy">
+        <figcaption>Abgeschlossen, fehlgeschlagen und verbleibend — live verfolgt, auch auf dem iPad.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-destinations.png" alt="Genauso auf dem iPad — wählen Sie USB/SSD, Ihren S3-Bucket oder einen REST-Server." loading="lazy">
+        <figcaption>Genauso auf dem iPad — wählen Sie USB/SSD, Ihren S3-Bucket oder einen REST-Server.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-progress.png" alt="Live-Übertragungsfortschritt, Datei für Datei — direkt auf dem iPad." loading="lazy">
+        <figcaption>Live-Übertragungsfortschritt, Datei für Datei — direkt auf dem iPad.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-stop.png" alt="Jederzeit pausieren und genau dort weitermachen, wo Sie aufgehört haben." loading="lazy">
+        <figcaption>Jederzeit pausieren und genau dort weitermachen, wo Sie aufgehört haben.</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="footer">
@@ -147,6 +169,20 @@
       location.href = '/' + base + '/' + select.value + filename;
     });
   }
+})();
+</script>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.gallery-tabs button');
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-panel').forEach(function(p) {
+        p.hidden = p.getAttribute('data-panel') !== btn.getAttribute('data-tab');
+      });
+    });
+  });
 })();
 </script>
 </body>
