@@ -74,35 +74,7 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-  <div class="section-title">Así se ve</div>
-  <div class="gallery">
-    <figure>
-      <img src="img/shot-storage.png" alt="Ve lo que ya se ha transferido y cuánto espacio queda libre en el disco." loading="lazy">
-      <figcaption>Ve lo que ya se ha transferido y cuánto espacio queda libre en el disco.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-destinations.png" alt="Elige a dónde van tus fotos — USB/SSD, tu propio bucket de S3 o un servidor REST que tú controlas." loading="lazy">
-      <figcaption>Elige a dónde van tus fotos — USB/SSD, tu propio bucket de S3 o un servidor REST que tú controlas.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-presets.png" alt="Ajustes preestablecidos para casos comunes: todo, solo favoritos, solo videos, o todo lo de más de un año." loading="lazy">
-      <figcaption>Ajustes preestablecidos para casos comunes: todo, solo favoritos, solo videos, o todo lo de más de un año.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-progress.png" alt="Descarga desde iCloud cuando hace falta, y luego escribe directamente en el disco." loading="lazy">
-      <figcaption>Descarga desde iCloud cuando hace falta, y luego escribe directamente en el disco.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-counters.png" alt="Completados, fallidos y restantes, en tiempo real — también en iPad." loading="lazy">
-      <figcaption>Completados, fallidos y restantes, en tiempo real — también en iPad.</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-browse.jpg" alt="Explora tu biblioteca transferida directamente desde el disco, como si nunca hubiera salido de tu teléfono." loading="lazy">
-      <figcaption>Explora tu biblioteca transferida directamente desde el disco, como si nunca hubiera salido de tu teléfono.</figcaption>
-    </figure>
-  </div>
-
-<div class="card">
+  <div class="card">
     <h2>¿Almacenamiento del iPhone lleno?</h2>
     <p>Mueve fotos y videos fuera del teléfono en lugar de borrarlos — nada se marca como seguro para eliminar hasta confirmarse en el disco.</p>
     <p><a href="iphone-storage-full.html">Leer más →</a></p>
@@ -123,6 +95,56 @@
   <div class="card">
     <h2>Usar tu propio almacenamiento en lugar de un proveedor en la nube</h2>
     <p>El soporte de PhotoDump para almacenamiento compatible con S3 y servidores REST (Beta) funciona con un NAS doméstico, un almacenamiento de objetos autoalojado, o cualquier servidor que controles. PhotoDump en sí nunca conserva una copia de nada — los archivos van directamente de tu teléfono al destino que configures.</p>
+  </div>
+
+  <div class="section-title">Así se ve</div>
+  <div class="gallery-tabs">
+    <button type="button" class="active" data-tab="iphone">iPhone</button>
+    <button type="button" data-tab="ipad">iPad</button>
+  </div>
+  <div class="gallery-panel" data-panel="iphone">
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-storage.png" alt="Ve lo que ya se ha transferido y cuánto espacio queda libre en el disco." loading="lazy">
+        <figcaption>Ve lo que ya se ha transferido y cuánto espacio queda libre en el disco.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-destinations.png" alt="Elige a dónde van tus fotos — USB/SSD, tu propio bucket de S3 o un servidor REST que tú controlas." loading="lazy">
+        <figcaption>Elige a dónde van tus fotos — USB/SSD, tu propio bucket de S3 o un servidor REST que tú controlas.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-presets.png" alt="Ajustes preestablecidos para casos comunes: todo, solo favoritos, solo videos, o todo lo de más de un año." loading="lazy">
+        <figcaption>Ajustes preestablecidos para casos comunes: todo, solo favoritos, solo videos, o todo lo de más de un año.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-progress.png" alt="Descarga desde iCloud cuando hace falta, y luego escribe directamente en el disco." loading="lazy">
+        <figcaption>Descarga desde iCloud cuando hace falta, y luego escribe directamente en el disco.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-browse.jpg" alt="Explora tu biblioteca transferida directamente desde el disco, como si nunca hubiera salido de tu teléfono." loading="lazy">
+        <figcaption>Explora tu biblioteca transferida directamente desde el disco, como si nunca hubiera salido de tu teléfono.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="gallery-panel" data-panel="ipad" hidden>
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-counters.png" alt="Completados, fallidos y restantes, en tiempo real — también en iPad." loading="lazy">
+        <figcaption>Completados, fallidos y restantes, en tiempo real — también en iPad.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-destinations.png" alt="Lo mismo en iPad — elige USB/SSD, tu bucket S3 o un servidor REST." loading="lazy">
+        <figcaption>Lo mismo en iPad — elige USB/SSD, tu bucket S3 o un servidor REST.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-progress.png" alt="Progreso de transferencia en vivo, archivo por archivo — directamente en iPad." loading="lazy">
+        <figcaption>Progreso de transferencia en vivo, archivo por archivo — directamente en iPad.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-stop.png" alt="Pausa en cualquier momento y retoma justo donde lo dejaste." loading="lazy">
+        <figcaption>Pausa en cualquier momento y retoma justo donde lo dejaste.</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="footer">
@@ -147,6 +169,20 @@
       location.href = '/' + base + '/' + select.value + filename;
     });
   }
+})();
+</script>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.gallery-tabs button');
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-panel').forEach(function(p) {
+        p.hidden = p.getAttribute('data-panel') !== btn.getAttribute('data-tab');
+      });
+    });
+  });
 })();
 </script>
 </body>
