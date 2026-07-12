@@ -74,35 +74,7 @@
       <option value="kk/">Қазақша</option>
     </select>
   </div>
-  <div class="section-title">实际效果</div>
-  <div class="gallery">
-    <figure>
-      <img src="img/shot-storage.png" alt="查看已迁移的内容，以及硬盘上还剩多少空间。" loading="lazy">
-      <figcaption>查看已迁移的内容，以及硬盘上还剩多少空间。</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-destinations.png" alt="选择照片去哪里——USB/SSD、你自己的 S3 存储桶，或你掌控的 REST 服务器。" loading="lazy">
-      <figcaption>选择照片去哪里——USB/SSD、你自己的 S3 存储桶，或你掌控的 REST 服务器。</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-presets.png" alt="常见场景的预设：全部、仅收藏、仅视频，或一年以上的所有内容。" loading="lazy">
-      <figcaption>常见场景的预设：全部、仅收藏、仅视频，或一年以上的所有内容。</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-progress.png" alt="需要时从 iCloud 下载，然后直接写入硬盘。" loading="lazy">
-      <figcaption>需要时从 iCloud 下载，然后直接写入硬盘。</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-counters.png" alt="已完成、失败和剩余，实时显示——iPad 上也一样。" loading="lazy">
-      <figcaption>已完成、失败和剩余，实时显示——iPad 上也一样。</figcaption>
-    </figure>
-    <figure>
-      <img src="img/shot-browse.jpg" alt="直接从硬盘浏览已迁移的图库，就像它从未离开过你的手机。" loading="lazy">
-      <figcaption>直接从硬盘浏览已迁移的图库，就像它从未离开过你的手机。</figcaption>
-    </figure>
-  </div>
-
-<div class="card">
+  <div class="card">
     <h2>iPhone 存储空间已满？</h2>
     <p>把照片和视频移出手机，而不是删除它们——只有在硬盘上确认存在后，文件才会被标记为可以安全删除。</p>
     <p><a href="iphone-storage-full.html">阅读更多 →</a></p>
@@ -123,6 +95,56 @@
   <div class="card">
     <h2>用自己的存储代替云服务商</h2>
     <p>PhotoDump 对 S3 兼容存储和 REST 服务器的支持（测试版）适用于家用 NAS、自建对象存储，或任何你自己掌控的服务器。PhotoDump 本身不会保留任何文件的副本——文件直接从你的手机传输到你设置的目标位置。</p>
+  </div>
+
+  <div class="section-title">实际效果</div>
+  <div class="gallery-tabs">
+    <button type="button" class="active" data-tab="iphone">iPhone</button>
+    <button type="button" data-tab="ipad">iPad</button>
+  </div>
+  <div class="gallery-panel" data-panel="iphone">
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-storage.png" alt="查看已迁移的内容，以及硬盘上还剩多少空间。" loading="lazy">
+        <figcaption>查看已迁移的内容，以及硬盘上还剩多少空间。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-destinations.png" alt="选择照片去哪里——USB/SSD、你自己的 S3 存储桶，或你掌控的 REST 服务器。" loading="lazy">
+        <figcaption>选择照片去哪里——USB/SSD、你自己的 S3 存储桶，或你掌控的 REST 服务器。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-presets.png" alt="常见场景的预设：全部、仅收藏、仅视频，或一年以上的所有内容。" loading="lazy">
+        <figcaption>常见场景的预设：全部、仅收藏、仅视频，或一年以上的所有内容。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-progress.png" alt="需要时从 iCloud 下载，然后直接写入硬盘。" loading="lazy">
+        <figcaption>需要时从 iCloud 下载，然后直接写入硬盘。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-browse.jpg" alt="直接从硬盘浏览已迁移的图库，就像它从未离开过你的手机。" loading="lazy">
+        <figcaption>直接从硬盘浏览已迁移的图库，就像它从未离开过你的手机。</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="gallery-panel" data-panel="ipad" hidden>
+    <div class="gallery">
+      <figure>
+        <img src="img/shot-counters.png" alt="已完成、失败和剩余，实时显示——iPad 上也一样。" loading="lazy">
+        <figcaption>已完成、失败和剩余，实时显示——iPad 上也一样。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-destinations.png" alt="iPad 上也一样——选择 USB/SSD、你的 S3 存储桶或 REST 服务器。" loading="lazy">
+        <figcaption>iPad 上也一样——选择 USB/SSD、你的 S3 存储桶或 REST 服务器。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-progress.png" alt="实时传输进度，逐个文件——直接在 iPad 上显示。" loading="lazy">
+        <figcaption>实时传输进度，逐个文件——直接在 iPad 上显示。</figcaption>
+      </figure>
+      <figure>
+        <img src="img/shot-ipad-stop.png" alt="随时暂停，从上次的位置精确继续。" loading="lazy">
+        <figcaption>随时暂停，从上次的位置精确继续。</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="footer">
@@ -147,6 +169,20 @@
       location.href = '/' + base + '/' + select.value + filename;
     });
   }
+})();
+</script>
+<script>
+(function() {
+  var tabs = document.querySelectorAll('.gallery-tabs button');
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-panel').forEach(function(p) {
+        p.hidden = p.getAttribute('data-panel') !== btn.getAttribute('data-tab');
+      });
+    });
+  });
 })();
 </script>
 </body>
