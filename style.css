@@ -375,7 +375,40 @@ details.faq .faq-body {
 details.faq .faq-body p { margin: 0 0 8px; }
 details.faq .faq-body p:last-child { margin-bottom: 0; }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px 14px;
+  margin: 0 0 18px;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.4) inset,
+    0 10px 24px -10px rgba(20, 20, 30, 0.25);
+}
+
+.gallery figcaption {
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 8px;
+  padding: 0 4px;
+}
+
 @media (max-width: 480px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); gap: 14px 10px; }
+  .gallery figcaption { font-size: 12px; }
+
   nav.pages { gap: 2px; font-size: 13px; }
   nav.pages a { padding: 7px 11px; }
   .card { border-radius: 18px; }
