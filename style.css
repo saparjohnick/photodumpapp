@@ -246,8 +246,10 @@ h1 {
 
 nav.pages {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 4px;
+  row-gap: 6px;
   margin-bottom: 28px;
   font-size: 14px;
   background: var(--card-bg);
