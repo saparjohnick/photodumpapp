@@ -304,6 +304,26 @@ nav.pages a.active {
   background-position: right 14px center;
 }
 
+.app-store-badge {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 22px;
+}
+
+.app-store-badge img {
+  height: 44px;
+  width: auto;
+  display: block;
+  border-radius: 8px;
+  filter: drop-shadow(0 6px 14px rgba(20, 20, 30, 0.25));
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.app-store-badge:hover img {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 8px 18px rgba(20, 20, 30, 0.32));
+}
+
 a, .btn { word-break: break-word; overflow-wrap: break-word; }
 
 .section-title {
