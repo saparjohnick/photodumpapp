@@ -247,6 +247,7 @@ h1 {
 nav.pages {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   gap: 4px;
   row-gap: 6px;
@@ -474,7 +475,11 @@ details.faq .faq-body p:last-child { margin-bottom: 0; }
   .gallery figcaption { font-size: 12px; }
 
   nav.pages { gap: 2px; font-size: 13px; }
-  nav.pages a { padding: 7px 11px; }
+  /* Long translated labels (e.g. Russian "Политика конфиденциальности") can't shrink below
+     their own text width while white-space stays nowrap — that forces the pill wider than
+     the wrap column and it spills past the rounded background instead of actually wrapping.
+     Allowing the text itself to break onto a second line keeps every pill inside the frame. */
+  nav.pages a { padding: 7px 11px; white-space: normal; text-align: center; max-width: 160px; }
   .card { border-radius: 18px; }
   .card h2 { font-size: 16px; }
   .card p, .card li { font-size: 14px; }
