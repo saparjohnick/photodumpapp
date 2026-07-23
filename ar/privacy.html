@@ -83,6 +83,7 @@
   <div class="card">
     <h2>6. خدمات الجهات الخارجية</h2>
     <p>لا يشارك التطبيق المعلومات مع جهات خارجية لأغراض الإعلان أو التسويق. عندما يتفاعل التطبيق مع خدمات نظام Apple (مثل الصور أو CoreLocation أو iCloud)، تخضع هذه التفاعلات لممارسات Apple الخاصة بالخصوصية، المتاحة على <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>.</p>
+    <p>يستخدم موقع الدعم والتسويق هذا (الصفحات التي تشاهدها حاليًا) خدمة Google Analytics لفهم حركة الزوار. قد تقوم Google Analytics بتعيين ملفات تعريف الارتباط (كوكيز) وجمع معلومات مثل عنوان IP الخاص بك ونوع المتصفح والصفحات التي تزورها. لا ينطبق هذا على التطبيق نفسه، الذي لا يستخدم — كما هو موضح في القسم 3 — خدمة Google Analytics أو أي حزمة تطوير برامج أخرى للتحليلات أو التتبع. يمكنك رفض ذلك بالنقر على "رفض" في شريط ملفات تعريف الارتباط الظاهر على هذا الموقع. لمزيد من التفاصيل حول كيفية معالجة Google لهذه البيانات، راجع سياسة خصوصية Google على <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
   </div>
 
   <div class="card">
@@ -140,6 +141,50 @@
     select.addEventListener('change', function() {
       location.href = '/' + base + '/' + select.value + filename;
     });
+  }
+})();
+</script>
+<div id="cookieConsent" class="cookie-consent" hidden>
+  <p>يستخدم هذا الموقع Google Analytics لتحليل الزيارات. <a href="privacy.html">معرفة المزيد</a></p>
+  <div class="cookie-consent-buttons">
+    <button id="cookieAccept" type="button">قبول</button>
+    <button id="cookieDecline" type="button">رفض</button>
+  </div>
+</div>
+<script>
+(function() {
+  var CONSENT_KEY = 'pd_analytics_consent';
+  var GA_ID = 'G-D4T5LMKC8Y';
+
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  var consent = localStorage.getItem(CONSENT_KEY);
+  if (consent === 'granted') {
+    loadGA();
+  } else if (consent !== 'denied') {
+    var banner = document.getElementById('cookieConsent');
+    if (banner) {
+      banner.hidden = false;
+      document.getElementById('cookieAccept').addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'granted');
+        banner.hidden = true;
+        loadGA();
+      });
+      document.getElementById('cookieDecline').addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'denied');
+        banner.hidden = true;
+      });
+    }
   }
 })();
 </script>
