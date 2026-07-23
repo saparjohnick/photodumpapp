@@ -347,6 +347,13 @@ nav.pages a.active {
   box-shadow: 0 1px 1px rgba(255,255,255,0.5) inset, 0 16px 40px -10px rgba(20,20,30,0.35);
 }
 
+/* The [hidden] attribute is overridden by any author-CSS `display` rule of equal or higher
+   specificity — .cookie-consent's own `display: flex` above defeats the browser's built-in
+   `[hidden] { display: none }`, so toggling .hidden via JS silently does nothing without this. */
+.cookie-consent[hidden] {
+  display: none;
+}
+
 .cookie-consent p {
   flex: 1 1 220px;
   margin: 0;
