@@ -83,6 +83,7 @@
   <div class="card">
     <h2>6. 第三方服务</h2>
     <p>本应用不会出于广告或营销目的向第三方共享信息。本应用与 Apple 系统服务（例如“照片”、CoreLocation 或 iCloud）交互时，此类交互受 Apple 自身隐私政策约束，详见 <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>。</p>
+    <p>本支持与营销网站（即您当前浏览的页面）使用 Google Analytics 分析访客流量。Google Analytics 可能会设置 Cookie 并收集诸如您的 IP 地址、浏览器类型和您访问的页面等信息。这与本应用本身无关——如第 3 节所述，本应用不使用 Google Analytics 或任何其他分析或跟踪 SDK。您可以通过点击本网站显示的 Cookie 提示中的"拒绝"来拒绝此项。有关 Google 如何处理这些数据的详情，请参阅 Google 隐私政策：<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>。</p>
   </div>
 
   <div class="card">
@@ -140,6 +141,50 @@
     select.addEventListener('change', function() {
       location.href = '/' + base + '/' + select.value + filename;
     });
+  }
+})();
+</script>
+<div id="cookieConsent" class="cookie-consent" hidden>
+  <p>本网站使用 Google Analytics 分析流量。 <a href="privacy.html">了解更多</a></p>
+  <div class="cookie-consent-buttons">
+    <button id="cookieAccept" type="button">接受</button>
+    <button id="cookieDecline" type="button">拒绝</button>
+  </div>
+</div>
+<script>
+(function() {
+  var CONSENT_KEY = 'pd_analytics_consent';
+  var GA_ID = 'G-D4T5LMKC8Y';
+
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  var consent = localStorage.getItem(CONSENT_KEY);
+  if (consent === 'granted') {
+    loadGA();
+  } else if (consent !== 'denied') {
+    var banner = document.getElementById('cookieConsent');
+    if (banner) {
+      banner.hidden = false;
+      document.getElementById('cookieAccept').addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'granted');
+        banner.hidden = true;
+        loadGA();
+      });
+      document.getElementById('cookieDecline').addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'denied');
+        banner.hidden = true;
+      });
+    }
   }
 })();
 </script>
