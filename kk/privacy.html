@@ -83,6 +83,7 @@
   <div class="card">
     <h2>6. Үшінші тарап қызметтері</h2>
     <p>Қолданба ақпаратты жарнамалық немесе маркетингтік мақсатта үшінші тараптармен бөліспейді. Қолданба Apple жүйелік қызметтерімен (мысалы, Photos, CoreLocation немесе iCloud) өзара әрекеттескен жағдайда, мұндай өзара әрекеттесу Apple-дың өз құпиялылық тәжірибелерімен реттеледі, олармен мына мекенжай бойынша танысуға болады: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>.</p>
+    <p>Бұл қолдау және маркетинг сайты (сіз қазір қарап отырған беттер) сайтқа кірушілер трафигін талдау үшін Google Analytics қолданады. Google Analytics cookie файлдарын орнатып, IP мекенжайы, браузер түрі және қаралған беттер сияқты ақпаратты жинауы мүмкін. Бұл 3-бөлімде көрсетілгендей, Google Analytics немесе басқа кез келген талдау не бақылау SDK-сын қолданбайтын Қолданбаның өзіне қатысты емес. Осы сайттағы cookie баннерінде «Бас тарту» түймесін басу арқылы бас тартуға болады. Google бұл деректерді қалай өңдейтіні туралы толығырақ ақпаратты Google құпиялылық саясатынан қараңыз: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
   </div>
 
   <div class="card">
@@ -140,6 +141,50 @@
     select.addEventListener('change', function() {
       location.href = '/' + base + '/' + select.value + filename;
     });
+  }
+})();
+</script>
+<div id="cookieConsent" class="cookie-consent" hidden>
+  <p>Бұл сайт трафикті талдау үшін Google Analytics қолданады. <a href="privacy.html">Толығырақ</a></p>
+  <div class="cookie-consent-buttons">
+    <button id="cookieAccept" type="button">Қабылдау</button>
+    <button id="cookieDecline" type="button">Бас тарту</button>
+  </div>
+</div>
+<script>
+(function() {
+  var CONSENT_KEY = 'pd_analytics_consent';
+  var GA_ID = 'G-D4T5LMKC8Y';
+
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  var consent = localStorage.getItem(CONSENT_KEY);
+  if (consent === 'granted') {
+    loadGA();
+  } else if (consent !== 'denied') {
+    var banner = document.getElementById('cookieConsent');
+    if (banner) {
+      banner.hidden = false;
+      document.getElementById('cookieAccept').addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'granted');
+        banner.hidden = true;
+        loadGA();
+      });
+      document.getElementById('cookieDecline').addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'denied');
+        banner.hidden = true;
+      });
+    }
   }
 })();
 </script>
