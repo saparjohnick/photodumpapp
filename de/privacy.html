@@ -83,6 +83,7 @@
   <div class="card">
     <h2>6. Dienste Dritter</h2>
     <p>Die Anwendung gibt keine Informationen zu Werbe- oder Marketingzwecken an Dritte weiter. Interagiert die Anwendung mit Systemdiensten von Apple (etwa Fotos, CoreLocation oder iCloud), unterliegen diese Interaktionen den eigenen Datenschutzpraktiken von Apple, abrufbar unter <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>.</p>
+    <p>Diese Support- und Marketing-Website (die Seiten, die Sie gerade betrachten) verwendet Google Analytics, um den Besucherverkehr zu analysieren. Google Analytics kann Cookies setzen und Informationen wie Ihre IP-Adresse, Ihren Browsertyp und die von Ihnen besuchten Seiten erfassen. Dies betrifft nicht die Anwendung selbst, die – wie in Abschnitt 3 beschrieben – kein Google Analytics oder andere Analyse- oder Tracking-SDKs verwendet. Sie können dies ablehnen, indem Sie im Cookie-Banner dieser Website auf „Ablehnen" klicken. Details zur Datenverarbeitung durch Google finden Sie in der Datenschutzerklärung von Google unter <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
   </div>
 
   <div class="card">
@@ -140,6 +141,50 @@
     select.addEventListener('change', function() {
       location.href = '/' + base + '/' + select.value + filename;
     });
+  }
+})();
+</script>
+<div id="cookieConsent" class="cookie-consent" hidden>
+  <p>Diese Website verwendet Google Analytics, um den Traffic zu analysieren. <a href="privacy.html">Mehr erfahren</a></p>
+  <div class="cookie-consent-buttons">
+    <button id="cookieAccept" type="button">Akzeptieren</button>
+    <button id="cookieDecline" type="button">Ablehnen</button>
+  </div>
+</div>
+<script>
+(function() {
+  var CONSENT_KEY = 'pd_analytics_consent';
+  var GA_ID = 'G-D4T5LMKC8Y';
+
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  var consent = localStorage.getItem(CONSENT_KEY);
+  if (consent === 'granted') {
+    loadGA();
+  } else if (consent !== 'denied') {
+    var banner = document.getElementById('cookieConsent');
+    if (banner) {
+      banner.hidden = false;
+      document.getElementById('cookieAccept').addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'granted');
+        banner.hidden = true;
+        loadGA();
+      });
+      document.getElementById('cookieDecline').addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'denied');
+        banner.hidden = true;
+      });
+    }
   }
 })();
 </script>
